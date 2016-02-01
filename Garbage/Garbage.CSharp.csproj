@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />
     <Compile Include="Assets\Scripts\DialogFunction.cs" />
+    <Compile Include="Assets\Scripts\GridMovement.cs" />
     <Compile Include="Assets\Scripts\Ljud.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\NPCBehavior.cs" />

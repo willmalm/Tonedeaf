@@ -4,9 +4,13 @@ using System.Collections;
 public class playerController : MonoBehaviour {
 
     public GameObject playerSprite;
+    public GameObject gridObject;
 	private PlayerVariables playerVar;
 	private Animator animator;
 	private Rigidbody2D rb;
+
+    public bool movingUp;
+    public bool movingDown;
 
 	void Start ()
 	{
@@ -23,23 +27,31 @@ public class playerController : MonoBehaviour {
 			rb.MovePosition(transform.position - transform.right * playerVar.speed * Time.deltaTime);
 			animator.SetInteger ("Direction", 1);
 		}
-		
-		if (Input.GetKey ("right"))
-		{
-			rb.MovePosition(transform.position + transform.right * playerVar.speed * Time.deltaTime);
-			animator.SetInteger ("Direction", 3);
-		}
-		
-		if (Input.GetKey ("up"))
-		{
-			rb.MovePosition(transform.position + transform.up * playerVar.speed * Time.deltaTime);
-			animator.SetInteger ("Direction", 2);
-		}
-		
-		if (Input.GetKey ("down"))
-		{
-			rb.MovePosition(transform.position - transform.up * playerVar.speed * Time.deltaTime);
-			animator.SetInteger ("Direction", 0);
-		}
+
+        if (Input.GetKey("right"))
+        {
+            rb.MovePosition(transform.position + transform.right * playerVar.speed * Time.deltaTime);
+            animator.SetInteger("Direction", 3);
+        }
+        if (movingUp)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, gridObject.transform.position.y, 0), playerVar.speed* Time.deltaTime);
+            if (transform.position.y >= gridObject.transform.position.y)
+            {
+                movingUp = false;
+                transform.position = new Vector3(transform.position.x, gridObject.transform.position.y, 0);
+                gridObject.GetComponent<GridMovement>().canMove = true;
+            }
+        }
+        if (movingDown)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, gridObject.transform.position.y, 0), playerVar.speed *Time.deltaTime);
+            if (transform.position.y <= gridObject.transform.position.y)
+            {
+                movingDown = false;
+                transform.position = new Vector3(transform.position.x, gridObject.transform.position.y, 0);
+                gridObject.GetComponent<GridMovement>().canMove = true;
+            }
+        }
 	}
 }
