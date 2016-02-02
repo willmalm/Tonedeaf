@@ -77,10 +77,10 @@
     <Compile Include="Assets\Scripts\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\PlayerVariables.cs" />
     <Compile Include="Assets\Scripts\QuestVariables.cs" />
+    <Compile Include="Assets\Scripts\Speech.cs" />
     <Compile Include="Assets\Scripts\SpriteSize.cs" />
     <Compile Include="Assets\Scripts\StageVariables.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\lol.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
   </ItemGroup>
   <ItemGroup>
