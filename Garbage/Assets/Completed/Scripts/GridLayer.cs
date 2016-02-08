@@ -7,6 +7,7 @@ public class GridLayer : MonoBehaviour {
     GameObject gridManagerObject;
     GridManager gridManager;
     GridVariables gridVar;
+    public int offset;
 
 	void Start () {
         spr = GetComponent<SpriteRenderer>();
@@ -23,7 +24,7 @@ public class GridLayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        spr.sortingOrder = gridManager.maxLayers/* - gridVar.gridLayer*/;
+        spr.sortingOrder = gridManager.maxLayers*2 - gridVar.gridLayer*2 + offset;
 	}
 
 }
