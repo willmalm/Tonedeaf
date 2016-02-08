@@ -5,12 +5,13 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
-    public const int maxItemsInRow = 5;
-    public const int maxItemsInColumn = 2;
+    //public int maxItemsInRow;
+    public int maxItemsInColumn = 2;
     private List<GameObject> itemList;
-    private int counter1 = 0;
-    private int counter2 = 0;
+    public int counter1 = 0;
+    public int counter2 = 0;
     public Text text;
+    public float distance;
     // Use this for initialization
     public void Start()
     {
@@ -33,6 +34,7 @@ public class Inventory : MonoBehaviour
     public void AddItem(GameObject item)
     {
         itemList.Add(item);
+        UpdatePositions();
     }
     public void RemoveItem(int index)
     {
@@ -46,12 +48,12 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < itemList.Count; i++)
         {
-            itemList[i].GetComponent<Item>().SetInventoryPosition(counter1, counter2);
-            counter1++;
-            if (counter1 == maxItemsInRow)
+            itemList[i].GetComponent<Item>().SetInventoryPosition(counter1, counter2, distance);
+            counter2++;
+            if (counter2 == maxItemsInColumn)
             {
-                counter1 = 0;
-                counter2++;
+                counter2 = 0;
+                counter1++;
             }
         }
         counter1 = 0;

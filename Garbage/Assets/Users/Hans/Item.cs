@@ -3,23 +3,25 @@ using System.Collections;
 
 public class Item : MonoBehaviour
 {
+    GameObject inventory;
     // Use this for initialization
-    public virtual void Start()
+    public void Start()
     {
-
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
 
     }
 
-    public virtual void SetInventoryPosition(int xPosition, int yPosition)
+    public void SetInventoryPosition(float xPosition, float yPosition, float distance)
     {
-        transform.position = new Vector3(-10 + (xPosition), -3 - (yPosition), 0);
+        inventory = GameObject.FindGameObjectWithTag("Inventory");
+        transform.SetParent(inventory.transform);
+        transform.position = inventory.transform.position + new Vector3(xPosition * distance, (yPosition) * distance, 0);
     }
-    public virtual void Effect()
+    public void Effect()
     {
 
     }
