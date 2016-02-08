@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject playerSprite;
     public GameObject gridObject;
+    JensAnimationController playerAnimation;
 	private PlayerVariables playerVar;
 	private Animator animator;
 	private Rigidbody2D rb;
@@ -19,33 +20,11 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		playerVar = GetComponent<PlayerVariables> ();
         gridVar = GetComponent<GridVariables>();
-
+        playerAnimation = playerSprite.GetComponent<JensAnimationController>();
 	}
 	
 	void Update ()
 	{
-        /*if (movingUp)
-        {
-            //transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, gridObject.transform.position.y, 0), playerVar.speed* Time.deltaTime);
-            transform.position += new Vector3(0, playerVar.speed * Time.deltaTime, 0);
-            if (transform.position.y >= gridObject.transform.position.y)
-            {
-                movingUp = false;
-                transform.position = new Vector3(transform.position.x, gridObject.transform.position.y, 0);
-                gridObject.GetComponent<GridMovement>().canMove = true;
-            }
-        }
-        if (movingDown)
-        {
-            //transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, gridObject.transform.position.y, 0), playerVar.speed *Time.deltaTime);
-            transform.position -= new Vector3(0, playerVar.speed * Time.deltaTime, 0);
-            if (transform.position.y <= gridObject.transform.position.y)
-            {
-                movingDown = false;
-                transform.position = new Vector3(transform.position.x, gridObject.transform.position.y, 0);
-                gridObject.GetComponent<GridMovement>().canMove = true;
-            }
-        }*/
         if (Input.GetKey("left"))
 		{
             //rb.MovePosition(transform.position - transform.right * playerVar.speed * Time.deltaTime);
@@ -53,6 +32,8 @@ public class PlayerController : MonoBehaviour {
             if (gridVar.canMove == true)
             {
                 animator.SetInteger("Direction", 1);
+                playerAnimation.speed = new Vector2(1, 0);
+                playerSprite.transform.localScale = new Vector3(1, 1, 1);
             }
 		}
 
@@ -63,6 +44,8 @@ public class PlayerController : MonoBehaviour {
             if (gridVar.canMove == true)
             {
                 animator.SetInteger("Direction", 3);
+                playerAnimation.speed = new Vector2(1, 0);
+                playerSprite.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
         if (Input.GetKey("up") && gridVar.canMove)

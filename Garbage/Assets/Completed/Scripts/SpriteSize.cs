@@ -17,6 +17,6 @@ public class SpriteSize : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		sprite.transform.localScale = new Vector2 (size - transform.position.y * angle, size - transform.position.y * angle);
+		transform.localScale = new Vector2 (size - transform.position.y * angle, size - transform.position.y * angle);
 	}
 }

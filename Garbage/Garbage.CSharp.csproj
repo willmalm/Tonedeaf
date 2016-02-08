@@ -57,37 +57,68 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Boss1_stage1.cs" />
-    <Compile Include="Assets\Scripts\BossBehavior.cs" />
-    <Compile Include="Assets\Scripts\ButtonFunctions.cs" />
-    <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Dialog.cs" />
-    <Compile Include="Assets\Scripts\DialogFunction.cs" />
-    <Compile Include="Assets\Scripts\GridMovement.cs" />
-    <Compile Include="Assets\Scripts\Ljud.cs" />
-    <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\NPCBehavior.cs" />
-    <Compile Include="Assets\Scripts\Obstacle01.cs" />
-    <Compile Include="Assets\Scripts\PlayerSprite.cs" />
-    <Compile Include="Assets\Scripts\PlayerStatus.cs" />
-    <Compile Include="Assets\Scripts\PlayerVariables.cs" />
-    <Compile Include="Assets\Scripts\QuestVariables.cs" />
-    <Compile Include="Assets\Scripts\Speech.cs" />
-    <Compile Include="Assets\Scripts\SpriteSize.cs" />
-    <Compile Include="Assets\Scripts\StageVariables.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\playerController.cs" />
+    <Compile Include="Assets\Completed\Scripts\Boss1_stage1.cs" />
+    <Compile Include="Assets\Completed\Scripts\BossBehavior.cs" />
+    <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
+    <Compile Include="Assets\Completed\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Completed\Scripts\Dialog.cs" />
+    <Compile Include="Assets\Completed\Scripts\DialogFunction.cs" />
+    <Compile Include="Assets\Completed\Scripts\GridLayer.cs" />
+    <Compile Include="Assets\Completed\Scripts\GridManager.cs" />
+    <Compile Include="Assets\Completed\Scripts\GridMovement.cs" />
+    <Compile Include="Assets\Completed\Scripts\GridObjectPosition.cs" />
+    <Compile Include="Assets\Completed\Scripts\GridPosition.cs" />
+    <Compile Include="Assets\Completed\Scripts\GridVariables.cs" />
+    <Compile Include="Assets\Completed\Scripts\Interaction.cs" />
+    <Compile Include="Assets\Completed\Scripts\Ljud.cs" />
+    <Compile Include="Assets\Completed\Scripts\Movement.cs" />
+    <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
+    <Compile Include="Assets\Completed\Scripts\ObjectPosition.cs" />
+    <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
+    <Compile Include="Assets\Completed\Scripts\Obstacle01.cs" />
+    <Compile Include="Assets\Completed\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Completed\Scripts\PlayerSprite.cs" />
+    <Compile Include="Assets\Completed\Scripts\PlayerStatus.cs" />
+    <Compile Include="Assets\Completed\Scripts\PlayerVariables.cs" />
+    <Compile Include="Assets\Completed\Scripts\QuestVariables.cs" />
+    <Compile Include="Assets\Completed\Scripts\Speech.cs" />
+    <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
+    <Compile Include="Assets\Completed\Scripts\StageVariables.cs" />
+    <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Jens\JensAnimationController.cs" />
+    <Compile Include="Assets\Users\Hans\Cursor.cs" />
+    <Compile Include="Assets\Users\Hans\ExampleItem.cs" />
+    <Compile Include="Assets\Users\Hans\ExamplePlayer.cs" />
+    <Compile Include="Assets\Users\Hans\Inventory.cs" />
+    <Compile Include="Assets\Users\Hans\Item.cs" />
+    <Compile Include="Assets\Users\Hans\KeyID.cs" />
+    <Compile Include="Assets\Users\Hans\Settings.cs" />
+    <Compile Include="Assets\Users\Simon\BasicMovement.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_Boss1_stage1.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_BossBehavior.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_ButtonFunctions.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_CameraMovement.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_Dialog.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_DialogFunction.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_GridMovement.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_Ljud.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_Movement.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_NPCBehavior.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_Obstacle01.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_PlayerController.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_PlayerSprite.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_PlayerStatus.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_PlayerVariables.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_QuestVariables.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_Speech.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_SpriteSize.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_StageVariables.cs" />
+    <Compile Include="Assets\Users\William\Scripts\W_UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\eufaof.txt" />

@@ -12,8 +12,8 @@ public class UIManager : MonoBehaviour {
     SpriteRenderer invSprite;
     bool invEnabled;
     Vector3 invCurrent;
-    public Vector3 invDisabled;
-    public Vector3 invEnabled;
+    public Vector3 invInvisible;
+    public Vector3 invVisible;
 
     void Start()
     {
