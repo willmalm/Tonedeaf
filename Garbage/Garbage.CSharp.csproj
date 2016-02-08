@@ -75,7 +75,6 @@
     <Compile Include="Assets\Completed\Scripts\GridVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\Interaction.cs" />
     <Compile Include="Assets\Completed\Scripts\Ljud.cs" />
-    <Compile Include="Assets\Completed\Scripts\Movement.cs" />
     <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectPosition.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
