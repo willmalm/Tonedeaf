@@ -70,7 +70,6 @@
     <Compile Include="Assets\Completed\Scripts\DialogFunction.cs" />
     <Compile Include="Assets\Completed\Scripts\GridLayer.cs" />
     <Compile Include="Assets\Completed\Scripts\GridManager.cs" />
-    <Compile Include="Assets\Completed\Scripts\GridMovement.cs" />
     <Compile Include="Assets\Completed\Scripts\GridObjectPosition.cs" />
     <Compile Include="Assets\Completed\Scripts\GridPosition.cs" />
     <Compile Include="Assets\Completed\Scripts\GridVariables.cs" />
@@ -99,26 +98,6 @@
     <Compile Include="Assets\Users\Hans\KeyID.cs" />
     <Compile Include="Assets\Users\Hans\Settings.cs" />
     <Compile Include="Assets\Users\Simon\BasicMovement.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_Boss1_stage1.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_BossBehavior.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_ButtonFunctions.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_CameraMovement.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_Dialog.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_DialogFunction.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_GridMovement.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_Ljud.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_Movement.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_NPCBehavior.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_Obstacle01.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_PlayerController.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_PlayerSprite.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_PlayerStatus.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_PlayerVariables.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_QuestVariables.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_Speech.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_SpriteSize.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_StageVariables.cs" />
-    <Compile Include="Assets\Users\William\Scripts\W_UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\eufaof.txt" />

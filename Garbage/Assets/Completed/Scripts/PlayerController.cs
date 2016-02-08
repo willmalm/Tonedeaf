@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject playerSprite;
     public GameObject gridObject;
     JensAnimationController playerAnimation;
+    SpriteSize playerSize;
 	private PlayerVariables playerVar;
 	private Animator animator;
 	private Rigidbody2D rb;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 		playerVar = GetComponent<PlayerVariables> ();
         gridVar = GetComponent<GridVariables>();
         playerAnimation = playerSprite.GetComponent<JensAnimationController>();
+        playerSize = playerSprite.GetComponent<SpriteSize>();
 	}
 	
 	void Update ()
@@ -32,8 +34,6 @@ public class PlayerController : MonoBehaviour {
             if (gridVar.canMove == true)
             {
                 animator.SetInteger("Direction", 1);
-                playerAnimation.speed = new Vector2(1, 0);
-                playerSprite.transform.localScale = new Vector3(1, 1, 1);
             }
 		}
 
@@ -44,8 +44,6 @@ public class PlayerController : MonoBehaviour {
             if (gridVar.canMove == true)
             {
                 animator.SetInteger("Direction", 3);
-                playerAnimation.speed = new Vector2(1, 0);
-                playerSprite.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
         if (Input.GetKey("up") && gridVar.canMove)

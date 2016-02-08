@@ -7,21 +7,27 @@ public class UIManager : MonoBehaviour {
     public GameObject savePrompt;
     public bool pauseBool = true;
     public int invSpeed;
+    public int invEnabledPos;
+    public int invDisabledPos;
     GameObject inventory;
     GameObject map;
+    GameObject player;
     SpriteRenderer invSprite;
     bool invEnabled;
     Vector3 invCurrent;
-    public Vector3 invInvisible;
-    public Vector3 invVisible;
+    public float invInvisible;
+    public float invVisible;
 
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Inventory");
-        map = GameObject.FindGameObjectWithTag("Map");
+        player = GameObject.FindGameObjectWithTag("Player");
+        //map = GameObject.FindGameObjectWithTag("Map");
         invSprite = inventory.GetComponent<SpriteRenderer>();
     }
 	void Update () {
+        invInvisible = player.transform.position.x + invDisabledPos;
+        invVisible = player.transform.position.x + invEnabledPos;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseWindow.SetActive(pauseBool);
@@ -39,26 +45,25 @@ public class UIManager : MonoBehaviour {
         }
         if (invEnabled)
         {
-            inventory.transform.position += new Vector3(invSpeed * Time.deltaTime, 0, 0);
-            if (inventory.transform.position.x >= invCurrent.x + 5)
+            if (inventory.transform.position.x < invVisible)
             {
-                
+                inventory.transform.position += new Vector3(invSpeed * Time.deltaTime, 0, 0);
             }
             else
             {
-                inventory.transform.position += new Vector3(invSpeed * Time.deltaTime, 0, 0);
+                inventory.transform.position = new Vector3(invVisible, inventory.transform.position.y, 0);
             }
         }
         else if (invEnabled == false)
         {
-            
-            if (inventory.transform.position.x <= invCurrent.x - 5)
+
+            if (inventory.transform.position.x > invInvisible)
             {
-                
+                inventory.transform.position -= new Vector3(invSpeed * Time.deltaTime, 0, 0);
             }
             else
             {
-                inventory.transform.position -= new Vector3(invSpeed * Time.deltaTime, 0, 0);
+                inventory.transform.position = new Vector3(invInvisible, inventory.transform.position.y, 0);
             }
         }
 	}

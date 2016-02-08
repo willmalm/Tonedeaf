@@ -9,7 +9,4 @@ public class PlayerVariables : MonoBehaviour {
     public bool immune;
     public bool knockdown;
     public bool immobile;
-
-    [Range(0,4)]
-    public int gridLayer;
 }

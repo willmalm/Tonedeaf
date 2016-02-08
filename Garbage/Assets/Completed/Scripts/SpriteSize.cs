@@ -4,7 +4,9 @@ using System.Collections;
 public class SpriteSize : MonoBehaviour {
 
 	public float angle;
-	public float size;
+	public float sizeY;
+    public float sizeX;
+    public float direction;
 
 	SpriteRenderer sprite;
 
@@ -17,6 +19,6 @@ public class SpriteSize : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		transform.localScale = new Vector2 (size - transform.position.y * angle, size - transform.position.y * angle);
+		transform.localScale = new Vector2 ((sizeX - transform.position.y * angle)*direction, (sizeY - transform.position.y * angle));
 	}
 }
