@@ -33,7 +33,7 @@ public class Interaction : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown("p") && canPickup)
+        if (Input.GetKeyDown("e") && canPickup)
         {
             Debug.Log("Picked up " + objectVar.objName);
             var obj = (GameObject)Instantiate(itemUI, transform.position, Quaternion.identity);
