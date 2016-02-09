@@ -67,14 +67,11 @@
     <Compile Include="Assets\Completed\Scripts\DialogFunction.cs" />
     <Compile Include="Assets\Completed\Scripts\GridLayer.cs" />
     <Compile Include="Assets\Completed\Scripts\GridManager.cs" />
-    <Compile Include="Assets\Completed\Scripts\GridObjectPosition.cs" />
     <Compile Include="Assets\Completed\Scripts\GridPosition.cs" />
     <Compile Include="Assets\Completed\Scripts\GridVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\Interaction.cs" />
     <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
-    <Compile Include="Assets\Completed\Scripts\ObjectPosition.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
-    <Compile Include="Assets\Completed\Scripts\Obstacle01.cs" />
     <Compile Include="Assets\Completed\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Completed\Scripts\PlayerVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\QuestVariables.cs" />
@@ -82,8 +79,9 @@
     <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
     <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
     <Compile Include="Assets\Jens\JensAnimationController.cs" />
+    <Compile Include="Assets\KeyBindings.cs" />
+    <Compile Include="Assets\SceneChangeTrigger.cs" />
     <Compile Include="Assets\Users\Hans\Cursor.cs" />
-    <Compile Include="Assets\Users\Hans\ExamplePlayer.cs" />
     <Compile Include="Assets\Users\Hans\Inventory.cs" />
     <Compile Include="Assets\Users\Hans\Item.cs" />
     <Compile Include="Assets\Users\Hans\KeyID.cs" />
@@ -92,6 +90,7 @@
     <Compile Include="Assets\Users\William\Boss1_stage1.cs" />
     <Compile Include="Assets\Users\William\BossBehavior.cs" />
     <Compile Include="Assets\Users\William\Ljud.cs" />
+    <Compile Include="Assets\Users\William\Obstacle01.cs" />
     <Compile Include="Assets\Users\William\PlayerStatus.cs" />
     <Compile Include="Assets\Users\William\StageVariables.cs" />
   </ItemGroup>

@@ -1,21 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class DialogFunction : MonoBehaviour {
 
-    UnityEngine.UI.Text txt;
+    //Public variables
     public GameObject dialogText;
-    public GameObject player;
-    GameObject[] items;
-    GameObject[] events;
-    public GameObject portrait;
-    string[] stage;
     public bool active;
-    int currentStage;
-    int maxStages;
+
+    //Objects
+    private GameObject player;
+    private GameObject[] items;
+    private GameObject[] events;
+    private GameObject portrait;
+
+    //Components
+    private Text txt;
+
+    private string[] stage;
+    private int currentStage;
+    private int maxStages;
 
 	void Start () {
-        txt = dialogText.GetComponent<UnityEngine.UI.Text>();
+        //Dependancy "Text"
+        txt = dialogText.GetComponent<Text>();
+        //Dependancy "Player"
+        player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	void Update () {
@@ -50,9 +60,9 @@ public class DialogFunction : MonoBehaviour {
     public void startDialog(string[] s, GameObject[] g, GameObject[] e, Sprite port)
     {
         GetComponent<UnityEngine.UI.Image>().enabled = true;
-        dialogText.GetComponent<UnityEngine.UI.Text>().enabled = true;
-        portrait.GetComponent<UnityEngine.UI.Image>().sprite = port;
-        portrait.GetComponent<UnityEngine.UI.Image>().enabled = true;
+        dialogText.GetComponent<Text>().enabled = true;
+        portrait.GetComponent<Image>().sprite = port;
+        portrait.GetComponent<Image>().enabled = true;
         player.GetComponent<PlayerVariables>().immobile = true;
         currentStage = 0;
         maxStages = s.Length;

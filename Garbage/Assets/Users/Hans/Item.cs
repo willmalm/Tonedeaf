@@ -4,16 +4,6 @@ using System.Collections;
 public class Item : MonoBehaviour
 {
     GameObject inventory;
-    // Use this for initialization
-    public void Start()
-    {
-    }
-
-    // Update is called once per frame
-    public void Update()
-    {
-
-    }
 
     public void SetInventoryPosition(float xPosition, float yPosition, float distance)
     {

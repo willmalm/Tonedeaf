@@ -3,46 +3,54 @@ using System.Collections;
 
 public class UIManager : MonoBehaviour {
 
+    //Public variables
     public GameObject pauseWindow;
     public GameObject savePrompt;
-    public bool pauseBool = true;
+    [Space(5)]
     public int invSpeed;
     public int invEnabledPos;
     public int invDisabledPos;
-    GameObject inventory;
-    GameObject map;
-    GameObject player;
-    SpriteRenderer invSprite;
-    bool invEnabled;
-    Vector3 invCurrent;
+    [Header("Read-only")]
     public float invInvisible;
     public float invVisible;
+    public bool pauseBool = true;
+
+    //Objects
+    private GameObject inventory;
+    private GameObject map;
+    private GameObject player;
+
+    private bool invEnabled;
+    private Vector3 invCurrent;
 
     void Start()
     {
+        //Dependancy "Player", "Inventory"
         inventory = GameObject.FindGameObjectWithTag("Inventory");
         player = GameObject.FindGameObjectWithTag("Player");
-        //map = GameObject.FindGameObjectWithTag("Map");
-        invSprite = inventory.GetComponent<SpriteRenderer>();
     }
 	void Update () {
+        //Set position for inventory states based on player position
         invInvisible = player.transform.position.x + invDisabledPos;
         invVisible = player.transform.position.x + invEnabledPos;
+
+        //Show "Pause Window" on keypress
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseWindow.SetActive(pauseBool);
             pauseBool = !pauseBool;
         }
+        //Show "Inventory" on keypress
         if (Input.GetKeyDown(KeyCode.I))
         {
             invCurrent = inventory.transform.position;
             invEnabled = !invEnabled;
-            //invSprite.enabled = inv;
            /* foreach (Transform child in inventory.transform)
             {
                 //child.gameObject.SetActive(inv);
             }*/
         }
+        //Change position of inventory based on current state
         if (invEnabled)
         {
             if (inventory.transform.position.x < invVisible)

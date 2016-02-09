@@ -3,70 +3,91 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+    //Public variables
     public GameObject playerSprite;
-    public GameObject gridObject;
-    JensAnimationController playerAnimation;
-    SpriteSize playerSize;
-	private PlayerVariables playerVar;
-	private Animator animator;
-	private Rigidbody2D rb;
-    GridVariables gridVar;
-
+    [Header("Idle states")]
+    public float idle1_Delay;
+    public float idle2_Delay;
+    public float reset_Delay;
+    [Header("Read-only")]
     public bool movingUp;
     public bool movingDown;
+    public float idleTimer;
+
+    //Scripts
+    private PlayerVariables playerVar;
+    private GridVariables gridVar;
+    private SpriteSize playerSize;
+    private JensAnimationController playerAnimation;
 
 	void Start ()
 	{
-		animator = playerSprite.GetComponent<Animator> ();
-		rb = GetComponent<Rigidbody2D> ();
+        //Dependancy "PlayerVariables", "GridVariables"
 		playerVar = GetComponent<PlayerVariables> ();
         gridVar = GetComponent<GridVariables>();
+
+        //Dependancy "Player Sprite"
         playerAnimation = playerSprite.GetComponent<JensAnimationController>();
         playerSize = playerSprite.GetComponent<SpriteSize>();
 	}
 	
 	void Update ()
 	{
+        //Horizontal movement
         if (Input.GetKey("left"))
 		{
-            //rb.MovePosition(transform.position - transform.right * playerVar.speed * Time.deltaTime);
+            idleTimer = 0;
             transform.position += new Vector3(-playerVar.speed * Time.deltaTime, 0, 0);
-            if (gridVar.canMove == true)
-            {
-                //animator.SetInteger("Direction", 1);
-            }
             playerSize.direction = 1;
             playerAnimation.speed = new Vector2(1,0);
-		}
+            playerAnimation.idleAnimation = 0;
+        }
         else if (Input.GetKey("right"))
         {
-            //rb.MovePosition(transform.position + transform.right * playerVar.speed * Time.deltaTime);
+            idleTimer = 0;
             transform.position += new Vector3(playerVar.speed * Time.deltaTime, 0, 0);
-            if (gridVar.canMove == true)
-            {
-                //animator.SetInteger("Direction", 3);
-            }
             playerSize.direction = -1;
             playerAnimation.speed = new Vector2(1, 0);
+            playerAnimation.idleAnimation = 0;
         }
         else
         {
+            //Increase timer based on framrate
+            idleTimer += Time.deltaTime;
+
             playerAnimation.speed = new Vector2(0, 0);
+            if (idleTimer >= idle1_Delay && idleTimer < idle2_Delay)
+            {
+                playerAnimation.idleAnimation = 1;
+            }
+            else if(idleTimer >= idle2_Delay && idleTimer < reset_Delay)
+            {
+                playerAnimation.idleAnimation = 2;
+            }
+            else if(idleTimer >= reset_Delay)
+            {
+                idleTimer = 0;
+            }
+            else
+            {
+                playerAnimation.idleAnimation = 0;
+            }
         }
-        if (Input.GetKey("up") && gridVar.canMove)
+
+        //Vertical movement
+        if (Input.GetKey("up") && gridVar.canMoveY)
         {
             gridVar.gridLayer++;
-            gridVar.canMove = false;
-            //animator.SetInteger("Direction", 2);
+            gridVar.canMoveY = false;
         }
-        if (Input.GetKey("down") && gridVar.canMove)
+        else if (Input.GetKey("down") && gridVar.canMoveY)
         {
             gridVar.gridLayer--;
-            gridVar.canMove = false;
-            //animator.SetInteger("Direction", 0);
+            gridVar.canMoveY = false;
         }
-        if(gridVar.canMove == false)
+        if(gridVar.canMoveY == false)
         {
+            idleTimer = 0;
             playerAnimation.speed = new Vector2(1, 0);
         }
     }

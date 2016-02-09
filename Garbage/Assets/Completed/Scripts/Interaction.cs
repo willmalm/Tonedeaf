@@ -4,50 +4,65 @@ using System.Collections;
 
 public class Interaction : MonoBehaviour {
 
+    //Public variables
     public GameObject textBox;
-    public int distance;
-    GameObject invObject;
-    Inventory inventory;
     public GameObject itemUI;
-    bool canPickup;
+    [Space(5)]
+    public int distance;
+    [Header("Read-only")]
+    public bool canPickup;
 
-    ObjectVariables objectVar;
-    GridVariables objGridVar;
-    GridVariables plGridVar;
-    Text txt;
-    RaycastHit2D hit;
-    GameObject player;
-    PlayerVariables playerVar;
+    //Objects
+    private GameObject invObject;
+    private GameObject player;
 
+    //Scripts
+    private Inventory inventory;
+    private GridVariables objGridVar;
+    private GridVariables plGridVar;
+    private PlayerVariables playerVar;
+    private ObjectVariables objectVar;
+
+    //Components
+    private Text txt;
+
+    //Misc.
+    private RaycastHit2D hit;
 
     void Start()
     {
+        //Dependancy "TextBox"
         txt = textBox.GetComponent<Text>();
-        objectVar = transform.parent.gameObject.GetComponent<ObjectVariables>();
+        //Dependancy "Inventory"
         invObject = GameObject.FindGameObjectWithTag("Inventory");
         inventory = invObject.GetComponent<Inventory>();
+        //Dependancy "Player"
         player = GameObject.FindGameObjectWithTag("Player");
         playerVar = player.GetComponent<PlayerVariables>();
+        //Dependancy "ObjectVariables", "Player_GridVariables", "This_GridVariables"
+        objectVar = transform.parent.gameObject.GetComponent<ObjectVariables>();
         objGridVar = transform.parent.gameObject.GetComponent<GridVariables>();
         plGridVar = player.GetComponent<GridVariables>();
     }
 
     void Update() {
+        //Adds item to inventory on keypress
         if (Input.GetKeyDown("p") && canPickup)
         {
             Debug.Log("Picked up " + objectVar.objName);
+
             var obj = (GameObject)Instantiate(itemUI, transform.position, Quaternion.identity);
             inventory.AddItem(obj);
             Destroy(transform.parent.gameObject);
         }
     }
 
-  
-    void OnTriggerExit2D(Collider2D col)
+    //Changes value of bool based on collision
+    void OnTriggerStay2D(Collider2D col)
     {
-        if(col.tag == "plInteract")
+        if (col.tag == "plInteract" && objGridVar.gridLayer == plGridVar.gridLayer)
         {
-            txt.text = "";
+            canPickup = true;
         }
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -57,11 +72,11 @@ public class Interaction : MonoBehaviour {
             txt.text = "Pick up " + objectVar.objName;
         }
     }
-    void OnTriggerStay2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
-        if (col.tag == "plInteract" && objGridVar.gridLayer == plGridVar.gridLayer)
+        if (col.tag == "plInteract")
         {
-            canPickup = true;
+            txt.text = "";
         }
     }
 }

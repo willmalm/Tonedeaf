@@ -5,14 +5,13 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
-    //public int maxItemsInRow;
     public int maxItemsInColumn = 2;
     private List<GameObject> itemList;
     public int counter1 = 0;
     public int counter2 = 0;
     public Text text;
     public float distance;
-    // Use this for initialization
+
     public void Start()
     {
         itemList = new List<GameObject>();
@@ -22,7 +21,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.D) && GameObject.FindGameObjectWithTag("Settings").GetComponent<Settings>().configuringSettings == false)
@@ -73,6 +71,6 @@ public class Inventory : MonoBehaviour
     }
     public void EquipItem(int index)
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<ExamplePlayer>().EquipItem(itemList[index]);
+        //N/A
     }
 }

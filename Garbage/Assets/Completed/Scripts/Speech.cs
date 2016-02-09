@@ -3,21 +3,28 @@ using System.Collections;
 
 public class Speech : MonoBehaviour {
 
+    //Public variables
     [Range(0,10)]
     public int range;
     public GameObject speech;
-    GameObject player;
-    GridVariables plGridVar;
-    GridVariables gridVar;
+
+    //Objects
+    private GameObject player;
+
+    //Scripts
+    private GridVariables plGridVar;
+    private GridVariables gridVar;
 
 	void Start () {
+        //Dependancy "Player", "Player GridVariables"
         player = GameObject.FindGameObjectWithTag("Player");
-        gridVar = GetComponent<GridVariables>();
         plGridVar = player.GetComponent<GridVariables>();
+        //Dependancy "GridVariables"
+        gridVar = GetComponent<GridVariables>();
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
+        //Shows speech bubble if player is within range
 	    if (player.transform.position.x > transform.position.x-range && player.transform.position.x < transform.position.x + range && plGridVar.gridLayer == gridVar.gridLayer)
         {
             speech.SetActive(true);
