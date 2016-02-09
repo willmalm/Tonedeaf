@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.FindGameObjectWithTag("Settings").GetComponent<Settings>().configuringSettings == false)
+        if (Input.GetKeyDown(KeyCode.D) && GameObject.FindGameObjectWithTag("Settings").GetComponent<Settings>().configuringSettings == false)
         {
             UpdatePositions();
         }

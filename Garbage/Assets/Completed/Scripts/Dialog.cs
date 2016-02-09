@@ -37,13 +37,13 @@ public class Dialog : MonoBehaviour {
 	void Update () {
         leftRange = transform.position.x - range;
         rightRange = transform.position.x + range;
-	    if (Input.GetKeyDown("e") && activated && player.transform.position.x < rightRange && player.transform.position.x > leftRange && NPCGridVar.gridLayer == plGridVar.gridLayer)
+	    if (Input.GetKeyDown("d") && activated && player.transform.position.x < rightRange && player.transform.position.x > leftRange && NPCGridVar.gridLayer == plGridVar.gridLayer)
         {
             dialog.startDialog(lines, items, events, portrait);
             currentlyTalking = true;
             activated = false;
         }
-        if (currentlyTalking && !dialog.active)
+        if (currentlyTalking && dialog.active == false)
         {
             currentlyTalking = false;
         }

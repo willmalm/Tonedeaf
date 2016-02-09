@@ -21,7 +21,7 @@ public class DialogFunction : MonoBehaviour {
 	void Update () {
         if (active == true)
         {
-            if (Input.GetKeyDown("e"))
+            if (Input.GetKeyDown("w"))
             {
                 if (currentStage == maxStages)
                 {
