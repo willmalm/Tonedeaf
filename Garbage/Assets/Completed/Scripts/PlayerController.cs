@@ -33,30 +33,41 @@ public class PlayerController : MonoBehaviour {
             transform.position += new Vector3(-playerVar.speed * Time.deltaTime, 0, 0);
             if (gridVar.canMove == true)
             {
-                animator.SetInteger("Direction", 1);
+                //animator.SetInteger("Direction", 1);
             }
+            playerSize.direction = 1;
+            playerAnimation.speed = new Vector2(1,0);
 		}
-
-        if (Input.GetKey("right"))
+        else if (Input.GetKey("right"))
         {
             //rb.MovePosition(transform.position + transform.right * playerVar.speed * Time.deltaTime);
             transform.position += new Vector3(playerVar.speed * Time.deltaTime, 0, 0);
             if (gridVar.canMove == true)
             {
-                animator.SetInteger("Direction", 3);
+                //animator.SetInteger("Direction", 3);
             }
+            playerSize.direction = -1;
+            playerAnimation.speed = new Vector2(1, 0);
+        }
+        else
+        {
+            playerAnimation.speed = new Vector2(0, 0);
         }
         if (Input.GetKey("up") && gridVar.canMove)
         {
             gridVar.gridLayer++;
             gridVar.canMove = false;
-            animator.SetInteger("Direction", 2);
+            //animator.SetInteger("Direction", 2);
         }
         if (Input.GetKey("down") && gridVar.canMove)
         {
             gridVar.gridLayer--;
             gridVar.canMove = false;
-            animator.SetInteger("Direction", 0);
+            //animator.SetInteger("Direction", 0);
+        }
+        if(gridVar.canMove == false)
+        {
+            playerAnimation.speed = new Vector2(1, 0);
         }
     }
 }

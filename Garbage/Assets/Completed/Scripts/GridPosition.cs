@@ -7,6 +7,7 @@ public class GridPosition : MonoBehaviour {
     GridManager gridManager;
     GridVariables gridVar;
     PlayerVariables playerVar;
+    GridLayer gridLayer;
 
     bool movingUp;
     bool movingDown;
@@ -16,7 +17,7 @@ public class GridPosition : MonoBehaviour {
         gridManager = gridManagerObject.GetComponent<GridManager>();
         gridVar = GetComponent<GridVariables>();
         playerVar = GetComponent<PlayerVariables>();
-
+        gridLayer = GetComponent<GridLayer>();
         transform.position = new Vector3(transform.position.x, gridVar.gridLayer * gridManager.tileSize);
 	}
 
@@ -36,22 +37,22 @@ public class GridPosition : MonoBehaviour {
         }
         if (movingDown)
         {
-            //gridVar.canMove = false;
             transform.position += new Vector3(0, -(playerVar.speed / 2) * Time.deltaTime, 0);
             if (transform.position.y <= gridVar.gridPosY)
             {
                 transform.position = new Vector3(transform.position.x, gridVar.gridPosY, 0);
+                gridLayer.UpdateLayer();
                 movingDown = false;
                 gridVar.canMove = true;
             }
         }
-        if (movingUp)
+        else if (movingUp)
         {
-            //gridVar.canMove = false;
             transform.position += new Vector3(0, (playerVar.speed / 2) * Time.deltaTime, 0);
             if (transform.position.y >= gridVar.gridPosY)
             {
                 transform.position = new Vector3(transform.position.x, gridVar.gridPosY, 0);
+                gridLayer.UpdateLayer();
                 movingUp = false;
                 gridVar.canMove = true;
             }
