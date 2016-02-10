@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour {
             }*/
         }
         //Change position of inventory based on current state
-        if (invEnabled)
+        /*if (invEnabled)
         {
             if (inventory.transform.position.x < invVisible)
             {
@@ -73,6 +73,6 @@ public class UIManager : MonoBehaviour {
             {
                 inventory.transform.position = new Vector3(invInvisible, inventory.transform.position.y, 0);
             }
-        }
+        }*/
 	}
 }

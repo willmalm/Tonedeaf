@@ -7,5 +7,11 @@ public class GridManager : MonoBehaviour {
     [Range(0,10)]
     public int maxLayers;
     public int tileSize;
+    public float[] layers;
+
+    void Start()
+    {
+        maxLayers = layers.Length-1;
+    }
 
 }

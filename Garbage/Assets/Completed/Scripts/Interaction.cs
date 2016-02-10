@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Interaction : MonoBehaviour {
 
@@ -13,8 +14,10 @@ public class Interaction : MonoBehaviour {
     public bool canPickup;
 
     //Objects
-    private GameObject invObject;
+    private GameObject objInventory;
     private GameObject player;
+    private GameObject obj;
+    public List<GameObject> objectList;
 
     //Scripts
     private Inventory inventory;
@@ -26,16 +29,13 @@ public class Interaction : MonoBehaviour {
     //Components
     private Text txt;
 
-    //Misc.
-    private RaycastHit2D hit;
-
     void Start()
     {
         //Dependancy "TextBox"
         txt = textBox.GetComponent<Text>();
         //Dependancy "Inventory"
-        invObject = GameObject.FindGameObjectWithTag("Inventory");
-        inventory = invObject.GetComponent<Inventory>();
+        objInventory = GameObject.FindGameObjectWithTag("Inventory");
+        inventory = objInventory.GetComponent<Inventory>();
         //Dependancy "Player"
         player = GameObject.FindGameObjectWithTag("Player");
         playerVar = player.GetComponent<PlayerVariables>();
@@ -43,40 +43,67 @@ public class Interaction : MonoBehaviour {
         objectVar = transform.parent.gameObject.GetComponent<ObjectVariables>();
         objGridVar = transform.parent.gameObject.GetComponent<GridVariables>();
         plGridVar = player.GetComponent<GridVariables>();
+
+        objectList = new List<GameObject>();
     }
 
     void Update() {
         //Adds item to inventory on keypress
-        if (Input.GetKeyDown("p") && canPickup)
+        /*if (Input.GetKeyDown("p") && canPickup)
         {
             Debug.Log("Picked up " + objectVar.objName);
 
             var obj = (GameObject)Instantiate(itemUI, transform.position, Quaternion.identity);
             inventory.AddItem(obj);
             Destroy(transform.parent.gameObject);
-        }
+        }*/
     }
 
     //Changes value of bool based on collision
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.tag == "plInteract" && objGridVar.gridLayer == plGridVar.gridLayer)
-        {
-            canPickup = true;
-        }
-    }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "plInteract" && objGridVar.gridLayer == plGridVar.gridLayer)
+        if (col.tag == "objInteract" && objGridVar.gridLayer == plGridVar.gridLayer)
         {
-            txt.text = "Pick up " + objectVar.objName;
+            objectList.Add(col.gameObject);
+            txt.text = "Pick up ";
         }
     }
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.tag == "plInteract")
+        if (col.tag == "objInteract")
         {
+            objectList.Remove(col.gameObject);
             txt.text = "";
+        }
+    }
+    public void PickUp()
+    {
+        //Check which item is closest to the player
+        while (1 < objectList.Count) {
+            Debug.Log("searching...");
+            for (int i = 0; i < objectList.Count; i++)
+            {
+                for (int j = 0; j < objectList.Count;)
+                {
+                    if (Vector2.Distance(player.transform.position, objectList[j].transform.position) > Vector2.Distance(player.transform.position, objectList[i].transform.position)){
+                        objectList.Remove(objectList[j]);
+                        j++;
+                    }
+                    else
+                    {
+                        objectList.Remove(objectList[i]);
+                        j = -1;
+                    }
+                }
+            }
+        }
+        if (objectList.Count > 0)
+        {
+            //Add item to inventory and destroy object
+            var obj = (GameObject)Instantiate(objectList[0].transform.parent.GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
+            inventory.AddItem(obj);
+            Destroy(objectList[0].transform.parent.gameObject);
+            objectList.Clear();
         }
     }
 }
