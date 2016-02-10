@@ -24,6 +24,7 @@ $RECYCLE.BIN/
 # OSX
 # =========================
 
+
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -47,6 +48,10 @@ Temporary Items
 .apdisk
 
 # Unity files
+!/Assets/
+!/ProjectSettings/
+!.gitignore
+
 *.meta
 *.log
 *.dwlt
