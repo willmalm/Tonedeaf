@@ -49,7 +49,7 @@ public class GridPosition : MonoBehaviour {
         //Translate object based on value of bools
         if (movingDown)
         {
-            transform.position += new Vector3(0, -(playerVar.speed / 2) * Time.deltaTime, 0);
+            transform.position += new Vector3(0, -(playerVar.horizontal_speed / 2) * Time.deltaTime, 0);
             if (transform.position.y <= gridVar.gridPosY)
             {
                 transform.position = new Vector3(transform.position.x, gridVar.gridPosY, 0);
@@ -60,7 +60,7 @@ public class GridPosition : MonoBehaviour {
         }
         else if (movingUp)
         {
-            transform.position += new Vector3(0, (playerVar.speed / 2) * Time.deltaTime, 0);
+            transform.position += new Vector3(0, (playerVar.horizontal_speed / 2) * Time.deltaTime, 0);
             if (transform.position.y >= gridVar.gridPosY)
             {
                 transform.position = new Vector3(transform.position.x, gridVar.gridPosY, 0);

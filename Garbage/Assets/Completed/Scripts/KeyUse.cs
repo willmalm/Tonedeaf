@@ -45,7 +45,7 @@ public class KeyUse : MonoBehaviour {
         {
             plController.MoveUp();
         }
-        if (Input.GetKey(keys[3]))
+        else if (Input.GetKey(keys[3]))
         {
             plController.MoveDown();
         }

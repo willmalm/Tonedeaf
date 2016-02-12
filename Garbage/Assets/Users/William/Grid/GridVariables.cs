@@ -8,7 +8,7 @@ public class GridVariables : MonoBehaviour {
 
     [Header("Read-only")]
     public bool canMoveY;
-    public int gridPosY;
+    public float gridPosY;
 
     private GameObject gridManagerObject;
     private GridManager gridManager;

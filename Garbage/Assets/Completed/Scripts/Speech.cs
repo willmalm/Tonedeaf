@@ -25,7 +25,7 @@ public class Speech : MonoBehaviour {
 
 	void Update () {
         //Shows speech bubble if player is within range
-	    if (player.transform.position.x > transform.position.x-range && player.transform.position.x < transform.position.x + range && plGridVar.gridLayer == gridVar.gridLayer)
+	    if (player.transform.position.x > transform.position.x-range && player.transform.position.x < transform.position.x + range)
         {
             speech.SetActive(true);
         }

@@ -63,14 +63,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
+    <Compile Include="Assets\Completed\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Completed\Scripts\Dialog.cs" />
     <Compile Include="Assets\Completed\Scripts\DialogFunction.cs" />
-    <Compile Include="Assets\Completed\Scripts\GridLayer.cs" />
-    <Compile Include="Assets\Completed\Scripts\GridManager.cs" />
-    <Compile Include="Assets\Completed\Scripts\GridPosition.cs" />
-    <Compile Include="Assets\Completed\Scripts\GridVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\Interaction.cs" />
+    <Compile Include="Assets\Completed\Scripts\InventoryUI.cs" />
+    <Compile Include="Assets\Completed\Scripts\KeyUse.cs" />
+    <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
     <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
+    <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Completed\Scripts\PlayerVariables.cs" />
@@ -80,7 +81,10 @@
     <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
     <Compile Include="Assets\Jens\JensAnimationController.cs" />
     <Compile Include="Assets\KeyBindings.cs" />
+    <Compile Include="Assets\MicrophoneInput.cs" />
     <Compile Include="Assets\SceneChangeTrigger.cs" />
+    <Compile Include="Assets\ScreechTransform.cs" />
+    <Compile Include="Assets\SpawnByLoudness.cs" />
     <Compile Include="Assets\Users\Hans\Cursor.cs" />
     <Compile Include="Assets\Users\Hans\Inventory.cs" />
     <Compile Include="Assets\Users\Hans\Item.cs" />
@@ -89,6 +93,10 @@
     <Compile Include="Assets\Users\Simon\BasicMovement.cs" />
     <Compile Include="Assets\Users\William\Boss1_stage1.cs" />
     <Compile Include="Assets\Users\William\BossBehavior.cs" />
+    <Compile Include="Assets\Users\William\Grid\GridLayer.cs" />
+    <Compile Include="Assets\Users\William\Grid\GridManager.cs" />
+    <Compile Include="Assets\Users\William\Grid\GridPosition.cs" />
+    <Compile Include="Assets\Users\William\Grid\GridVariables.cs" />
     <Compile Include="Assets\Users\William\Ljud.cs" />
     <Compile Include="Assets\Users\William\Obstacle01.cs" />
     <Compile Include="Assets\Users\William\PlayerStatus.cs" />
