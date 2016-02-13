@@ -59,5 +59,13 @@ public class KeyUse : MonoBehaviour {
         {
             inventoryUI.ChangeState();
         }
+        if (Input.GetKeyDown(keys[6]))
+        {
+            plController.Screech();
+        }
+        else if (Input.GetKeyUp(keys[6]))
+        {
+            plController.ScreechEnd();
+        }
 	}
 }

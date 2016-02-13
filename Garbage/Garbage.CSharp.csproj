@@ -72,7 +72,9 @@
     <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
     <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
+    <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
+    <Compile Include="Assets\Completed\Scripts\PivotTest.cs" />
     <Compile Include="Assets\Completed\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Completed\Scripts\PlayerVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\QuestVariables.cs" />

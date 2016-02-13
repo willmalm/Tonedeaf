@@ -49,37 +49,48 @@ public class PlayerController : MonoBehaviour {
         
     public void MoveRight()
     {
-        
+        if (playerVar.immobile == false)
+        {
             idleTimer = 0;
             transform.position += new Vector3(playerVar.horizontal_speed * Time.deltaTime, 0, 0);
             playerSize.direction = -1;
             playerAnimation.speed = new Vector2(1, 0);
             playerAnimation.idleAnimation = 0;
+        }
        
     }
     public void MoveLeft()
     {
+        if (playerVar.immobile == false)
+        {
             idleTimer = 0;
-            transform.position += new Vector3(-playerVar.horizontal_speed *  Time.deltaTime, 0, 0);
+            transform.position += new Vector3(-playerVar.horizontal_speed * Time.deltaTime, 0, 0);
             playerSize.direction = 1;
             playerAnimation.speed = new Vector2(1, 0);
             playerAnimation.idleAnimation = 0;
+        }
     }
     public void MoveUp()
     {
-        idleTimer = 0;
-        transform.position += new Vector3(0, playerVar.vertical_speed * Time.deltaTime, 0);
-        playerAnimation.speed = new Vector2(1, 0);
-        playerAnimation.idleAnimation = 0;
+        if (playerVar.immobile == false)
+        {
+            idleTimer = 0;
+            transform.position += new Vector3(0, playerVar.vertical_speed * Time.deltaTime, 0);
+            playerAnimation.speed = new Vector2(1, 0);
+            playerAnimation.idleAnimation = 0;
+        }
 
 
     }
     public void MoveDown()
     {
-        idleTimer = 0;
-        transform.position += new Vector3(0, -playerVar.vertical_speed * Time.deltaTime, 0);
-        playerAnimation.speed = new Vector2(1, 0);
-        playerAnimation.idleAnimation = 0;
+        if (playerVar.immobile == false)
+        {
+            idleTimer = 0;
+            transform.position += new Vector3(0, -playerVar.vertical_speed * Time.deltaTime, 0);
+            playerAnimation.speed = new Vector2(1, 0);
+            playerAnimation.idleAnimation = 0;
+        }
     }
     public void Idle()
     {
@@ -103,5 +114,15 @@ public class PlayerController : MonoBehaviour {
             {
                 playerAnimation.idleAnimation = 0;
             }
+    }
+    public void Screech()
+    {
+        playerAnimation.screamStrength = 1;
+        playerVar.immobile = true;
+    }
+    public void ScreechEnd()
+    {
+        playerAnimation.screamStrength = 0;
+        playerVar.immobile = false;
     }
 }
