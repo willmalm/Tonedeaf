@@ -15,14 +15,10 @@ public class PlayerController : MonoBehaviour {
     public bool moving;
     public float idleTimer;
 
-    //Objects
-    private GameObject objGridManager;
-
     //Scripts
     private PlayerVariables playerVar;
     private GridVariables gridVar;
     private SpriteSize playerSize;
-    private GridManager gridManager;
     private JensAnimationController playerAnimation;
 
     private int backUpLayer;
@@ -36,10 +32,6 @@ public class PlayerController : MonoBehaviour {
         //Dependency "Player Sprite"
         playerAnimation = playerSprite.GetComponent<JensAnimationController>();
         playerSize = playerSprite.GetComponent<SpriteSize>();
-
-        //Dependency "GridManager"
-        objGridManager = GameObject.FindGameObjectWithTag("GridManager");
-        gridManager = objGridManager.GetComponent<GridManager>();
 
         backUpLayer = 0;
 	}

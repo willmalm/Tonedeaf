@@ -53,7 +53,7 @@ Temporary Items
 !.gitignore
 
 *.meta
-*.log
-*.dwlt
-*.info
-*.dll
+# *.log
+# *.dwlt
+# *.info
+# *.dll
