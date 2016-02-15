@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
     <Compile Include="Assets\Completed\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Completed\Scripts\Dialog.cs" />
