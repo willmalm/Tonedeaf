@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Beehive\BeehiveController.cs" />
     <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
     <Compile Include="Assets\Completed\Scripts\CameraMovement.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Completed\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Completed\Scripts\PlayerVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\QuestVariables.cs" />
+    <Compile Include="Assets\Completed\Scripts\Screech.cs" />
     <Compile Include="Assets\Completed\Scripts\Speech.cs" />
     <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
     <Compile Include="Assets\Completed\Scripts\UIManager.cs" />

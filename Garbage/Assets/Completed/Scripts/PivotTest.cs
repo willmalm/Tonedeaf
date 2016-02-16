@@ -7,10 +7,12 @@ public class PivotTest : MonoBehaviour {
 
     ObjectVariables objectVar;
     public GameObject parent;
+    private BeehiveController beehive;
 
 	// Use this for initialization
 	void Start()
     {
+        beehive = GetComponent<BeehiveController>();
         parent = transform.parent.gameObject;
         try {
             objectVar = transform.parent.gameObject.GetComponent<ObjectVariables>();
@@ -24,22 +26,9 @@ public class PivotTest : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        try{
             if (objectVar.used)
             {
-                if (transform.position.y <= transform.parent.gameObject.transform.position.y)
-                {
-                    transform.position = transform.parent.gameObject.transform.position;
-                }
-                else
-                {
-                    transform.position += new Vector3(0, -4 * Time.deltaTime, 0);
-                }
+                beehive.dead = true;
             }
-        }
-        catch
-        {
-            Debug.Log("Failed to assign parent");
-        }
     }
 }

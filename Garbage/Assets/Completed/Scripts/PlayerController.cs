@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     public float idleTimer;
     public float stepTimer;
     public float stepDelay;
+    public string stepSound;
 
     //Scripts
     private PlayerVariables playerVar;
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
-                audioManager.playSound("Hit");
+                audioManager.PlaySound(stepSound);
                 stepTimer = 0;
             }
         }
@@ -77,7 +78,7 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
-                audioManager.playSound("Hit");
+                audioManager.PlaySound(stepSound);
                 stepTimer = 0;
             }
         }
@@ -93,7 +94,7 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
-                audioManager.playSound("Hit");
+                audioManager.PlaySound(stepSound);
                 stepTimer = 0;
             }
         }
@@ -111,7 +112,7 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
-                audioManager.playSound("Hit");
+                audioManager.PlaySound(stepSound);
                 stepTimer = 0;
             }
         }
