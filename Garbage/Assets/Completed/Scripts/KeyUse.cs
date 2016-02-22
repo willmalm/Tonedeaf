@@ -17,12 +17,12 @@ public class KeyUse : MonoBehaviour {
     private InventoryUI inventoryUI;
 
     void Start () {
-        //Dependancy "Player"
+        //Dependency "Player"
         player = GameObject.FindGameObjectWithTag("Player");
         playerInteract = GameObject.FindGameObjectWithTag("plInteract");
         plController = player.GetComponent<PlayerController>();
         plInteraction = playerInteract.GetComponent<Interaction>();
-        //Dependancy "Inventory"
+        //Dependency "Inventory"
         inventory = GameObject.FindGameObjectWithTag("Inventory");
         inventoryUI = inventory.GetComponent<InventoryUI>();
 	}
@@ -59,12 +59,15 @@ public class KeyUse : MonoBehaviour {
         {
             inventoryUI.ChangeState();
         }
+        //Scrrech
         if (Input.GetKeyDown(keys[6]))
         {
+            plController.interactingWithScreech = true;
             plController.Screech();
         }
         else if (Input.GetKeyUp(keys[6]))
         {
+            plController.interactingWithScreech = false;
             plController.ScreechEnd();
         }
 	}
