@@ -1,12 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{4D4193BA-78D9-0409-71DE-3D323AB17506}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -46,56 +45,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Beehive\BeehiveController.cs" />
-    <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
-    <Compile Include="Assets\Completed\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Completed\Scripts\Dialog.cs" />
-    <Compile Include="Assets\Completed\Scripts\DialogFunction.cs" />
-    <Compile Include="Assets\Completed\Scripts\Interaction.cs" />
-    <Compile Include="Assets\Completed\Scripts\InventoryUI.cs" />
-    <Compile Include="Assets\Completed\Scripts\KeyUse.cs" />
-    <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
-    <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
-    <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
-    <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
-    <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
-    <Compile Include="Assets\Completed\Scripts\PivotTest.cs" />
-    <Compile Include="Assets\Completed\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Completed\Scripts\PlayerVariables.cs" />
-    <Compile Include="Assets\Completed\Scripts\QuestVariables.cs" />
-    <Compile Include="Assets\Completed\Scripts\Speech.cs" />
-    <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
-    <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Jens\JensAnimationController.cs" />
-    <Compile Include="Assets\KeyBindings.cs" />
-    <Compile Include="Assets\MicrophoneInput.cs" />
-    <Compile Include="Assets\SceneChangeTrigger.cs" />
-    <Compile Include="Assets\ScreechTransform.cs" />
-    <Compile Include="Assets\SpawnByLoudness.cs" />
-    <Compile Include="Assets\Users\Hans\Cursor.cs" />
-    <Compile Include="Assets\Users\Hans\Inventory.cs" />
-    <Compile Include="Assets\Users\Hans\Item.cs" />
-    <Compile Include="Assets\Users\Hans\KeyID.cs" />
-    <Compile Include="Assets\Users\Hans\Settings.cs" />
-    <Compile Include="Assets\Users\Simon\BasicMovement.cs" />
-    <Compile Include="Assets\Users\William\Boss1_stage1.cs" />
-    <Compile Include="Assets\Users\William\BossBehavior.cs" />
-    <Compile Include="Assets\Users\William\Grid\GridLayer.cs" />
-    <Compile Include="Assets\Users\William\Grid\GridManager.cs" />
-    <Compile Include="Assets\Users\William\Grid\GridPosition.cs" />
-    <Compile Include="Assets\Users\William\Grid\GridVariables.cs" />
-    <Compile Include="Assets\Users\William\Ljud.cs" />
-    <Compile Include="Assets\Users\William\Obstacle01.cs" />
-    <Compile Include="Assets\Users\William\PlayerStatus.cs" />
-    <Compile Include="Assets\Users\William\StageVariables.cs" />
-    <None Include="Assets\eufaof.txt" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Hans/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>D:/Hans/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\Beehive\BeehiveController.cs" />
+     <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
+     <Compile Include="Assets\Completed\Scripts\CameraMovement.cs" />
+     <Compile Include="Assets\Completed\Scripts\Dialog.cs" />
+     <Compile Include="Assets\Completed\Scripts\DialogFunction.cs" />
+     <Compile Include="Assets\Completed\Scripts\Interaction.cs" />
+     <Compile Include="Assets\Completed\Scripts\InventoryUI.cs" />
+     <Compile Include="Assets\Completed\Scripts\KeyUse.cs" />
+     <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
+     <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
+     <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
+     <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
+     <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
+     <Compile Include="Assets\Completed\Scripts\PivotTest.cs" />
+     <Compile Include="Assets\Completed\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Completed\Scripts\PlayerVariables.cs" />
+     <Compile Include="Assets\Completed\Scripts\QuestVariables.cs" />
+     <Compile Include="Assets\Completed\Scripts\SceneChangeTrigger.cs" />
+     <Compile Include="Assets\Completed\Scripts\Speech.cs" />
+     <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
+     <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
+     <Compile Include="Assets\Jens\JensAnimationController.cs" />
+     <Compile Include="Assets\KeyBindings.cs" />
+     <Compile Include="Assets\MicrophoneInput.cs" />
+     <Compile Include="Assets\ScreechTransform.cs" />
+     <Compile Include="Assets\SpawnByLoudness.cs" />
+     <Compile Include="Assets\Users\Hans\Cursor.cs" />
+     <Compile Include="Assets\Users\Hans\Inventory.cs" />
+     <Compile Include="Assets\Users\Hans\Item.cs" />
+     <Compile Include="Assets\Users\Hans\KeyID.cs" />
+     <Compile Include="Assets\Users\Hans\Settings.cs" />
+     <Compile Include="Assets\Users\Simon\BasicMovement.cs" />
+     <Compile Include="Assets\Users\William\Boss1_stage1.cs" />
+     <Compile Include="Assets\Users\William\BossBehavior.cs" />
+     <Compile Include="Assets\Users\William\Grid\GridLayer.cs" />
+     <Compile Include="Assets\Users\William\Grid\GridManager.cs" />
+     <Compile Include="Assets\Users\William\Grid\GridPosition.cs" />
+     <Compile Include="Assets\Users\William\Grid\GridVariables.cs" />
+     <Compile Include="Assets\Users\William\Ljud.cs" />
+     <Compile Include="Assets\Users\William\Obstacle01.cs" />
+     <Compile Include="Assets\Users\William\PlayerStatus.cs" />
+     <Compile Include="Assets\Users\William\StageVariables.cs" />
+     <None Include="Assets\eufaof.txt" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>D:/Hans/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>D:/Hans/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -105,4 +104,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>
