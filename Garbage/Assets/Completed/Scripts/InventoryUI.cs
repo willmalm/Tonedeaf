@@ -19,7 +19,7 @@ public class InventoryUI : MonoBehaviour {
     void Update()
     {
         enabledPosX = targetObject.transform.position.x + posX;
-        disabledPosX = targetObject.transform.position.x + posX*3;
+        disabledPosX = targetObject.transform.position.x + posX*5;
 
         if (activated)
         {

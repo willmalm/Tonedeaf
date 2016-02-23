@@ -29,22 +29,25 @@ public class Interaction : MonoBehaviour {
     //Components
     private Text txt;
 
+    public List<GameObject> backUpList;
+
     void Start()
     {
-        //Dependancy "TextBox"
+        //Dependency "TextBox"
         txt = textBox.GetComponent<Text>();
-        //Dependancy "Inventory"
+        //Dependency "Inventory"
         objInventory = GameObject.FindGameObjectWithTag("Inventory");
         inventory = objInventory.GetComponent<Inventory>();
-        //Dependancy "Player"
+        //Dependency "Player"
         player = GameObject.FindGameObjectWithTag("Player");
         playerVar = player.GetComponent<PlayerVariables>();
-        //Dependancy "ObjectVariables", "Player_GridVariables", "This_GridVariables"
+        //Dependency "ObjectVariables", "Player_GridVariables", "This_GridVariables"
         objectVar = transform.parent.gameObject.GetComponent<ObjectVariables>();
         objGridVar = transform.parent.gameObject.GetComponent<GridVariables>();
         plGridVar = player.GetComponent<GridVariables>();
 
         objectList = new List<GameObject>();
+        backUpList = new List<GameObject>();
     }
 
     void Update() {
@@ -62,10 +65,11 @@ public class Interaction : MonoBehaviour {
     //Changes value of bool based on collision
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "objInteract" && objGridVar.gridLayer == plGridVar.gridLayer)
+        if (col.tag == "objInteract")
         {
             objectList.Add(col.gameObject);
-            txt.text = "Pick up ";
+            backUpList.Add(col.gameObject);
+            col.gameObject.transform.parent.gameObject.GetComponent<ObjectVariables>().highlight.SetActive(true);
         }
     }
     void OnTriggerExit2D(Collider2D col)
@@ -73,7 +77,8 @@ public class Interaction : MonoBehaviour {
         if (col.tag == "objInteract")
         {
             objectList.Remove(col.gameObject);
-            txt.text = "";
+            backUpList.Remove(col.gameObject);
+            col.gameObject.transform.parent.gameObject.GetComponent<ObjectVariables>().highlight.SetActive(false);
         }
     }
     public void PickUp()
@@ -85,14 +90,24 @@ public class Interaction : MonoBehaviour {
             {
                 for (int j = 0; j < objectList.Count;)
                 {
-                    if (Vector2.Distance(player.transform.position, objectList[j].transform.position) > Vector2.Distance(player.transform.position, objectList[i].transform.position)){
-                        objectList.Remove(objectList[j]);
-                        j++;
+                    if (j != i)
+                    {
+                        if (Vector2.Distance(player.transform.position, objectList[j].transform.position) > Vector2.Distance(player.transform.position, objectList[i].transform.position))
+                        {
+                            objectList.Remove(objectList[j]);
+                            Debug.Log("Removed object j" + j);
+                            j++;
+                        }
+                        else
+                        {
+                            objectList.Remove(objectList[i]);
+                            Debug.Log("Removed object i" + i);
+                            j = 1000000;
+                        }
                     }
                     else
                     {
-                        objectList.Remove(objectList[i]);
-                        j = -1;
+                        j++;
                     }
                 }
             }
@@ -102,8 +117,12 @@ public class Interaction : MonoBehaviour {
             //Add item to inventory and destroy object
             var obj = (GameObject)Instantiate(objectList[0].transform.parent.GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
             inventory.AddItem(obj);
-            Destroy(objectList[0].transform.parent.gameObject);
-            objectList.Clear();
+            GameObject singleObject = objectList[0];
+            backUpList.Remove(singleObject);
+            Destroy(singleObject.transform.parent.gameObject);
+            objectList = backUpList;
+            //objectList.Clear();
+            //objectList = backUpList;
         }
     }
 }

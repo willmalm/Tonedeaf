@@ -1,0 +1,1861 @@
+fileFormatVersion: 2
+guid: 7f20bf8b79a66ee4fbdf835f751e1d8b
+timeCreated: 1455541862
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: B1
+    100004: B1_001
+    100006: B1_002
+    100008: B1_003
+    100010: B1_004
+    100012: B1_005
+    100014: B1_006
+    100016: B1_007
+    100018: B1_008
+    100020: B1_009
+    100022: B1_010
+    100024: B1_011
+    100026: B1_012
+    100028: B1_013
+    100030: B1_014
+    100032: B1_015
+    100034: B1_016
+    100036: B1_017
+    100038: B2
+    100040: B2_001
+    100042: B2_002
+    100044: B2_003
+    100046: B2_004
+    100048: B2_005
+    100050: B2_006
+    100052: B2_007
+    100054: B2_008
+    100056: B2_009
+    100058: B2_010
+    100060: B2_011
+    100062: B2_012
+    100064: B2_013
+    100066: B2_014
+    100068: B2_015
+    100070: B2_016
+    100072: B2_017
+    100074: B3
+    100076: B3_001
+    100078: B3_002
+    100080: B3_003
+    100082: B3_004
+    100084: B3_005
+    100086: B3_006
+    100088: B3_007
+    100090: B3_008
+    100092: B3_009
+    100094: B3_010
+    100096: B3_011
+    100098: B3_012
+    100100: B3_013
+    100102: B3_014
+    100104: B3_015
+    100106: B3_016
+    100108: B3_017
+    100110: B4
+    100112: B4_001
+    100114: B4_002
+    100116: B4_003
+    100118: B4_004
+    100120: B4_005
+    100122: B4_006
+    100124: B4_007
+    100126: B4_008
+    100128: B4_009
+    100130: B4_010
+    100132: B4_011
+    100134: B4_012
+    100136: B4_013
+    100138: B4_014
+    100140: B4_015
+    100142: B4_016
+    100144: B4_017
+    100146: B5
+    100148: B5_001
+    100150: B5_002
+    100152: B5_003
+    100154: B5_004
+    100156: B5_005
+    100158: B5_006
+    100160: B5_007
+    100162: B5_008
+    100164: B5_009
+    100166: B5_010
+    100168: B5_011
+    100170: B5_012
+    100172: B5_013
+    100174: B5_014
+    100176: B5_015
+    100178: B5_016
+    100180: B5_017
+    100182: //RootNode
+    100184: Hive
+    100186: Hive_a
+    100188: Hive_b
+    100190: Hive_c
+    100192: Hive_d
+    100194: Plane
+    100196: Root
+    400000: Armature
+    400002: B1
+    400004: B1_001
+    400006: B1_002
+    400008: B1_003
+    400010: B1_004
+    400012: B1_005
+    400014: B1_006
+    400016: B1_007
+    400018: B1_008
+    400020: B1_009
+    400022: B1_010
+    400024: B1_011
+    400026: B1_012
+    400028: B1_013
+    400030: B1_014
+    400032: B1_015
+    400034: B1_016
+    400036: B1_017
+    400038: B2
+    400040: B2_001
+    400042: B2_002
+    400044: B2_003
+    400046: B2_004
+    400048: B2_005
+    400050: B2_006
+    400052: B2_007
+    400054: B2_008
+    400056: B2_009
+    400058: B2_010
+    400060: B2_011
+    400062: B2_012
+    400064: B2_013
+    400066: B2_014
+    400068: B2_015
+    400070: B2_016
+    400072: B2_017
+    400074: B3
+    400076: B3_001
+    400078: B3_002
+    400080: B3_003
+    400082: B3_004
+    400084: B3_005
+    400086: B3_006
+    400088: B3_007
+    400090: B3_008
+    400092: B3_009
+    400094: B3_010
+    400096: B3_011
+    400098: B3_012
+    400100: B3_013
+    400102: B3_014
+    400104: B3_015
+    400106: B3_016
+    400108: B3_017
+    400110: B4
+    400112: B4_001
+    400114: B4_002
+    400116: B4_003
+    400118: B4_004
+    400120: B4_005
+    400122: B4_006
+    400124: B4_007
+    400126: B4_008
+    400128: B4_009
+    400130: B4_010
+    400132: B4_011
+    400134: B4_012
+    400136: B4_013
+    400138: B4_014
+    400140: B4_015
+    400142: B4_016
+    400144: B4_017
+    400146: B5
+    400148: B5_001
+    400150: B5_002
+    400152: B5_003
+    400154: B5_004
+    400156: B5_005
+    400158: B5_006
+    400160: B5_007
+    400162: B5_008
+    400164: B5_009
+    400166: B5_010
+    400168: B5_011
+    400170: B5_012
+    400172: B5_013
+    400174: B5_014
+    400176: B5_015
+    400178: B5_016
+    400180: B5_017
+    400182: //RootNode
+    400184: Hive
+    400186: Hive_a
+    400188: Hive_b
+    400190: Hive_c
+    400192: Hive_d
+    400194: Plane
+    400196: Root
+    4300000: Plane
+    7400000: Default Take
+    7400002: Destroy
+    7400004: Destroy_Bake
+    7400006: FuckYou
+    7400008: FuckYou_Bake
+    7400010: Idle
+    7400012: Idle_Bake
+    9500000: //RootNode
+    13700000: Plane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/B1
+        weight: 1
+      - path: Armature/Root/B1/B1_002
+        weight: 1
+      - path: Armature/Root/B1/B1_004
+        weight: 1
+      - path: Armature/Root/B1/B1_006
+        weight: 1
+      - path: Armature/Root/B1/B1_008
+        weight: 1
+      - path: Armature/Root/B1/B1_010
+        weight: 1
+      - path: Armature/Root/B1/B1_012
+        weight: 1
+      - path: Armature/Root/B1/B1_014
+        weight: 1
+      - path: Armature/Root/B1/B1_016
+        weight: 1
+      - path: Armature/Root/B1_001
+        weight: 1
+      - path: Armature/Root/B1_001/B1_003
+        weight: 1
+      - path: Armature/Root/B1_001/B1_005
+        weight: 1
+      - path: Armature/Root/B1_001/B1_007
+        weight: 1
+      - path: Armature/Root/B1_001/B1_009
+        weight: 1
+      - path: Armature/Root/B1_001/B1_011
+        weight: 1
+      - path: Armature/Root/B1_001/B1_013
+        weight: 1
+      - path: Armature/Root/B1_001/B1_015
+        weight: 1
+      - path: Armature/Root/B1_001/B1_017
+        weight: 1
+      - path: Armature/Root/B2
+        weight: 1
+      - path: Armature/Root/B2/B2_002
+        weight: 1
+      - path: Armature/Root/B2/B2_004
+        weight: 1
+      - path: Armature/Root/B2/B2_006
+        weight: 1
+      - path: Armature/Root/B2/B2_008
+        weight: 1
+      - path: Armature/Root/B2/B2_010
+        weight: 1
+      - path: Armature/Root/B2/B2_012
+        weight: 1
+      - path: Armature/Root/B2/B2_014
+        weight: 1
+      - path: Armature/Root/B2/B2_016
+        weight: 1
+      - path: Armature/Root/B2_001
+        weight: 1
+      - path: Armature/Root/B2_001/B2_003
+        weight: 1
+      - path: Armature/Root/B2_001/B2_005
+        weight: 1
+      - path: Armature/Root/B2_001/B2_007
+        weight: 1
+      - path: Armature/Root/B2_001/B2_009
+        weight: 1
+      - path: Armature/Root/B2_001/B2_011
+        weight: 1
+      - path: Armature/Root/B2_001/B2_013
+        weight: 1
+      - path: Armature/Root/B2_001/B2_015
+        weight: 1
+      - path: Armature/Root/B2_001/B2_017
+        weight: 1
+      - path: Armature/Root/B3
+        weight: 1
+      - path: Armature/Root/B3/B3_002
+        weight: 1
+      - path: Armature/Root/B3/B3_004
+        weight: 1
+      - path: Armature/Root/B3/B3_006
+        weight: 1
+      - path: Armature/Root/B3/B3_008
+        weight: 1
+      - path: Armature/Root/B3/B3_010
+        weight: 1
+      - path: Armature/Root/B3/B3_012
+        weight: 1
+      - path: Armature/Root/B3/B3_014
+        weight: 1
+      - path: Armature/Root/B3/B3_016
+        weight: 1
+      - path: Armature/Root/B3_001
+        weight: 1
+      - path: Armature/Root/B3_001/B3_003
+        weight: 1
+      - path: Armature/Root/B3_001/B3_005
+        weight: 1
+      - path: Armature/Root/B3_001/B3_007
+        weight: 1
+      - path: Armature/Root/B3_001/B3_009
+        weight: 1
+      - path: Armature/Root/B3_001/B3_011
+        weight: 1
+      - path: Armature/Root/B3_001/B3_013
+        weight: 1
+      - path: Armature/Root/B3_001/B3_015
+        weight: 1
+      - path: Armature/Root/B3_001/B3_017
+        weight: 1
+      - path: Armature/Root/B4
+        weight: 1
+      - path: Armature/Root/B4/B4_002
+        weight: 1
+      - path: Armature/Root/B4/B4_004
+        weight: 1
+      - path: Armature/Root/B4/B4_006
+        weight: 1
+      - path: Armature/Root/B4/B4_008
+        weight: 1
+      - path: Armature/Root/B4/B4_010
+        weight: 1
+      - path: Armature/Root/B4/B4_012
+        weight: 1
+      - path: Armature/Root/B4/B4_014
+        weight: 1
+      - path: Armature/Root/B4/B4_016
+        weight: 1
+      - path: Armature/Root/B4_001
+        weight: 1
+      - path: Armature/Root/B4_001/B4_003
+        weight: 1
+      - path: Armature/Root/B4_001/B4_005
+        weight: 1
+      - path: Armature/Root/B4_001/B4_007
+        weight: 1
+      - path: Armature/Root/B4_001/B4_009
+        weight: 1
+      - path: Armature/Root/B4_001/B4_011
+        weight: 1
+      - path: Armature/Root/B4_001/B4_013
+        weight: 1
+      - path: Armature/Root/B4_001/B4_015
+        weight: 1
+      - path: Armature/Root/B4_001/B4_017
+        weight: 1
+      - path: Armature/Root/B5
+        weight: 1
+      - path: Armature/Root/B5/B5_002
+        weight: 1
+      - path: Armature/Root/B5/B5_004
+        weight: 1
+      - path: Armature/Root/B5/B5_006
+        weight: 1
+      - path: Armature/Root/B5/B5_008
+        weight: 1
+      - path: Armature/Root/B5/B5_010
+        weight: 1
+      - path: Armature/Root/B5/B5_012
+        weight: 1
+      - path: Armature/Root/B5/B5_014
+        weight: 1
+      - path: Armature/Root/B5/B5_016
+        weight: 1
+      - path: Armature/Root/B5_001
+        weight: 1
+      - path: Armature/Root/B5_001/B5_003
+        weight: 1
+      - path: Armature/Root/B5_001/B5_005
+        weight: 1
+      - path: Armature/Root/B5_001/B5_007
+        weight: 1
+      - path: Armature/Root/B5_001/B5_009
+        weight: 1
+      - path: Armature/Root/B5_001/B5_011
+        weight: 1
+      - path: Armature/Root/B5_001/B5_013
+        weight: 1
+      - path: Armature/Root/B5_001/B5_015
+        weight: 1
+      - path: Armature/Root/B5_001/B5_017
+        weight: 1
+      - path: Armature/Root/Hive
+        weight: 1
+      - path: Armature/Root/Hive_a
+        weight: 1
+      - path: Armature/Root/Hive_b
+        weight: 1
+      - path: Armature/Root/Hive_c
+        weight: 1
+      - path: Armature/Root/Hive_d
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Destroy
+      takeName: Destroy
+      firstFrame: 0
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/B1
+        weight: 1
+      - path: Armature/Root/B1/B1_002
+        weight: 1
+      - path: Armature/Root/B1/B1_004
+        weight: 1
+      - path: Armature/Root/B1/B1_006
+        weight: 1
+      - path: Armature/Root/B1/B1_008
+        weight: 1
+      - path: Armature/Root/B1/B1_010
+        weight: 1
+      - path: Armature/Root/B1/B1_012
+        weight: 1
+      - path: Armature/Root/B1/B1_014
+        weight: 1
+      - path: Armature/Root/B1/B1_016
+        weight: 1
+      - path: Armature/Root/B1_001
+        weight: 1
+      - path: Armature/Root/B1_001/B1_003
+        weight: 1
+      - path: Armature/Root/B1_001/B1_005
+        weight: 1
+      - path: Armature/Root/B1_001/B1_007
+        weight: 1
+      - path: Armature/Root/B1_001/B1_009
+        weight: 1
+      - path: Armature/Root/B1_001/B1_011
+        weight: 1
+      - path: Armature/Root/B1_001/B1_013
+        weight: 1
+      - path: Armature/Root/B1_001/B1_015
+        weight: 1
+      - path: Armature/Root/B1_001/B1_017
+        weight: 1
+      - path: Armature/Root/B2
+        weight: 1
+      - path: Armature/Root/B2/B2_002
+        weight: 1
+      - path: Armature/Root/B2/B2_004
+        weight: 1
+      - path: Armature/Root/B2/B2_006
+        weight: 1
+      - path: Armature/Root/B2/B2_008
+        weight: 1
+      - path: Armature/Root/B2/B2_010
+        weight: 1
+      - path: Armature/Root/B2/B2_012
+        weight: 1
+      - path: Armature/Root/B2/B2_014
+        weight: 1
+      - path: Armature/Root/B2/B2_016
+        weight: 1
+      - path: Armature/Root/B2_001
+        weight: 1
+      - path: Armature/Root/B2_001/B2_003
+        weight: 1
+      - path: Armature/Root/B2_001/B2_005
+        weight: 1
+      - path: Armature/Root/B2_001/B2_007
+        weight: 1
+      - path: Armature/Root/B2_001/B2_009
+        weight: 1
+      - path: Armature/Root/B2_001/B2_011
+        weight: 1
+      - path: Armature/Root/B2_001/B2_013
+        weight: 1
+      - path: Armature/Root/B2_001/B2_015
+        weight: 1
+      - path: Armature/Root/B2_001/B2_017
+        weight: 1
+      - path: Armature/Root/B3
+        weight: 1
+      - path: Armature/Root/B3/B3_002
+        weight: 1
+      - path: Armature/Root/B3/B3_004
+        weight: 1
+      - path: Armature/Root/B3/B3_006
+        weight: 1
+      - path: Armature/Root/B3/B3_008
+        weight: 1
+      - path: Armature/Root/B3/B3_010
+        weight: 1
+      - path: Armature/Root/B3/B3_012
+        weight: 1
+      - path: Armature/Root/B3/B3_014
+        weight: 1
+      - path: Armature/Root/B3/B3_016
+        weight: 1
+      - path: Armature/Root/B3_001
+        weight: 1
+      - path: Armature/Root/B3_001/B3_003
+        weight: 1
+      - path: Armature/Root/B3_001/B3_005
+        weight: 1
+      - path: Armature/Root/B3_001/B3_007
+        weight: 1
+      - path: Armature/Root/B3_001/B3_009
+        weight: 1
+      - path: Armature/Root/B3_001/B3_011
+        weight: 1
+      - path: Armature/Root/B3_001/B3_013
+        weight: 1
+      - path: Armature/Root/B3_001/B3_015
+        weight: 1
+      - path: Armature/Root/B3_001/B3_017
+        weight: 1
+      - path: Armature/Root/B4
+        weight: 1
+      - path: Armature/Root/B4/B4_002
+        weight: 1
+      - path: Armature/Root/B4/B4_004
+        weight: 1
+      - path: Armature/Root/B4/B4_006
+        weight: 1
+      - path: Armature/Root/B4/B4_008
+        weight: 1
+      - path: Armature/Root/B4/B4_010
+        weight: 1
+      - path: Armature/Root/B4/B4_012
+        weight: 1
+      - path: Armature/Root/B4/B4_014
+        weight: 1
+      - path: Armature/Root/B4/B4_016
+        weight: 1
+      - path: Armature/Root/B4_001
+        weight: 1
+      - path: Armature/Root/B4_001/B4_003
+        weight: 1
+      - path: Armature/Root/B4_001/B4_005
+        weight: 1
+      - path: Armature/Root/B4_001/B4_007
+        weight: 1
+      - path: Armature/Root/B4_001/B4_009
+        weight: 1
+      - path: Armature/Root/B4_001/B4_011
+        weight: 1
+      - path: Armature/Root/B4_001/B4_013
+        weight: 1
+      - path: Armature/Root/B4_001/B4_015
+        weight: 1
+      - path: Armature/Root/B4_001/B4_017
+        weight: 1
+      - path: Armature/Root/B5
+        weight: 1
+      - path: Armature/Root/B5/B5_002
+        weight: 1
+      - path: Armature/Root/B5/B5_004
+        weight: 1
+      - path: Armature/Root/B5/B5_006
+        weight: 1
+      - path: Armature/Root/B5/B5_008
+        weight: 1
+      - path: Armature/Root/B5/B5_010
+        weight: 1
+      - path: Armature/Root/B5/B5_012
+        weight: 1
+      - path: Armature/Root/B5/B5_014
+        weight: 1
+      - path: Armature/Root/B5/B5_016
+        weight: 1
+      - path: Armature/Root/B5_001
+        weight: 1
+      - path: Armature/Root/B5_001/B5_003
+        weight: 1
+      - path: Armature/Root/B5_001/B5_005
+        weight: 1
+      - path: Armature/Root/B5_001/B5_007
+        weight: 1
+      - path: Armature/Root/B5_001/B5_009
+        weight: 1
+      - path: Armature/Root/B5_001/B5_011
+        weight: 1
+      - path: Armature/Root/B5_001/B5_013
+        weight: 1
+      - path: Armature/Root/B5_001/B5_015
+        weight: 1
+      - path: Armature/Root/B5_001/B5_017
+        weight: 1
+      - path: Armature/Root/Hive
+        weight: 1
+      - path: Armature/Root/Hive_a
+        weight: 1
+      - path: Armature/Root/Hive_b
+        weight: 1
+      - path: Armature/Root/Hive_c
+        weight: 1
+      - path: Armature/Root/Hive_d
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Destroy_Bake
+      takeName: Destroy_Bake
+      firstFrame: 0
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/B1
+        weight: 1
+      - path: Armature/Root/B1/B1_002
+        weight: 1
+      - path: Armature/Root/B1/B1_004
+        weight: 1
+      - path: Armature/Root/B1/B1_006
+        weight: 1
+      - path: Armature/Root/B1/B1_008
+        weight: 1
+      - path: Armature/Root/B1/B1_010
+        weight: 1
+      - path: Armature/Root/B1/B1_012
+        weight: 1
+      - path: Armature/Root/B1/B1_014
+        weight: 1
+      - path: Armature/Root/B1/B1_016
+        weight: 1
+      - path: Armature/Root/B1_001
+        weight: 1
+      - path: Armature/Root/B1_001/B1_003
+        weight: 1
+      - path: Armature/Root/B1_001/B1_005
+        weight: 1
+      - path: Armature/Root/B1_001/B1_007
+        weight: 1
+      - path: Armature/Root/B1_001/B1_009
+        weight: 1
+      - path: Armature/Root/B1_001/B1_011
+        weight: 1
+      - path: Armature/Root/B1_001/B1_013
+        weight: 1
+      - path: Armature/Root/B1_001/B1_015
+        weight: 1
+      - path: Armature/Root/B1_001/B1_017
+        weight: 1
+      - path: Armature/Root/B2
+        weight: 1
+      - path: Armature/Root/B2/B2_002
+        weight: 1
+      - path: Armature/Root/B2/B2_004
+        weight: 1
+      - path: Armature/Root/B2/B2_006
+        weight: 1
+      - path: Armature/Root/B2/B2_008
+        weight: 1
+      - path: Armature/Root/B2/B2_010
+        weight: 1
+      - path: Armature/Root/B2/B2_012
+        weight: 1
+      - path: Armature/Root/B2/B2_014
+        weight: 1
+      - path: Armature/Root/B2/B2_016
+        weight: 1
+      - path: Armature/Root/B2_001
+        weight: 1
+      - path: Armature/Root/B2_001/B2_003
+        weight: 1
+      - path: Armature/Root/B2_001/B2_005
+        weight: 1
+      - path: Armature/Root/B2_001/B2_007
+        weight: 1
+      - path: Armature/Root/B2_001/B2_009
+        weight: 1
+      - path: Armature/Root/B2_001/B2_011
+        weight: 1
+      - path: Armature/Root/B2_001/B2_013
+        weight: 1
+      - path: Armature/Root/B2_001/B2_015
+        weight: 1
+      - path: Armature/Root/B2_001/B2_017
+        weight: 1
+      - path: Armature/Root/B3
+        weight: 1
+      - path: Armature/Root/B3/B3_002
+        weight: 1
+      - path: Armature/Root/B3/B3_004
+        weight: 1
+      - path: Armature/Root/B3/B3_006
+        weight: 1
+      - path: Armature/Root/B3/B3_008
+        weight: 1
+      - path: Armature/Root/B3/B3_010
+        weight: 1
+      - path: Armature/Root/B3/B3_012
+        weight: 1
+      - path: Armature/Root/B3/B3_014
+        weight: 1
+      - path: Armature/Root/B3/B3_016
+        weight: 1
+      - path: Armature/Root/B3_001
+        weight: 1
+      - path: Armature/Root/B3_001/B3_003
+        weight: 1
+      - path: Armature/Root/B3_001/B3_005
+        weight: 1
+      - path: Armature/Root/B3_001/B3_007
+        weight: 1
+      - path: Armature/Root/B3_001/B3_009
+        weight: 1
+      - path: Armature/Root/B3_001/B3_011
+        weight: 1
+      - path: Armature/Root/B3_001/B3_013
+        weight: 1
+      - path: Armature/Root/B3_001/B3_015
+        weight: 1
+      - path: Armature/Root/B3_001/B3_017
+        weight: 1
+      - path: Armature/Root/B4
+        weight: 1
+      - path: Armature/Root/B4/B4_002
+        weight: 1
+      - path: Armature/Root/B4/B4_004
+        weight: 1
+      - path: Armature/Root/B4/B4_006
+        weight: 1
+      - path: Armature/Root/B4/B4_008
+        weight: 1
+      - path: Armature/Root/B4/B4_010
+        weight: 1
+      - path: Armature/Root/B4/B4_012
+        weight: 1
+      - path: Armature/Root/B4/B4_014
+        weight: 1
+      - path: Armature/Root/B4/B4_016
+        weight: 1
+      - path: Armature/Root/B4_001
+        weight: 1
+      - path: Armature/Root/B4_001/B4_003
+        weight: 1
+      - path: Armature/Root/B4_001/B4_005
+        weight: 1
+      - path: Armature/Root/B4_001/B4_007
+        weight: 1
+      - path: Armature/Root/B4_001/B4_009
+        weight: 1
+      - path: Armature/Root/B4_001/B4_011
+        weight: 1
+      - path: Armature/Root/B4_001/B4_013
+        weight: 1
+      - path: Armature/Root/B4_001/B4_015
+        weight: 1
+      - path: Armature/Root/B4_001/B4_017
+        weight: 1
+      - path: Armature/Root/B5
+        weight: 1
+      - path: Armature/Root/B5/B5_002
+        weight: 1
+      - path: Armature/Root/B5/B5_004
+        weight: 1
+      - path: Armature/Root/B5/B5_006
+        weight: 1
+      - path: Armature/Root/B5/B5_008
+        weight: 1
+      - path: Armature/Root/B5/B5_010
+        weight: 1
+      - path: Armature/Root/B5/B5_012
+        weight: 1
+      - path: Armature/Root/B5/B5_014
+        weight: 1
+      - path: Armature/Root/B5/B5_016
+        weight: 1
+      - path: Armature/Root/B5_001
+        weight: 1
+      - path: Armature/Root/B5_001/B5_003
+        weight: 1
+      - path: Armature/Root/B5_001/B5_005
+        weight: 1
+      - path: Armature/Root/B5_001/B5_007
+        weight: 1
+      - path: Armature/Root/B5_001/B5_009
+        weight: 1
+      - path: Armature/Root/B5_001/B5_011
+        weight: 1
+      - path: Armature/Root/B5_001/B5_013
+        weight: 1
+      - path: Armature/Root/B5_001/B5_015
+        weight: 1
+      - path: Armature/Root/B5_001/B5_017
+        weight: 1
+      - path: Armature/Root/Hive
+        weight: 1
+      - path: Armature/Root/Hive_a
+        weight: 1
+      - path: Armature/Root/Hive_b
+        weight: 1
+      - path: Armature/Root/Hive_c
+        weight: 1
+      - path: Armature/Root/Hive_d
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FuckYou
+      takeName: FuckYou
+      firstFrame: -353
+      lastFrame: 651
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/B1
+        weight: 1
+      - path: Armature/Root/B1/B1_002
+        weight: 1
+      - path: Armature/Root/B1/B1_004
+        weight: 1
+      - path: Armature/Root/B1/B1_006
+        weight: 1
+      - path: Armature/Root/B1/B1_008
+        weight: 1
+      - path: Armature/Root/B1/B1_010
+        weight: 1
+      - path: Armature/Root/B1/B1_012
+        weight: 1
+      - path: Armature/Root/B1/B1_014
+        weight: 1
+      - path: Armature/Root/B1/B1_016
+        weight: 1
+      - path: Armature/Root/B1_001
+        weight: 1
+      - path: Armature/Root/B1_001/B1_003
+        weight: 1
+      - path: Armature/Root/B1_001/B1_005
+        weight: 1
+      - path: Armature/Root/B1_001/B1_007
+        weight: 1
+      - path: Armature/Root/B1_001/B1_009
+        weight: 1
+      - path: Armature/Root/B1_001/B1_011
+        weight: 1
+      - path: Armature/Root/B1_001/B1_013
+        weight: 1
+      - path: Armature/Root/B1_001/B1_015
+        weight: 1
+      - path: Armature/Root/B1_001/B1_017
+        weight: 1
+      - path: Armature/Root/B2
+        weight: 1
+      - path: Armature/Root/B2/B2_002
+        weight: 1
+      - path: Armature/Root/B2/B2_004
+        weight: 1
+      - path: Armature/Root/B2/B2_006
+        weight: 1
+      - path: Armature/Root/B2/B2_008
+        weight: 1
+      - path: Armature/Root/B2/B2_010
+        weight: 1
+      - path: Armature/Root/B2/B2_012
+        weight: 1
+      - path: Armature/Root/B2/B2_014
+        weight: 1
+      - path: Armature/Root/B2/B2_016
+        weight: 1
+      - path: Armature/Root/B2_001
+        weight: 1
+      - path: Armature/Root/B2_001/B2_003
+        weight: 1
+      - path: Armature/Root/B2_001/B2_005
+        weight: 1
+      - path: Armature/Root/B2_001/B2_007
+        weight: 1
+      - path: Armature/Root/B2_001/B2_009
+        weight: 1
+      - path: Armature/Root/B2_001/B2_011
+        weight: 1
+      - path: Armature/Root/B2_001/B2_013
+        weight: 1
+      - path: Armature/Root/B2_001/B2_015
+        weight: 1
+      - path: Armature/Root/B2_001/B2_017
+        weight: 1
+      - path: Armature/Root/B3
+        weight: 1
+      - path: Armature/Root/B3/B3_002
+        weight: 1
+      - path: Armature/Root/B3/B3_004
+        weight: 1
+      - path: Armature/Root/B3/B3_006
+        weight: 1
+      - path: Armature/Root/B3/B3_008
+        weight: 1
+      - path: Armature/Root/B3/B3_010
+        weight: 1
+      - path: Armature/Root/B3/B3_012
+        weight: 1
+      - path: Armature/Root/B3/B3_014
+        weight: 1
+      - path: Armature/Root/B3/B3_016
+        weight: 1
+      - path: Armature/Root/B3_001
+        weight: 1
+      - path: Armature/Root/B3_001/B3_003
+        weight: 1
+      - path: Armature/Root/B3_001/B3_005
+        weight: 1
+      - path: Armature/Root/B3_001/B3_007
+        weight: 1
+      - path: Armature/Root/B3_001/B3_009
+        weight: 1
+      - path: Armature/Root/B3_001/B3_011
+        weight: 1
+      - path: Armature/Root/B3_001/B3_013
+        weight: 1
+      - path: Armature/Root/B3_001/B3_015
+        weight: 1
+      - path: Armature/Root/B3_001/B3_017
+        weight: 1
+      - path: Armature/Root/B4
+        weight: 1
+      - path: Armature/Root/B4/B4_002
+        weight: 1
+      - path: Armature/Root/B4/B4_004
+        weight: 1
+      - path: Armature/Root/B4/B4_006
+        weight: 1
+      - path: Armature/Root/B4/B4_008
+        weight: 1
+      - path: Armature/Root/B4/B4_010
+        weight: 1
+      - path: Armature/Root/B4/B4_012
+        weight: 1
+      - path: Armature/Root/B4/B4_014
+        weight: 1
+      - path: Armature/Root/B4/B4_016
+        weight: 1
+      - path: Armature/Root/B4_001
+        weight: 1
+      - path: Armature/Root/B4_001/B4_003
+        weight: 1
+      - path: Armature/Root/B4_001/B4_005
+        weight: 1
+      - path: Armature/Root/B4_001/B4_007
+        weight: 1
+      - path: Armature/Root/B4_001/B4_009
+        weight: 1
+      - path: Armature/Root/B4_001/B4_011
+        weight: 1
+      - path: Armature/Root/B4_001/B4_013
+        weight: 1
+      - path: Armature/Root/B4_001/B4_015
+        weight: 1
+      - path: Armature/Root/B4_001/B4_017
+        weight: 1
+      - path: Armature/Root/B5
+        weight: 1
+      - path: Armature/Root/B5/B5_002
+        weight: 1
+      - path: Armature/Root/B5/B5_004
+        weight: 1
+      - path: Armature/Root/B5/B5_006
+        weight: 1
+      - path: Armature/Root/B5/B5_008
+        weight: 1
+      - path: Armature/Root/B5/B5_010
+        weight: 1
+      - path: Armature/Root/B5/B5_012
+        weight: 1
+      - path: Armature/Root/B5/B5_014
+        weight: 1
+      - path: Armature/Root/B5/B5_016
+        weight: 1
+      - path: Armature/Root/B5_001
+        weight: 1
+      - path: Armature/Root/B5_001/B5_003
+        weight: 1
+      - path: Armature/Root/B5_001/B5_005
+        weight: 1
+      - path: Armature/Root/B5_001/B5_007
+        weight: 1
+      - path: Armature/Root/B5_001/B5_009
+        weight: 1
+      - path: Armature/Root/B5_001/B5_011
+        weight: 1
+      - path: Armature/Root/B5_001/B5_013
+        weight: 1
+      - path: Armature/Root/B5_001/B5_015
+        weight: 1
+      - path: Armature/Root/B5_001/B5_017
+        weight: 1
+      - path: Armature/Root/Hive
+        weight: 1
+      - path: Armature/Root/Hive_a
+        weight: 1
+      - path: Armature/Root/Hive_b
+        weight: 1
+      - path: Armature/Root/Hive_c
+        weight: 1
+      - path: Armature/Root/Hive_d
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FuckYou_Bake
+      takeName: FuckYou_Bake
+      firstFrame: 0
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/B1
+        weight: 1
+      - path: Armature/Root/B1/B1_002
+        weight: 1
+      - path: Armature/Root/B1/B1_004
+        weight: 1
+      - path: Armature/Root/B1/B1_006
+        weight: 1
+      - path: Armature/Root/B1/B1_008
+        weight: 1
+      - path: Armature/Root/B1/B1_010
+        weight: 1
+      - path: Armature/Root/B1/B1_012
+        weight: 1
+      - path: Armature/Root/B1/B1_014
+        weight: 1
+      - path: Armature/Root/B1/B1_016
+        weight: 1
+      - path: Armature/Root/B1_001
+        weight: 1
+      - path: Armature/Root/B1_001/B1_003
+        weight: 1
+      - path: Armature/Root/B1_001/B1_005
+        weight: 1
+      - path: Armature/Root/B1_001/B1_007
+        weight: 1
+      - path: Armature/Root/B1_001/B1_009
+        weight: 1
+      - path: Armature/Root/B1_001/B1_011
+        weight: 1
+      - path: Armature/Root/B1_001/B1_013
+        weight: 1
+      - path: Armature/Root/B1_001/B1_015
+        weight: 1
+      - path: Armature/Root/B1_001/B1_017
+        weight: 1
+      - path: Armature/Root/B2
+        weight: 1
+      - path: Armature/Root/B2/B2_002
+        weight: 1
+      - path: Armature/Root/B2/B2_004
+        weight: 1
+      - path: Armature/Root/B2/B2_006
+        weight: 1
+      - path: Armature/Root/B2/B2_008
+        weight: 1
+      - path: Armature/Root/B2/B2_010
+        weight: 1
+      - path: Armature/Root/B2/B2_012
+        weight: 1
+      - path: Armature/Root/B2/B2_014
+        weight: 1
+      - path: Armature/Root/B2/B2_016
+        weight: 1
+      - path: Armature/Root/B2_001
+        weight: 1
+      - path: Armature/Root/B2_001/B2_003
+        weight: 1
+      - path: Armature/Root/B2_001/B2_005
+        weight: 1
+      - path: Armature/Root/B2_001/B2_007
+        weight: 1
+      - path: Armature/Root/B2_001/B2_009
+        weight: 1
+      - path: Armature/Root/B2_001/B2_011
+        weight: 1
+      - path: Armature/Root/B2_001/B2_013
+        weight: 1
+      - path: Armature/Root/B2_001/B2_015
+        weight: 1
+      - path: Armature/Root/B2_001/B2_017
+        weight: 1
+      - path: Armature/Root/B3
+        weight: 1
+      - path: Armature/Root/B3/B3_002
+        weight: 1
+      - path: Armature/Root/B3/B3_004
+        weight: 1
+      - path: Armature/Root/B3/B3_006
+        weight: 1
+      - path: Armature/Root/B3/B3_008
+        weight: 1
+      - path: Armature/Root/B3/B3_010
+        weight: 1
+      - path: Armature/Root/B3/B3_012
+        weight: 1
+      - path: Armature/Root/B3/B3_014
+        weight: 1
+      - path: Armature/Root/B3/B3_016
+        weight: 1
+      - path: Armature/Root/B3_001
+        weight: 1
+      - path: Armature/Root/B3_001/B3_003
+        weight: 1
+      - path: Armature/Root/B3_001/B3_005
+        weight: 1
+      - path: Armature/Root/B3_001/B3_007
+        weight: 1
+      - path: Armature/Root/B3_001/B3_009
+        weight: 1
+      - path: Armature/Root/B3_001/B3_011
+        weight: 1
+      - path: Armature/Root/B3_001/B3_013
+        weight: 1
+      - path: Armature/Root/B3_001/B3_015
+        weight: 1
+      - path: Armature/Root/B3_001/B3_017
+        weight: 1
+      - path: Armature/Root/B4
+        weight: 1
+      - path: Armature/Root/B4/B4_002
+        weight: 1
+      - path: Armature/Root/B4/B4_004
+        weight: 1
+      - path: Armature/Root/B4/B4_006
+        weight: 1
+      - path: Armature/Root/B4/B4_008
+        weight: 1
+      - path: Armature/Root/B4/B4_010
+        weight: 1
+      - path: Armature/Root/B4/B4_012
+        weight: 1
+      - path: Armature/Root/B4/B4_014
+        weight: 1
+      - path: Armature/Root/B4/B4_016
+        weight: 1
+      - path: Armature/Root/B4_001
+        weight: 1
+      - path: Armature/Root/B4_001/B4_003
+        weight: 1
+      - path: Armature/Root/B4_001/B4_005
+        weight: 1
+      - path: Armature/Root/B4_001/B4_007
+        weight: 1
+      - path: Armature/Root/B4_001/B4_009
+        weight: 1
+      - path: Armature/Root/B4_001/B4_011
+        weight: 1
+      - path: Armature/Root/B4_001/B4_013
+        weight: 1
+      - path: Armature/Root/B4_001/B4_015
+        weight: 1
+      - path: Armature/Root/B4_001/B4_017
+        weight: 1
+      - path: Armature/Root/B5
+        weight: 1
+      - path: Armature/Root/B5/B5_002
+        weight: 1
+      - path: Armature/Root/B5/B5_004
+        weight: 1
+      - path: Armature/Root/B5/B5_006
+        weight: 1
+      - path: Armature/Root/B5/B5_008
+        weight: 1
+      - path: Armature/Root/B5/B5_010
+        weight: 1
+      - path: Armature/Root/B5/B5_012
+        weight: 1
+      - path: Armature/Root/B5/B5_014
+        weight: 1
+      - path: Armature/Root/B5/B5_016
+        weight: 1
+      - path: Armature/Root/B5_001
+        weight: 1
+      - path: Armature/Root/B5_001/B5_003
+        weight: 1
+      - path: Armature/Root/B5_001/B5_005
+        weight: 1
+      - path: Armature/Root/B5_001/B5_007
+        weight: 1
+      - path: Armature/Root/B5_001/B5_009
+        weight: 1
+      - path: Armature/Root/B5_001/B5_011
+        weight: 1
+      - path: Armature/Root/B5_001/B5_013
+        weight: 1
+      - path: Armature/Root/B5_001/B5_015
+        weight: 1
+      - path: Armature/Root/B5_001/B5_017
+        weight: 1
+      - path: Armature/Root/Hive
+        weight: 1
+      - path: Armature/Root/Hive_a
+        weight: 1
+      - path: Armature/Root/Hive_b
+        weight: 1
+      - path: Armature/Root/Hive_c
+        weight: 1
+      - path: Armature/Root/Hive_d
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: -393
+      lastFrame: 678
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/B1
+        weight: 1
+      - path: Armature/Root/B1/B1_002
+        weight: 1
+      - path: Armature/Root/B1/B1_004
+        weight: 1
+      - path: Armature/Root/B1/B1_006
+        weight: 1
+      - path: Armature/Root/B1/B1_008
+        weight: 1
+      - path: Armature/Root/B1/B1_010
+        weight: 1
+      - path: Armature/Root/B1/B1_012
+        weight: 1
+      - path: Armature/Root/B1/B1_014
+        weight: 1
+      - path: Armature/Root/B1/B1_016
+        weight: 1
+      - path: Armature/Root/B1_001
+        weight: 1
+      - path: Armature/Root/B1_001/B1_003
+        weight: 1
+      - path: Armature/Root/B1_001/B1_005
+        weight: 1
+      - path: Armature/Root/B1_001/B1_007
+        weight: 1
+      - path: Armature/Root/B1_001/B1_009
+        weight: 1
+      - path: Armature/Root/B1_001/B1_011
+        weight: 1
+      - path: Armature/Root/B1_001/B1_013
+        weight: 1
+      - path: Armature/Root/B1_001/B1_015
+        weight: 1
+      - path: Armature/Root/B1_001/B1_017
+        weight: 1
+      - path: Armature/Root/B2
+        weight: 1
+      - path: Armature/Root/B2/B2_002
+        weight: 1
+      - path: Armature/Root/B2/B2_004
+        weight: 1
+      - path: Armature/Root/B2/B2_006
+        weight: 1
+      - path: Armature/Root/B2/B2_008
+        weight: 1
+      - path: Armature/Root/B2/B2_010
+        weight: 1
+      - path: Armature/Root/B2/B2_012
+        weight: 1
+      - path: Armature/Root/B2/B2_014
+        weight: 1
+      - path: Armature/Root/B2/B2_016
+        weight: 1
+      - path: Armature/Root/B2_001
+        weight: 1
+      - path: Armature/Root/B2_001/B2_003
+        weight: 1
+      - path: Armature/Root/B2_001/B2_005
+        weight: 1
+      - path: Armature/Root/B2_001/B2_007
+        weight: 1
+      - path: Armature/Root/B2_001/B2_009
+        weight: 1
+      - path: Armature/Root/B2_001/B2_011
+        weight: 1
+      - path: Armature/Root/B2_001/B2_013
+        weight: 1
+      - path: Armature/Root/B2_001/B2_015
+        weight: 1
+      - path: Armature/Root/B2_001/B2_017
+        weight: 1
+      - path: Armature/Root/B3
+        weight: 1
+      - path: Armature/Root/B3/B3_002
+        weight: 1
+      - path: Armature/Root/B3/B3_004
+        weight: 1
+      - path: Armature/Root/B3/B3_006
+        weight: 1
+      - path: Armature/Root/B3/B3_008
+        weight: 1
+      - path: Armature/Root/B3/B3_010
+        weight: 1
+      - path: Armature/Root/B3/B3_012
+        weight: 1
+      - path: Armature/Root/B3/B3_014
+        weight: 1
+      - path: Armature/Root/B3/B3_016
+        weight: 1
+      - path: Armature/Root/B3_001
+        weight: 1
+      - path: Armature/Root/B3_001/B3_003
+        weight: 1
+      - path: Armature/Root/B3_001/B3_005
+        weight: 1
+      - path: Armature/Root/B3_001/B3_007
+        weight: 1
+      - path: Armature/Root/B3_001/B3_009
+        weight: 1
+      - path: Armature/Root/B3_001/B3_011
+        weight: 1
+      - path: Armature/Root/B3_001/B3_013
+        weight: 1
+      - path: Armature/Root/B3_001/B3_015
+        weight: 1
+      - path: Armature/Root/B3_001/B3_017
+        weight: 1
+      - path: Armature/Root/B4
+        weight: 1
+      - path: Armature/Root/B4/B4_002
+        weight: 1
+      - path: Armature/Root/B4/B4_004
+        weight: 1
+      - path: Armature/Root/B4/B4_006
+        weight: 1
+      - path: Armature/Root/B4/B4_008
+        weight: 1
+      - path: Armature/Root/B4/B4_010
+        weight: 1
+      - path: Armature/Root/B4/B4_012
+        weight: 1
+      - path: Armature/Root/B4/B4_014
+        weight: 1
+      - path: Armature/Root/B4/B4_016
+        weight: 1
+      - path: Armature/Root/B4_001
+        weight: 1
+      - path: Armature/Root/B4_001/B4_003
+        weight: 1
+      - path: Armature/Root/B4_001/B4_005
+        weight: 1
+      - path: Armature/Root/B4_001/B4_007
+        weight: 1
+      - path: Armature/Root/B4_001/B4_009
+        weight: 1
+      - path: Armature/Root/B4_001/B4_011
+        weight: 1
+      - path: Armature/Root/B4_001/B4_013
+        weight: 1
+      - path: Armature/Root/B4_001/B4_015
+        weight: 1
+      - path: Armature/Root/B4_001/B4_017
+        weight: 1
+      - path: Armature/Root/B5
+        weight: 1
+      - path: Armature/Root/B5/B5_002
+        weight: 1
+      - path: Armature/Root/B5/B5_004
+        weight: 1
+      - path: Armature/Root/B5/B5_006
+        weight: 1
+      - path: Armature/Root/B5/B5_008
+        weight: 1
+      - path: Armature/Root/B5/B5_010
+        weight: 1
+      - path: Armature/Root/B5/B5_012
+        weight: 1
+      - path: Armature/Root/B5/B5_014
+        weight: 1
+      - path: Armature/Root/B5/B5_016
+        weight: 1
+      - path: Armature/Root/B5_001
+        weight: 1
+      - path: Armature/Root/B5_001/B5_003
+        weight: 1
+      - path: Armature/Root/B5_001/B5_005
+        weight: 1
+      - path: Armature/Root/B5_001/B5_007
+        weight: 1
+      - path: Armature/Root/B5_001/B5_009
+        weight: 1
+      - path: Armature/Root/B5_001/B5_011
+        weight: 1
+      - path: Armature/Root/B5_001/B5_013
+        weight: 1
+      - path: Armature/Root/B5_001/B5_015
+        weight: 1
+      - path: Armature/Root/B5_001/B5_017
+        weight: 1
+      - path: Armature/Root/Hive
+        weight: 1
+      - path: Armature/Root/Hive_a
+        weight: 1
+      - path: Armature/Root/Hive_b
+        weight: 1
+      - path: Armature/Root/Hive_c
+        weight: 1
+      - path: Armature/Root/Hive_d
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_Bake
+      takeName: Idle_Bake
+      firstFrame: 0
+      lastFrame: 239
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/B1
+        weight: 1
+      - path: Armature/Root/B1/B1_002
+        weight: 1
+      - path: Armature/Root/B1/B1_004
+        weight: 1
+      - path: Armature/Root/B1/B1_006
+        weight: 1
+      - path: Armature/Root/B1/B1_008
+        weight: 1
+      - path: Armature/Root/B1/B1_010
+        weight: 1
+      - path: Armature/Root/B1/B1_012
+        weight: 1
+      - path: Armature/Root/B1/B1_014
+        weight: 1
+      - path: Armature/Root/B1/B1_016
+        weight: 1
+      - path: Armature/Root/B1_001
+        weight: 1
+      - path: Armature/Root/B1_001/B1_003
+        weight: 1
+      - path: Armature/Root/B1_001/B1_005
+        weight: 1
+      - path: Armature/Root/B1_001/B1_007
+        weight: 1
+      - path: Armature/Root/B1_001/B1_009
+        weight: 1
+      - path: Armature/Root/B1_001/B1_011
+        weight: 1
+      - path: Armature/Root/B1_001/B1_013
+        weight: 1
+      - path: Armature/Root/B1_001/B1_015
+        weight: 1
+      - path: Armature/Root/B1_001/B1_017
+        weight: 1
+      - path: Armature/Root/B2
+        weight: 1
+      - path: Armature/Root/B2/B2_002
+        weight: 1
+      - path: Armature/Root/B2/B2_004
+        weight: 1
+      - path: Armature/Root/B2/B2_006
+        weight: 1
+      - path: Armature/Root/B2/B2_008
+        weight: 1
+      - path: Armature/Root/B2/B2_010
+        weight: 1
+      - path: Armature/Root/B2/B2_012
+        weight: 1
+      - path: Armature/Root/B2/B2_014
+        weight: 1
+      - path: Armature/Root/B2/B2_016
+        weight: 1
+      - path: Armature/Root/B2_001
+        weight: 1
+      - path: Armature/Root/B2_001/B2_003
+        weight: 1
+      - path: Armature/Root/B2_001/B2_005
+        weight: 1
+      - path: Armature/Root/B2_001/B2_007
+        weight: 1
+      - path: Armature/Root/B2_001/B2_009
+        weight: 1
+      - path: Armature/Root/B2_001/B2_011
+        weight: 1
+      - path: Armature/Root/B2_001/B2_013
+        weight: 1
+      - path: Armature/Root/B2_001/B2_015
+        weight: 1
+      - path: Armature/Root/B2_001/B2_017
+        weight: 1
+      - path: Armature/Root/B3
+        weight: 1
+      - path: Armature/Root/B3/B3_002
+        weight: 1
+      - path: Armature/Root/B3/B3_004
+        weight: 1
+      - path: Armature/Root/B3/B3_006
+        weight: 1
+      - path: Armature/Root/B3/B3_008
+        weight: 1
+      - path: Armature/Root/B3/B3_010
+        weight: 1
+      - path: Armature/Root/B3/B3_012
+        weight: 1
+      - path: Armature/Root/B3/B3_014
+        weight: 1
+      - path: Armature/Root/B3/B3_016
+        weight: 1
+      - path: Armature/Root/B3_001
+        weight: 1
+      - path: Armature/Root/B3_001/B3_003
+        weight: 1
+      - path: Armature/Root/B3_001/B3_005
+        weight: 1
+      - path: Armature/Root/B3_001/B3_007
+        weight: 1
+      - path: Armature/Root/B3_001/B3_009
+        weight: 1
+      - path: Armature/Root/B3_001/B3_011
+        weight: 1
+      - path: Armature/Root/B3_001/B3_013
+        weight: 1
+      - path: Armature/Root/B3_001/B3_015
+        weight: 1
+      - path: Armature/Root/B3_001/B3_017
+        weight: 1
+      - path: Armature/Root/B4
+        weight: 1
+      - path: Armature/Root/B4/B4_002
+        weight: 1
+      - path: Armature/Root/B4/B4_004
+        weight: 1
+      - path: Armature/Root/B4/B4_006
+        weight: 1
+      - path: Armature/Root/B4/B4_008
+        weight: 1
+      - path: Armature/Root/B4/B4_010
+        weight: 1
+      - path: Armature/Root/B4/B4_012
+        weight: 1
+      - path: Armature/Root/B4/B4_014
+        weight: 1
+      - path: Armature/Root/B4/B4_016
+        weight: 1
+      - path: Armature/Root/B4_001
+        weight: 1
+      - path: Armature/Root/B4_001/B4_003
+        weight: 1
+      - path: Armature/Root/B4_001/B4_005
+        weight: 1
+      - path: Armature/Root/B4_001/B4_007
+        weight: 1
+      - path: Armature/Root/B4_001/B4_009
+        weight: 1
+      - path: Armature/Root/B4_001/B4_011
+        weight: 1
+      - path: Armature/Root/B4_001/B4_013
+        weight: 1
+      - path: Armature/Root/B4_001/B4_015
+        weight: 1
+      - path: Armature/Root/B4_001/B4_017
+        weight: 1
+      - path: Armature/Root/B5
+        weight: 1
+      - path: Armature/Root/B5/B5_002
+        weight: 1
+      - path: Armature/Root/B5/B5_004
+        weight: 1
+      - path: Armature/Root/B5/B5_006
+        weight: 1
+      - path: Armature/Root/B5/B5_008
+        weight: 1
+      - path: Armature/Root/B5/B5_010
+        weight: 1
+      - path: Armature/Root/B5/B5_012
+        weight: 1
+      - path: Armature/Root/B5/B5_014
+        weight: 1
+      - path: Armature/Root/B5/B5_016
+        weight: 1
+      - path: Armature/Root/B5_001
+        weight: 1
+      - path: Armature/Root/B5_001/B5_003
+        weight: 1
+      - path: Armature/Root/B5_001/B5_005
+        weight: 1
+      - path: Armature/Root/B5_001/B5_007
+        weight: 1
+      - path: Armature/Root/B5_001/B5_009
+        weight: 1
+      - path: Armature/Root/B5_001/B5_011
+        weight: 1
+      - path: Armature/Root/B5_001/B5_013
+        weight: 1
+      - path: Armature/Root/B5_001/B5_015
+        weight: 1
+      - path: Armature/Root/B5_001/B5_017
+        weight: 1
+      - path: Armature/Root/Hive
+        weight: 1
+      - path: Armature/Root/Hive_a
+        weight: 1
+      - path: Armature/Root/Hive_b
+        weight: 1
+      - path: Armature/Root/Hive_c
+        weight: 1
+      - path: Armature/Root/Hive_d
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
