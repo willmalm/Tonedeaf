@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Inventory");
         transform.SetParent(inventory.transform);
-        transform.position = inventory.transform.position + new Vector3(xPosition * distance, (yPosition) * distance, 0);
+        transform.position = inventory.transform.position + new Vector3(xPosition * distance, yPosition * distance, 0);
     }
     public void Effect()
     {

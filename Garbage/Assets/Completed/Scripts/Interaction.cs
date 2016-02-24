@@ -14,52 +14,50 @@ public class Interaction : MonoBehaviour {
     public bool canPickup;
 
     //Objects
-    private GameObject objInventory;
+    private GameObject object_Inventory;
     private GameObject player;
-    private GameObject obj;
-    public List<GameObject> objectList;
+
+    //Lists
+    public List<GameObject> item_List;
+    public List<GameObject> screech_List;
+
+    private List<GameObject> backup_List;
+    private List<ObjectVariables> var_List;
 
     //Scripts
     private Inventory inventory;
-    private GridVariables objGridVar;
-    private GridVariables plGridVar;
-    private PlayerVariables playerVar;
-    private ObjectVariables objectVar;
 
     //Components
     private Text txt;
 
-    public List<GameObject> backUpList;
+    //Variables
+    private bool screeching = false;
 
     void Start()
     {
         //Dependency "TextBox"
         txt = textBox.GetComponent<Text>();
         //Dependency "Inventory"
-        objInventory = GameObject.FindGameObjectWithTag("Inventory");
-        inventory = objInventory.GetComponent<Inventory>();
+        object_Inventory = GameObject.FindGameObjectWithTag("Inventory");
+        inventory = object_Inventory.GetComponent<Inventory>();
         //Dependency "Player"
         player = GameObject.FindGameObjectWithTag("Player");
-        playerVar = player.GetComponent<PlayerVariables>();
-        //Dependency "ObjectVariables", "Player_GridVariables", "This_GridVariables"
-        objectVar = transform.parent.gameObject.GetComponent<ObjectVariables>();
-        objGridVar = transform.parent.gameObject.GetComponent<GridVariables>();
-        plGridVar = player.GetComponent<GridVariables>();
 
-        objectList = new List<GameObject>();
-        backUpList = new List<GameObject>();
+        item_List = new List<GameObject>();
+        backup_List = new List<GameObject>();
+        screech_List = new List<GameObject>();
+        var_List = new List<ObjectVariables>();
     }
 
-    void Update() {
-        //Adds item to inventory on keypress
-        /*if (Input.GetKeyDown("p") && canPickup)
+    void Update()
+    {
+        if (screeching)
         {
-            Debug.Log("Picked up " + objectVar.objName);
-
-            var obj = (GameObject)Instantiate(itemUI, transform.position, Quaternion.identity);
-            inventory.AddItem(obj);
-            Destroy(transform.parent.gameObject);
-        }*/
+            for (int i = 0; i < screech_List.Count; i++)
+            {
+                var_List[i].force += Time.deltaTime;
+            }
+        }
     }
 
     //Changes value of bool based on collision
@@ -67,40 +65,48 @@ public class Interaction : MonoBehaviour {
     {
         if (col.tag == "objInteract")
         {
-            objectList.Add(col.gameObject);
-            backUpList.Add(col.gameObject);
+            item_List.Add(col.gameObject);
+            backup_List.Add(col.gameObject);
             col.gameObject.transform.parent.gameObject.GetComponent<ObjectVariables>().highlight.SetActive(true);
+        }
+        if (col.tag == "scrObject")
+        {
+            screech_List.Add(col.gameObject);
         }
     }
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag == "objInteract")
         {
-            objectList.Remove(col.gameObject);
-            backUpList.Remove(col.gameObject);
+            item_List.Remove(col.gameObject);
+            backup_List.Remove(col.gameObject);
             col.gameObject.transform.parent.gameObject.GetComponent<ObjectVariables>().highlight.SetActive(false);
+        }
+        if(col.tag == "scrObject")
+        {
+            screech_List.Remove(col.gameObject);
         }
     }
     public void PickUp()
     {
         //Check which item is closest to the player
-        while (1 < objectList.Count) {
+        while (1 < item_List.Count) {
             Debug.Log("searching...");
-            for (int i = 0; i < objectList.Count; i++)
+            for (int i = 0; i < item_List.Count; i++)
             {
-                for (int j = 0; j < objectList.Count;)
+                for (int j = 0; j < item_List.Count;)
                 {
                     if (j != i)
                     {
-                        if (Vector2.Distance(player.transform.position, objectList[j].transform.position) > Vector2.Distance(player.transform.position, objectList[i].transform.position))
+                        if (Vector2.Distance(player.transform.position, item_List[j].transform.position) > Vector2.Distance(player.transform.position, item_List[i].transform.position))
                         {
-                            objectList.Remove(objectList[j]);
+                            item_List.Remove(item_List[j]);
                             Debug.Log("Removed object j" + j);
                             j++;
                         }
                         else
                         {
-                            objectList.Remove(objectList[i]);
+                            item_List.Remove(item_List[i]);
                             Debug.Log("Removed object i" + i);
                             j = 1000000;
                         }
@@ -112,17 +118,28 @@ public class Interaction : MonoBehaviour {
                 }
             }
         }
-        if (objectList.Count > 0)
+        if (item_List.Count > 0)
         {
             //Add item to inventory and destroy object
-            var obj = (GameObject)Instantiate(objectList[0].transform.parent.GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
+            var obj = (GameObject)Instantiate(item_List[0].transform.parent.GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
             inventory.AddItem(obj);
-            GameObject singleObject = objectList[0];
-            backUpList.Remove(singleObject);
+            GameObject singleObject = item_List[0];
+            backup_List.Remove(singleObject);
             Destroy(singleObject.transform.parent.gameObject);
-            objectList = backUpList;
-            //objectList.Clear();
-            //objectList = backUpList;
+            item_List = backup_List;
         }
+    }
+    public void Screech()
+    {
+        for (int i = 0; i < screech_List.Count; i++)
+        {
+            var_List.Add(screech_List[i].GetComponent<ObjectVariables>());
+        }       
+        screeching = true;
+    }
+    public void ScreechStop()
+    {
+        var_List.Clear();
+        screeching = false;
     }
 }

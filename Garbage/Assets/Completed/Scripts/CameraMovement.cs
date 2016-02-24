@@ -20,6 +20,8 @@ public class CameraMovement : MonoBehaviour {
     private bool activated;
     private float xPos;
     private float yPos;
+    private bool shaking;
+    private bool playerImmobile;
 
 	// Use this for initialization
 	void Start () {
@@ -51,54 +53,18 @@ public class CameraMovement : MonoBehaviour {
                 transform.position = new Vector3(transform.position.x, limitUp, transform.position.z);
             }
         }
-    }
-    public void ScreenShake(bool im)
-    {
-        if(activated == false && im)
+        if (shaking)
         {
-            player.GetComponent<PlayerVariables>().immobile = true;
-        }
-        activated = true;
-        speed += shakeSpeed * Time.deltaTime;
-        if(speed >= shakeSpeed)
-        {
-            speed = shakeSpeed;
-        }
-        if (direction)
-        {
-            objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x + shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
-            if (objCamera.transform.position.x >= cameraRef.transform.position.x + shakeRange)
+            if (activated == false && playerImmobile)
             {
-                direction = false;
+                player.GetComponent<PlayerVariables>().immobile = true;
             }
-        }
-        else if(direction == false)
-        {
-            objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x - shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
-            if (objCamera.transform.position.x <= cameraRef.transform.position.x - shakeRange)
+            activated = true;
+            speed += shakeSpeed * Time.deltaTime;
+            if (speed >= shakeSpeed)
             {
-                direction = true;
+                speed = shakeSpeed;
             }
-        }
-        
-    }
-    public void StopShake(bool im)
-    {
-        speed -= shakeSpeed* Time.deltaTime;
-        if(speed <= 0)
-        {
-            speed = 0;
-            objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
-            if (im && (int)objCamera.transform.position.x == (int)cameraRef.transform.position.x)
-            {
-                activated = false;
-                objCamera.transform.position = new Vector3(cameraRef.transform.position.x, objCamera.transform.position.y, objCamera.transform.position.z);
-                player.GetComponent<PlayerVariables>().immobile = false;
-            }
-
-        }
-        if (activated)
-        {
             if (direction)
             {
                 objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x + shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
@@ -116,5 +82,51 @@ public class CameraMovement : MonoBehaviour {
                 }
             }
         }
+        else if (!shaking)
+        {
+            speed -= shakeSpeed * Time.deltaTime;
+            if (speed <= 0)
+            {
+                speed = 0;
+                objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x, objCamera.transform.position.y, objCamera.transform.position.z), shakeSpeed * Time.deltaTime);
+                if (playerImmobile && objCamera.transform.position.x == cameraRef.transform.position.x)
+                {
+                    activated = false;
+                    objCamera.transform.position = new Vector3(cameraRef.transform.position.x, objCamera.transform.position.y, objCamera.transform.position.z);
+                    player.GetComponent<PlayerVariables>().immobile = false;
+                }
+
+            }
+            if (activated)
+            {
+                if (direction)
+                {
+                    objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x + shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
+                    if (objCamera.transform.position.x >= cameraRef.transform.position.x + shakeRange)
+                    {
+                        direction = false;
+                    }
+                }
+                else if (direction == false)
+                {
+                    objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x - shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
+                    if (objCamera.transform.position.x <= cameraRef.transform.position.x - shakeRange)
+                    {
+                        direction = true;
+                    }
+                }
+            }
+        }
+    }
+    public void ScreenShake(bool im)
+    {
+        shaking = true;
+        playerImmobile = im;
+        
+    }
+    public void StopShake(bool im)
+    {
+        shaking = false;
+        playerImmobile = im;
     }
 }

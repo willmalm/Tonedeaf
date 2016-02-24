@@ -31,7 +31,7 @@ public class InventoryUI : MonoBehaviour {
             xPos = Mathf.Lerp(transform.position.x, disabledPosX, smoothSpeed * Time.deltaTime);
         }
 
-        transform.position = new Vector3(xPos, transform.position.y, -50);
+        transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
     }
 
     public void ChangeState()

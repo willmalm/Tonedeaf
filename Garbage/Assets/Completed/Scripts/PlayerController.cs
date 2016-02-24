@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour {
     public float stepTimer;
     public float stepDelay;
     public string stepSound;
-    public bool interactingWithScreech;
 
     //Scripts
     private PlayerVariables playerVar;
@@ -32,8 +31,6 @@ public class PlayerController : MonoBehaviour {
     //AudioSource
     private AudioSource aud;
 
-    //Collider2D
-    private Collider2D beeCollider;
 	void Start ()
 	{
         //Dependency "PlayerVariables", "GridVariables"
@@ -49,7 +46,6 @@ public class PlayerController : MonoBehaviour {
         timerSpeed = 0;
 
         aud = GetComponent<AudioSource>();
-        beeCollider = GameObject.FindGameObjectWithTag("FuckYou").GetComponent<Collider2D>();
 	}
 
     void Update()
@@ -152,26 +148,12 @@ public class PlayerController : MonoBehaviour {
     public void Screech()
     {
         playerAnimation.screamStrength = 1;
-        playerVar.immobile = true;
         aud.clip = Resources.Load("Scream_5_01") as AudioClip;
         aud.Play();
     }
     public void ScreechEnd()
     {
         playerAnimation.screamStrength = 0;
-        playerVar.immobile = false;
         aud.Stop();
-    }
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Dead" && interactingWithScreech)
-        {
-            col.gameObject.GetComponent<ObjectVariables>().force++;
-            beeCollider.enabled = false;
-        }
-        else if (col.gameObject.tag == "FuckYou" && interactingWithScreech)
-        {
-            col.gameObject.GetComponent<BeehiveController>().fuckYou = true;
-        }
     }
 }

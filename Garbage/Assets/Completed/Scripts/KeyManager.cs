@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KeyUse : MonoBehaviour {
+public class KeyManager : MonoBehaviour {
 
     //Public variables
     public string[] keys;
@@ -9,12 +9,14 @@ public class KeyUse : MonoBehaviour {
     //Objects
     private GameObject player;
     private GameObject playerInteract;
-    private GameObject inventory;
+    private GameObject sprite_inventory;
+    private GameObject cameraObject;
 
     //Scripts
     private PlayerController plController;
     private Interaction plInteraction;
     private InventoryUI inventoryUI;
+    private CameraMovement camMov;
 
     void Start () {
         //Dependency "Player"
@@ -23,8 +25,11 @@ public class KeyUse : MonoBehaviour {
         plController = player.GetComponent<PlayerController>();
         plInteraction = playerInteract.GetComponent<Interaction>();
         //Dependency "Inventory"
-        inventory = GameObject.FindGameObjectWithTag("Inventory");
-        inventoryUI = inventory.GetComponent<InventoryUI>();
+        sprite_inventory = GameObject.FindGameObjectWithTag("SpriteInventory");
+        inventoryUI = sprite_inventory.GetComponent<InventoryUI>();
+
+        cameraObject = GameObject.FindGameObjectWithTag("CameraObject");
+        camMov = cameraObject.GetComponent<CameraMovement>();
 	}
 	
 	void Update () {
@@ -59,16 +64,18 @@ public class KeyUse : MonoBehaviour {
         {
             inventoryUI.ChangeState();
         }
-        //Scrrech
+        //Screech
         if (Input.GetKeyDown(keys[6]))
         {
-            plController.interactingWithScreech = true;
             plController.Screech();
+            plInteraction.Screech();
+            camMov.ScreenShake(true);
         }
         else if (Input.GetKeyUp(keys[6]))
         {
-            plController.interactingWithScreech = false;
             plController.ScreechEnd();
+            plInteraction.ScreechStop();
+            camMov.StopShake(true);
         }
 	}
 }

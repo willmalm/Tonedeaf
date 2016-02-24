@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour {
     public bool pauseBool = true;
 
     //Objects
-    private GameObject inventory;
+    private GameObject sprite_inventory;
     private GameObject map;
     private GameObject player;
 
@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour {
     void Start()
     {
         //Dependancy "Player", "Inventory"
-        inventory = GameObject.FindGameObjectWithTag("Inventory");
+        sprite_inventory = GameObject.FindGameObjectWithTag("SpriteInventory");
         player = GameObject.FindGameObjectWithTag("Player");
     }
 	void Update () {
@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour {
         //Show "Inventory" on keypress
         if (Input.GetKeyDown(KeyCode.I))
         {
-            invCurrent = inventory.transform.position;
+            invCurrent = sprite_inventory.transform.position;
             invEnabled = !invEnabled;
            /* foreach (Transform child in inventory.transform)
             {

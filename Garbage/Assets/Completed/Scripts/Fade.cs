@@ -15,6 +15,7 @@ public class Fade : MonoBehaviour {
 	void Start () {
         sprite = GetComponent<SpriteRenderer>();
         sprite.color = new Color(1f, 1f, 1f, 0f);
+        UseFade();
     }
 
 	void Update () {
