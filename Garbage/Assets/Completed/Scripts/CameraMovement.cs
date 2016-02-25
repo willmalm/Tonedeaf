@@ -67,7 +67,8 @@ public class CameraMovement : MonoBehaviour {
             }
             if (direction)
             {
-                objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x + shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
+                //objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x + shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
+                objCamera.transform.position += new Vector3(speed, 0, 0);
                 if (objCamera.transform.position.x >= cameraRef.transform.position.x + shakeRange)
                 {
                     direction = false;
@@ -75,7 +76,8 @@ public class CameraMovement : MonoBehaviour {
             }
             else if (direction == false)
             {
-                objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x - shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
+                //.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x - shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
+                objCamera.transform.position -= new Vector3(speed, 0, 0);
                 if (objCamera.transform.position.x <= cameraRef.transform.position.x - shakeRange)
                 {
                     direction = true;
@@ -88,7 +90,7 @@ public class CameraMovement : MonoBehaviour {
             if (speed <= 0)
             {
                 speed = 0;
-                objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x, objCamera.transform.position.y, objCamera.transform.position.z), shakeSpeed * Time.deltaTime);
+                objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x, objCamera.transform.position.y, objCamera.transform.position.z), shakeSpeed * 100 * Time.deltaTime);
                 if (playerImmobile && objCamera.transform.position.x == cameraRef.transform.position.x)
                 {
                     activated = false;
@@ -101,7 +103,7 @@ public class CameraMovement : MonoBehaviour {
             {
                 if (direction)
                 {
-                    objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x + shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
+                    objCamera.transform.position += new Vector3(speed, 0, 0);
                     if (objCamera.transform.position.x >= cameraRef.transform.position.x + shakeRange)
                     {
                         direction = false;
@@ -109,7 +111,7 @@ public class CameraMovement : MonoBehaviour {
                 }
                 else if (direction == false)
                 {
-                    objCamera.transform.position = Vector3.MoveTowards(objCamera.transform.position, new Vector3(cameraRef.transform.position.x - shakeRange, objCamera.transform.position.y, objCamera.transform.position.z), speed * Time.deltaTime);
+                    objCamera.transform.position -= new Vector3(speed, 0, 0);
                     if (objCamera.transform.position.x <= cameraRef.transform.position.x - shakeRange)
                     {
                         direction = true;
