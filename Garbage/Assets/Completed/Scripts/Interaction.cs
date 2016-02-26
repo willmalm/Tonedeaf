@@ -176,6 +176,7 @@ public class Interaction : MonoBehaviour {
             }
             screeching = true;
         }
+        else if(micInput.ReadThreshold)
         else
         {
             if (screeching)
@@ -201,7 +202,7 @@ public class Interaction : MonoBehaviour {
     {
         GameObject nearPlayer = checkList(list_event)[0];
         ObjectVariables vars = nearPlayer.GetComponent<ObjectVariables>();
-
+        //if item is in inventory
         if (vars.used == false)
         {
             vars.used = true;

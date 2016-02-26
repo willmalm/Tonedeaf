@@ -9,7 +9,7 @@ public class ObjectVariables : MonoBehaviour {
     [Header("Global")]
     public int type; //The type of interactable object
     public bool used;
-    [Space(10)]
+    [Space(5)]
     public bool canHighlight;
     public GameObject highlight;
 
@@ -23,7 +23,10 @@ public class ObjectVariables : MonoBehaviour {
 
     [Header("Event")]
     public bool requiresItem;
-    public int itemID;
+    public GameObject rqrItem;
+    [Space(5)]
+    public bool addsItem;
+    public GameObject addItem;
 
     void Update()
     {
