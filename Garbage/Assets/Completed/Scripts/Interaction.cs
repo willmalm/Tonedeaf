@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -15,56 +16,46 @@ public class Interaction : MonoBehaviour {
     //Objects
     private GameObject object_Inventory;
     private GameObject player;
-    private GameObject cameraObject;
 
     //Lists
-    public List<GameObject> list_pickup;  //List of type 0
-    public List<GameObject> list_screech; //List of type 1
-    public List<GameObject> list_event;   //List of type 2
+    public List<GameObject> item_List;
+    public List<GameObject> screech_List;
 
-    private List<GameObject> list_temp; //Temporary list of type 0
-    private List<ObjectVariables> list_var1; //Variables of type 1
-
+    private List<GameObject> backup_List;
+    private List<ObjectVariables> var_List;
 
     //Scripts
     private Inventory inventory;
-    private SpawnByLoudness micInput;
-    private CameraMovement camMov;
-    private PlayerController plController;
+
+    //Components
+    private Text txt;
 
     //Variables
     private bool screeching = false;
 
     void Start()
     {
+        //Dependency "TextBox"
+        txt = textBox.GetComponent<Text>();
         //Dependency "Inventory"
         object_Inventory = GameObject.FindGameObjectWithTag("Inventory");
         inventory = object_Inventory.GetComponent<Inventory>();
         //Dependency "Player"
         player = GameObject.FindGameObjectWithTag("Player");
 
-        list_pickup = new List<GameObject>();
-        list_screech = new List<GameObject>();
-        list_event = new List<GameObject>();
-
-        list_temp = new List<GameObject>();
-        list_var1 = new List<ObjectVariables>();
-
-        micInput = player.GetComponent<SpawnByLoudness>();
-
-        cameraObject = GameObject.FindGameObjectWithTag("CameraObject");
-        camMov = cameraObject.GetComponent<CameraMovement>();
-
-        plController = transform.parent.gameObject.GetComponent<PlayerController>();
+        item_List = new List<GameObject>();
+        backup_List = new List<GameObject>();
+        screech_List = new List<GameObject>();
+        var_List = new List<ObjectVariables>();
     }
 
     void Update()
     {
         if (screeching)
         {
-            for (int i = 0; i < list_screech.Count; i++)
+            for (int i = 0; i < screech_List.Count; i++)
             {
-                list_var1[i].force += Time.deltaTime;
+                var_List[i].force += Time.deltaTime;
             }
         }
     }
@@ -72,72 +63,50 @@ public class Interaction : MonoBehaviour {
     //Changes value of bool based on collision
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "interact_pickup")
+        if (col.tag == "objInteract")
         {
-            list_pickup.Add(col.gameObject);
-            list_temp.Add(col.gameObject);
+            item_List.Add(col.gameObject);
+            backup_List.Add(col.gameObject);
+            col.gameObject.transform.parent.gameObject.GetComponent<ObjectVariables>().highlight.SetActive(true);
         }
-        if (col.tag == "interact_screech")
+        if (col.tag == "scrObject")
         {
-            list_screech.Add(col.gameObject);
-        }
-        if(col.tag == "interact_event")
-        {
-            list_event.Add(col.gameObject);
-        }
-        if(col.tag == "interact_pickup" || col.tag == "interact_screech" || col.tag == "interact_event")
-        {
-            ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
-            if (var.canHighlight)
-            {
-                var.highlight.SetActive(true);
-            }
+            screech_List.Add(col.gameObject);
         }
     }
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.tag == "interact_pickup")
+        if (col.tag == "objInteract")
         {
-            list_pickup.Remove(col.gameObject);
-            list_temp.Remove(col.gameObject);
+            item_List.Remove(col.gameObject);
+            backup_List.Remove(col.gameObject);
+            col.gameObject.transform.parent.gameObject.GetComponent<ObjectVariables>().highlight.SetActive(false);
         }
-        if(col.tag == "interact_screech")
+        if(col.tag == "scrObject")
         {
-            list_screech.Remove(col.gameObject);
-        }
-        if(col.tag == "interact_event")
-        {
-            list_event.Remove(col.gameObject);
-        }
-        if (col.tag == "interact_pickup" || col.tag == "interact_screech" || col.tag == "interact_event")
-        {
-            ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
-            if (var.canHighlight)
-            {
-                var.highlight.SetActive(false);
-            }
+            screech_List.Remove(col.gameObject);
         }
     }
     public void PickUp()
     {
         //Check which item is closest to the player
-        while (1 < list_pickup.Count) {
+        while (1 < item_List.Count) {
             Debug.Log("searching...");
-            for (int i = 0; i < list_pickup.Count; i++)
+            for (int i = 0; i < item_List.Count; i++)
             {
-                for (int j = 0; j < list_pickup.Count;)
+                for (int j = 0; j < item_List.Count;)
                 {
                     if (j != i)
                     {
-                        if (Vector2.Distance(player.transform.position, list_pickup[j].transform.position) > Vector2.Distance(player.transform.position, list_pickup[i].transform.position))
+                        if (Vector2.Distance(player.transform.position, item_List[j].transform.position) > Vector2.Distance(player.transform.position, item_List[i].transform.position))
                         {
-                            list_pickup.Remove(list_pickup[j]);
+                            item_List.Remove(item_List[j]);
                             Debug.Log("Removed object j" + j);
                             j++;
                         }
                         else
                         {
-                            list_pickup.Remove(list_pickup[i]);
+                            item_List.Remove(item_List[i]);
                             Debug.Log("Removed object i" + i);
                             j = 1000000;
                         }
@@ -149,59 +118,28 @@ public class Interaction : MonoBehaviour {
                 }
             }
         }
-        if (list_pickup.Count > 0)
+        if (item_List.Count > 0)
         {
             //Add item to inventory and destroy object
-            var obj = (GameObject)Instantiate(list_pickup[0].transform.parent.GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
+            var obj = (GameObject)Instantiate(item_List[0].transform.parent.GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
             inventory.AddItem(obj);
-            GameObject singleObject = list_pickup[0];
-            list_temp.Remove(singleObject);
+            GameObject singleObject = item_List[0];
+            backup_List.Remove(singleObject);
             Destroy(singleObject.transform.parent.gameObject);
-            list_pickup = list_temp;
+            item_List = backup_List;
         }
     }
     public void Screech()
     {
-        if (micInput.ReadLoudness())
+        for (int i = 0; i < screech_List.Count; i++)
         {
-            if (!screeching)
-            {
-                for (int i = 0; i < list_screech.Count; i++)
-                {
-                    list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
-                }
-                plController.Screech();
-                camMov.ScreenShake(true);
-            }
-            screeching = true;
-        }
-        else
-        {
-            if (screeching)
-            {
-                list_var1.Clear();
-                plController.ScreechEnd();
-                camMov.StopShake(true);
-            }
-            screeching = false;
-        }
+            var_List.Add(screech_List[i].GetComponent<ObjectVariables>());
+        }       
+        screeching = true;
     }
     public void ScreechStop()
     {
-        if (screeching)
-        {
-            list_var1.Clear();
-            plController.ScreechEnd();
-            camMov.StopShake(true);
-        }
+        var_List.Clear();
         screeching = false;
-    }
-    public void Talk()
-    {
-        for (int i = 0; i < list_event.Count; i++)
-        {
-            list_event[i].GetComponent<ObjectVariables>().used = true;
-        }
-
     }
 }

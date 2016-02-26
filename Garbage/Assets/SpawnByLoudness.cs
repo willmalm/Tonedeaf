@@ -2,14 +2,18 @@
 using System.Collections;
 
 public class SpawnByLoudness : MonoBehaviour {
-	public GameObject audioInputObject; // Microphone variable
-	public float firstThreshold = 1.0f; // Threshold variable
-	public float secondThreshold = 20.0f;
+	public GameObject audioInputObject;
+	public float threshold = 1.0f;
+	public GameObject objectToSpawn;
+	public float speed = 1.0f;
+	public float fade = 1.0f;
 	MicrophoneInput micIn;
 
 
 	// Use this for initialization
 	void Start () {
+		if (objectToSpawn == null)
+			Debug.LogError("You need to set a prefab to Object To Spawn -parameter in the editor!");
 		if (audioInputObject == null)
 			audioInputObject = GameObject.Find("MicMonitor");
 		micIn = (MicrophoneInput) audioInputObject.GetComponent<MicrophoneInput>();
@@ -18,13 +22,11 @@ public class SpawnByLoudness : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Debug.Log (micIn.loudness);
-		if (Input.GetKey(KeyCode.H) && micIn.loudness > firstThreshold) // If-statement that executes if the H-key is held down and the microphone level is above Threshold
+		if (micIn.loudness > threshold)
 		{
-			
+			Vector3 scale = new Vector3(micIn.loudness,micIn.loudness,micIn.loudness);
+			GameObject newObject = (GameObject)Instantiate(objectToSpawn, this.transform.position, Quaternion.identity);
+			// newObject.transform.localScale += scale;
 		}
 	}
-    public bool ReadLoudness()
-    {
-        return micIn.loudness > firstThreshold;
-    }
 }

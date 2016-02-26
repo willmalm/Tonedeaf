@@ -65,19 +65,17 @@ public class KeyManager : MonoBehaviour {
             inventoryUI.ChangeState();
         }
         //Screech
-        if (Input.GetKey(keys[6]))
+        if (Input.GetKeyDown(keys[6]))
         {
-
-            //plController.Screech();
+            plController.Screech();
             plInteraction.Screech();
-            //camMov.ScreenShake(true);
-            
+            camMov.ScreenShake(true);
         }
-        else
+        else if (Input.GetKeyUp(keys[6]))
         {
-            //plController.ScreechEnd();
+            plController.ScreechEnd();
             plInteraction.ScreechStop();
-            //camMov.StopShake(true);
+            camMov.StopShake(true);
         }
-    }
+	}
 }
