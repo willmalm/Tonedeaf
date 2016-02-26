@@ -163,7 +163,7 @@ public class Interaction : MonoBehaviour {
     }
     public void Screech()
     {
-        if (micInput.ReadLoudness())
+        if (micInput.ReadThreshold1())
         {
             if (!screeching)
             {
@@ -176,7 +176,32 @@ public class Interaction : MonoBehaviour {
             }
             screeching = true;
         }
-        else if(micInput.ReadThreshold)
+        else if (micInput.ReadThreshold2())
+        {
+            if (!screeching)
+            {
+                for (int i = 0; i < list_screech.Count; i++)
+                {
+                    list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
+                }
+                plController.Screech();
+                camMov.ScreenShake(true);
+            }
+            screeching = true;
+        }
+        else if (micInput.ReadThreshold3())
+        {
+            if (!screeching)
+            {
+                for (int i = 0; i < list_screech.Count; i++)
+                {
+                    list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
+                }
+                plController.Screech();
+                camMov.ScreenShake(true);
+            }
+            screeching = true;
+        }
         else
         {
             if (screeching)

@@ -29,12 +29,12 @@ public class SpawnByLoudness : MonoBehaviour {
         return micIn.loudness > firstThreshold && micIn.loudness < secondThreshold;
     }
 
-	public bool ReadThershold2()
+	public bool ReadThreshold2()
 	{
 		return micIn.loudness > secondThreshold && micIn.loudness < secondThreshold;
 	}
 
-	public bool ReadThreshold3(){
+	public bool ReadThreshold3()
 	{
 		return micIn.loudness > thirdThreshold;
 	}

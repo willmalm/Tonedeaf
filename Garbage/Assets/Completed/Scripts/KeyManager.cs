@@ -28,7 +28,7 @@ public class KeyManager : MonoBehaviour {
         sprite_inventory = GameObject.FindGameObjectWithTag("SpriteInventory");
         inventoryUI = sprite_inventory.GetComponent<InventoryUI>();
 
-        obj_camera = GameObject.FindGameObjectWithTag("obj_camera");
+        obj_camera = GameObject.FindGameObjectWithTag("CameraObject");
         camMov = obj_camera.GetComponent<CameraMovement>();
 	}
 	
