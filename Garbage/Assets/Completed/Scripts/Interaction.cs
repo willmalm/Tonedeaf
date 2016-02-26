@@ -121,7 +121,7 @@ public class Interaction : MonoBehaviour {
     public void PickUp()
     {
         //Check which item is closest to the player
-        while (1 < list_pickup.Count) {
+        /*while (1 < list_pickup.Count) {
             Debug.Log("searching...");
             for (int i = 0; i < list_pickup.Count; i++)
             {
@@ -148,7 +148,8 @@ public class Interaction : MonoBehaviour {
                     }
                 }
             }
-        }
+        }*/
+        list_pickup = checkList(list_pickup);
         if (list_pickup.Count > 0)
         {
             //Add item to inventory and destroy object
@@ -198,10 +199,47 @@ public class Interaction : MonoBehaviour {
     }
     public void Talk()
     {
-        for (int i = 0; i < list_event.Count; i++)
-        {
-            list_event[i].GetComponent<ObjectVariables>().used = true;
-        }
+        GameObject nearPlayer = checkList(list_event)[0];
+        ObjectVariables vars = nearPlayer.GetComponent<ObjectVariables>();
 
+        if (vars.used == false)
+        {
+            vars.used = true;
+        }
+        else
+        {
+            vars.used = false;
+        }
+    }
+    public List<GameObject> checkList(List<GameObject> list)
+    {
+        //Check which object is closest to the player
+        while (1 < list.Count)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = 0; j < list.Count;)
+                {
+                    if (j != i)
+                    {
+                        if (Vector2.Distance(player.transform.position, list[j].transform.position) > Vector2.Distance(player.transform.position, list[i].transform.position))
+                        {
+                            list.Remove(list[j]);
+                            j++;
+                        }
+                        else
+                        {
+                            list.Remove(list[i]);
+                            j = 1000000;
+                        }
+                    }
+                    else
+                    {
+                        j++;
+                    }
+                }
+            }
+        }
+        return list;
     }
 }

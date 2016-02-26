@@ -6,22 +6,22 @@ public class ObjectVariables : MonoBehaviour {
 
     public string objName;
 
-    //Global
+    [Header("Global")]
     public int type; //The type of interactable object
-
     public bool used;
+    [Space(10)]
     public bool canHighlight;
     public GameObject highlight;
 
-    //Pickup
+    [Header("Pickup")]
     public bool canPickup;
     public GameObject inventoryItem;
 
-    //Screech
+    [Header("Screech")]
     public float force;
     public float toughness;
 
-    //Interact
+    [Header("Event")]
     public bool requiresItem;
     public int itemID;
 

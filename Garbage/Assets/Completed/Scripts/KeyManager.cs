@@ -10,7 +10,7 @@ public class KeyManager : MonoBehaviour {
     private GameObject player;
     private GameObject playerInteract;
     private GameObject sprite_inventory;
-    private GameObject cameraObject;
+    private GameObject obj_camera;
 
     //Scripts
     private PlayerController plController;
@@ -28,8 +28,8 @@ public class KeyManager : MonoBehaviour {
         sprite_inventory = GameObject.FindGameObjectWithTag("SpriteInventory");
         inventoryUI = sprite_inventory.GetComponent<InventoryUI>();
 
-        cameraObject = GameObject.FindGameObjectWithTag("CameraObject");
-        camMov = cameraObject.GetComponent<CameraMovement>();
+        obj_camera = GameObject.FindGameObjectWithTag("obj_camera");
+        camMov = obj_camera.GetComponent<CameraMovement>();
 	}
 	
 	void Update () {
@@ -54,10 +54,11 @@ public class KeyManager : MonoBehaviour {
         {
             plController.MoveDown();
         }
-        //Pick up item
+        //Pick up item or interact with object
         if (Input.GetKeyDown(keys[4]))
         {
             plInteraction.PickUp();
+            plInteraction.Talk();
         }
         //Change inventory state
         if (Input.GetKeyDown(keys[5]))
@@ -67,17 +68,11 @@ public class KeyManager : MonoBehaviour {
         //Screech
         if (Input.GetKey(keys[6]))
         {
-
-            //plController.Screech();
             plInteraction.Screech();
-            //camMov.ScreenShake(true);
-            
         }
         else
         {
-            //plController.ScreechEnd();
             plInteraction.ScreechStop();
-            //camMov.StopShake(true);
         }
     }
 }
