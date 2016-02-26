@@ -65,6 +65,7 @@
     <Compile Include="Assets\Beehive\BeehiveController.cs" />
     <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
+    <Compile Include="Assets\Completed\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Completed\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Completed\Scripts\Dialog.cs" />
     <Compile Include="Assets\Completed\Scripts\DialogFunction.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Completed\Scripts\KeyManager.cs" />
     <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
     <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
+    <Compile Include="Assets\Completed\Scripts\NPCVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Beehive.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
@@ -108,6 +110,8 @@
     <Compile Include="Assets\Users\William\StageVariables.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Vegetation\Grass\Grass.shader" />
+    <None Include="Assets\Vegetation\Trees\Tree.shader" />
     <None Include="Assets\eufaof.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
