@@ -19,10 +19,10 @@ public class MicrophoneInput : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		loudness = GetAveragedVolume() * sensitivity;
+		loudness = GetAveragedVolume() * sensitivity; // Calculates the loudness by Multiplying the volume and the sensitivy
 	}
 
-	float GetAveragedVolume()
+	float GetAveragedVolume() // Function that calculates the volume
 	{ 
 		float[] data = new float[256];
 		float a = 0;
