@@ -27,13 +27,13 @@ public class PlayerController : MonoBehaviour {
     private JensAnimationController playerAnimation;
     private AudioManager audioManager;
 
-    private int backUpLayer;
     private int timerSpeed;
 
-    //AudioSource
+    //Components
     private AudioSource aud;
+    private Collider2D playerCollider;
 
-	void Start ()
+    void Start ()
 	{
         //Dependency "PlayerVariables", "GridVariables"
 		playerVar = GetComponent<PlayerVariables> ();
@@ -44,15 +44,16 @@ public class PlayerController : MonoBehaviour {
         playerSize = playerSprite.GetComponent<SpriteSize>();
 
         audioManager = GetComponent<AudioManager>();
-        backUpLayer = 0;
         timerSpeed = 0;
 
         aud = GetComponent<AudioSource>();
+        playerCollider = GetComponent<Collider2D>();
 	}
 
     void Update()
     {
         stepTimer += timerSpeed * Time.deltaTime;
+        Knockdown();
     }
         
     public void MoveRight()
@@ -177,5 +178,29 @@ public class PlayerController : MonoBehaviour {
     {
         playerAnimation.screamStrength = 0;
         aud.Stop();
+    }
+    private void Knockdown()
+    {
+        if (playerVar.knockdown)
+        {
+            playerCollider.enabled = false;
+            playerAnimation.screamStrength = 1;
+            playerVar.immobile = true;
+            if (transform.position.x > playerVar.newPosition.x)
+            {
+                transform.position += new Vector3(-0.2f, 0, 0);
+            }
+            else
+            {
+                playerVar.knockdown = false;
+            }
+        }
+        else
+        {
+            playerCollider.enabled = true;
+            playerVar.newPosition = transform.position + new Vector3(-5, 0, 0);
+            playerVar.immobile = false;
+            playerAnimation.screamStrength = 0;
+        }
     }
 }

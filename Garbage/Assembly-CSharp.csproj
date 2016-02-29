@@ -38,48 +38,51 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Hans/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Hans/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Beehive\BeehiveController.cs" />
+     <Compile Include="Assets\Completed\Scripts\AIGrowlingGoat.cs" />
      <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
+     <Compile Include="Assets\Completed\Scripts\ButtonManager.cs" />
      <Compile Include="Assets\Completed\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Completed\Scripts\Dialog.cs" />
-     <Compile Include="Assets\Completed\Scripts\DialogFunction.cs" />
+     <Compile Include="Assets\Completed\Scripts\Fade.cs" />
      <Compile Include="Assets\Completed\Scripts\Interaction.cs" />
+     <Compile Include="Assets\Completed\Scripts\Inventory.cs" />
      <Compile Include="Assets\Completed\Scripts\InventoryUI.cs" />
-     <Compile Include="Assets\Completed\Scripts\KeyUse.cs" />
+     <Compile Include="Assets\Completed\Scripts\Item.cs" />
+     <Compile Include="Assets\Completed\Scripts\KeyManager.cs" />
      <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
      <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
+     <Compile Include="Assets\Completed\Scripts\NPCVariables.cs" />
+     <Compile Include="Assets\Completed\Scripts\OF_Beehive.cs" />
      <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
      <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
      <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
-     <Compile Include="Assets\Completed\Scripts\PivotTest.cs" />
      <Compile Include="Assets\Completed\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Completed\Scripts\PlayerVariables.cs" />
-     <Compile Include="Assets\Completed\Scripts\QuestVariables.cs" />
-     <Compile Include="Assets\Completed\Scripts\SceneChangeTrigger.cs" />
      <Compile Include="Assets\Completed\Scripts\Speech.cs" />
      <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
      <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
      <Compile Include="Assets\Jens\JensAnimationController.cs" />
      <Compile Include="Assets\KeyBindings.cs" />
      <Compile Include="Assets\MicrophoneInput.cs" />
+     <Compile Include="Assets\SceneChangeTrigger.cs" />
      <Compile Include="Assets\ScreechTransform.cs" />
      <Compile Include="Assets\SpawnByLoudness.cs" />
      <Compile Include="Assets\Users\Hans\Cursor.cs" />
-     <Compile Include="Assets\Users\Hans\Inventory.cs" />
-     <Compile Include="Assets\Users\Hans\Item.cs" />
      <Compile Include="Assets\Users\Hans\KeyID.cs" />
      <Compile Include="Assets\Users\Hans\Settings.cs" />
      <Compile Include="Assets\Users\Simon\BasicMovement.cs" />
      <Compile Include="Assets\Users\William\Boss1_stage1.cs" />
      <Compile Include="Assets\Users\William\BossBehavior.cs" />
+     <Compile Include="Assets\Users\William\Dialog.cs" />
+     <Compile Include="Assets\Users\William\DialogFunction.cs" />
      <Compile Include="Assets\Users\William\Grid\GridLayer.cs" />
      <Compile Include="Assets\Users\William\Grid\GridManager.cs" />
      <Compile Include="Assets\Users\William\Grid\GridPosition.cs" />
@@ -87,13 +90,16 @@
      <Compile Include="Assets\Users\William\Ljud.cs" />
      <Compile Include="Assets\Users\William\Obstacle01.cs" />
      <Compile Include="Assets\Users\William\PlayerStatus.cs" />
+     <Compile Include="Assets\Users\William\QuestVariables.cs" />
      <Compile Include="Assets\Users\William\StageVariables.cs" />
+     <None Include="Assets\Vegetation\Trees\Tree.shader" />
+     <None Include="Assets\Vegetation\Grass\Grass.shader" />
      <None Include="Assets\eufaof.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Hans/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Hans/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
