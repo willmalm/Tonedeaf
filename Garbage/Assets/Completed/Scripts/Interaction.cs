@@ -153,11 +153,11 @@ public class Interaction : MonoBehaviour {
         if (list_pickup.Count > 0)
         {
             //Add item to inventory and destroy object
-            var obj = (GameObject)Instantiate(list_pickup[0].transform.parent.GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
+            var obj = (GameObject)Instantiate(list_pickup[0].GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
             inventory.AddItem(obj);
             GameObject singleObject = list_pickup[0];
             list_temp.Remove(singleObject);
-            Destroy(singleObject.transform.parent.gameObject);
+            Destroy(singleObject);
             list_pickup = list_temp;
         }
     }
@@ -225,16 +225,21 @@ public class Interaction : MonoBehaviour {
     }
     public void Talk()
     {
-        GameObject nearPlayer = checkList(list_event)[0];
-        ObjectVariables vars = nearPlayer.GetComponent<ObjectVariables>();
-        //if item is in inventory
-        if (vars.used == false)
+        if (list_event.Count > 0)
         {
-            vars.used = true;
-        }
-        else
-        {
-            vars.used = false;
+            GameObject nearPlayer = checkList(list_event)[0];
+            ObjectVariables vars = nearPlayer.GetComponent<ObjectVariables>();
+            if (inventory.ItemExists(vars.itemID))
+            {
+                if (vars.used == false)
+                {
+                    vars.used = true;
+                }
+                else
+                {
+                    vars.used = false;
+                }
+            }
         }
     }
     public List<GameObject> checkList(List<GameObject> list)

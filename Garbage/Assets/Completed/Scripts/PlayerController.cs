@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour {
     public float stepTimer;
     public float stepDelay;
     public string stepSound;
+    public string[] stepSounds;
+    public int currentStep;
 
     //Scripts
     private PlayerVariables playerVar;
@@ -65,8 +67,13 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
-                audioManager.PlaySound(stepSound);
+                audioManager.PlaySound(stepSounds[currentStep]);
                 stepTimer = 0;
+                currentStep++;
+                if (currentStep >= stepSounds.Length)
+                {
+                    currentStep = 0;
+                }
             }
         }
        
@@ -83,8 +90,13 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
-                audioManager.PlaySound(stepSound);
+                audioManager.PlaySound(stepSounds[currentStep]);
                 stepTimer = 0;
+                currentStep++;
+                if (currentStep >= stepSounds.Length)
+                {
+                    currentStep = 0;
+                }
             }
         }
     }
@@ -99,8 +111,13 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
-                audioManager.PlaySound(stepSound);
+                audioManager.PlaySound(stepSounds[currentStep]);
                 stepTimer = 0;
+                currentStep++;
+                if (currentStep >= stepSounds.Length)
+                {
+                    currentStep = 0;
+                }
             }
         }
 
@@ -117,8 +134,13 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
-                audioManager.PlaySound(stepSound);
+                audioManager.PlaySound(stepSounds[currentStep]);
                 stepTimer = 0;
+                currentStep++;
+                if(currentStep >= stepSounds.Length)
+                {
+                    currentStep = 0;
+                }
             }
         }
     }

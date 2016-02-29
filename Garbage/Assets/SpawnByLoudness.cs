@@ -18,11 +18,6 @@ public class SpawnByLoudness : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (micIn.loudness);
-		if (Input.GetKey(KeyCode.H) && micIn.loudness > firstThreshold) // If-statement that executes if the H-key is held down and the microphone level is above Threshold
-		{
-			
-		}
 	}
     public bool ReadThreshold1()
     {

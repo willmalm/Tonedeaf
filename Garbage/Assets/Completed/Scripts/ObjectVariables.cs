@@ -14,7 +14,6 @@ public class ObjectVariables : MonoBehaviour {
     public GameObject highlight;
 
     [Header("Pickup")]
-    public bool canPickup;
     public GameObject inventoryItem;
 
     [Header("Screech")]
@@ -23,7 +22,7 @@ public class ObjectVariables : MonoBehaviour {
 
     [Header("Event")]
     public bool requiresItem;
-    public GameObject rqrItem;
+    public int itemID;
     [Space(5)]
     public bool addsItem;
     public GameObject addItem;

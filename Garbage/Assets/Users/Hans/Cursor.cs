@@ -95,16 +95,4 @@ public class Cursor : MonoBehaviour
             }
         }
     }
-    private void EquipItem()
-    {
-        List<GameObject> itemsInInventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().GetList();
-        for (int i = 0; i < itemsInInventory.Count; i++)
-        {
-            if (itemsInInventory[i].transform.position == this.transform.position + new Vector3(0, 0, 1))
-            {
-                GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().EquipItem(i);
-                break;
-            }
-        }
-    }
 }
