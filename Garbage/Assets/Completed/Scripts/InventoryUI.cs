@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InventoryUI : MonoBehaviour {
+public class InventoryUI : MonoBehaviour
+{
 
     public float posX;
     public float smoothSpeed;
@@ -12,7 +13,8 @@ public class InventoryUI : MonoBehaviour {
     private bool activated;
 
 
-	void Start () {
+	void Start ()
+	{
         targetObject = transform.parent.gameObject;
 	}
 

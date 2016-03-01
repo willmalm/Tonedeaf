@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -9,7 +8,6 @@ public class Inventory : MonoBehaviour
     private List<GameObject> itemList;
     public int counter1 = 0;
     public int counter2 = 0;
-    public Text text;
     public float distance;
 
     public void Start()
@@ -56,7 +54,6 @@ public class Inventory : MonoBehaviour
         }
         counter1 = 0;
         counter2 = 0;
-        text.text = itemList.Count.ToString();
     }
     public void SwapItems(int index1, int index2)
     {
