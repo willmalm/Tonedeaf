@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerVariables : MonoBehaviour {
-
+public class PlayerVariables : MonoBehaviour
+{
     public int maxHealth;
     public int currentHealth;
     public int horizontal_speed;
@@ -10,4 +10,5 @@ public class PlayerVariables : MonoBehaviour {
     public bool immune;
     public bool knockdown;
     public bool immobile;
+    public Vector3 newPosition;
 }

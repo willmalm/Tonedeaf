@@ -58,10 +58,6 @@ public class Inventory : MonoBehaviour
         counter2 = 0;
         text.text = itemList.Count.ToString();
     }
-    public void UseItem(GameObject item)
-    {
-        item.GetComponent<Item>().Effect();
-    }
     public void SwapItems(int index1, int index2)
     {
         GameObject temp = itemList[index1];
@@ -69,8 +65,30 @@ public class Inventory : MonoBehaviour
         itemList[index2] = temp;
         UpdatePositions();
     }
-    public void EquipItem(int index)
+    public bool ItemExists(int id)
     {
-        //N/A
+        if (id == 0)
+        {
+            return true;
+        }
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            if(itemList[i].GetComponent<Item>().itemID == id)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public GameObject GetItem(int id)
+    {
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            if (itemList[i].GetComponent<Item>().itemID == id)
+            {
+                return itemList[i];
+            }
+        }
+        return null;
     }
 }
