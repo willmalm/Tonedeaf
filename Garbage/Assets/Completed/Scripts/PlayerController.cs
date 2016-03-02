@@ -188,19 +188,19 @@ public class PlayerController : MonoBehaviour {
             playerVar.immobile = true;
             if (transform.position.x > playerVar.newPosition.x)
             {
-                transform.position += new Vector3(-0.2f, 0, 0);
+                transform.position += new Vector3(-0.3f, 0, 0);
             }
             else
             {
                 playerVar.knockdown = false;
+				playerVar.immobile = false;
+				playerAnimation.screamStrength = 0;
+				playerCollider.enabled = true;
             }
         }
         else
         {
-            playerCollider.enabled = true;
-            playerVar.newPosition = transform.position + new Vector3(-5, 0, 0);
-            playerVar.immobile = false;
-            playerAnimation.screamStrength = 0;
+            playerVar.newPosition = transform.position + new Vector3(-15, 0, 0);
         }
     }
 }

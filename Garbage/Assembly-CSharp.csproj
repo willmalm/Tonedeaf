@@ -70,6 +70,7 @@
      <Compile Include="Assets\Completed\Scripts\Speech.cs" />
      <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
      <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
+     <Compile Include="Assets\Goat\GoatAnimator.cs" />
      <Compile Include="Assets\Jens\JensAnimationController.cs" />
      <Compile Include="Assets\KeyBindings.cs" />
      <Compile Include="Assets\MicrophoneInput.cs" />

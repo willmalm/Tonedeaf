@@ -31,6 +31,7 @@ public class Interaction : MonoBehaviour {
     private SpawnByLoudness micInput;
     private CameraMovement camMov;
     private PlayerController plController;
+	private PlayerVariables playerVar;
 
     //Variables
     private bool screeching = false;
@@ -56,6 +57,7 @@ public class Interaction : MonoBehaviour {
         camMov = cameraObject.GetComponent<CameraMovement>();
 
         plController = transform.parent.gameObject.GetComponent<PlayerController>();
+		playerVar = transform.parent.gameObject.GetComponent<PlayerVariables>();
     }
 
     void Update()
@@ -81,11 +83,11 @@ public class Interaction : MonoBehaviour {
         {
             list_screech.Add(col.gameObject);
         }
-        if(col.tag == "interact_event")
+        if (col.tag == "interact_event")
         {
             list_event.Add(col.gameObject);
         }
-        if(col.tag == "interact_pickup" || col.tag == "interact_screech" || col.tag == "interact_event")
+        if (col.tag == "interact_pickup" || col.tag == "interact_screech" || col.tag == "interact_event")
         {
             ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
             if (var.canHighlight)
@@ -93,6 +95,12 @@ public class Interaction : MonoBehaviour {
                 var.highlight.SetActive(true);
             }
         }
+		if (col.tag == "GrowlingGoatGreeting")
+		{
+			playerVar.immobile = true;
+			col.gameObject.GetComponent<AIGrowlingGoat>().Knockdown();
+			col.enabled = false;
+		}
     }
     void OnTriggerExit2D(Collider2D col)
     {

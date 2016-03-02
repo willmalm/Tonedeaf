@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public int counter2 = 0;
     public float distance;
 
-    public void Start()
+    private void Start()
     {
         itemList = new List<GameObject>();
         for (int i = 0; i < GameObject.FindGameObjectsWithTag("Item").Length; i++)
