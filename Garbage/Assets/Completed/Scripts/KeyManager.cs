@@ -16,7 +16,7 @@ public class KeyManager : MonoBehaviour {
     private PlayerController plController;
     private Interaction plInteraction;
     private InventoryUI inventoryUI;
-    private CameraMovement camMov;
+    private CameraControl camMov;
 
     void Start () {
         //Dependency "Player"
@@ -29,7 +29,7 @@ public class KeyManager : MonoBehaviour {
         inventoryUI = sprite_inventory.GetComponent<InventoryUI>();
 
         obj_camera = GameObject.FindGameObjectWithTag("CameraObject");
-        camMov = obj_camera.GetComponent<CameraMovement>();
+        camMov = obj_camera.GetComponent<CameraControl>();
 	}
 	
 	void Update () {
@@ -68,7 +68,11 @@ public class KeyManager : MonoBehaviour {
         //Screech
         if (Input.GetKey(keys[6]))
         {
-            plInteraction.Screech();
+            plInteraction.Screech(true);
+        }
+        else if (Input.GetKey(keys[7]))
+        {
+            plInteraction.Screech(false);
         }
         else
         {

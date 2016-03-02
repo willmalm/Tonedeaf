@@ -23,6 +23,11 @@ public class CameraMovement : MonoBehaviour {
     private bool shaking;
     private bool playerImmobile;
 
+
+
+    private float rangeUp;
+    private float rangeRight;
+
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");

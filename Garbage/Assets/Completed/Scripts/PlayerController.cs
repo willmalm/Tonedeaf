@@ -199,8 +199,8 @@ public class PlayerController : MonoBehaviour {
         {
             playerCollider.enabled = true;
             playerVar.newPosition = transform.position + new Vector3(-5, 0, 0);
-            playerVar.immobile = false;
-            playerAnimation.screamStrength = 0;
+            //playerVar.immobile = false;
+           // playerAnimation.screamStrength = 0;
         }
     }
 }

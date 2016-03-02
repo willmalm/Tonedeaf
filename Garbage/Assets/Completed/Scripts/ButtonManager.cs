@@ -43,7 +43,7 @@ public class ButtonManager : MonoBehaviour {
     {
         if(selected == buttons[0])
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         }
         else if (selected == buttons[1])
         {
