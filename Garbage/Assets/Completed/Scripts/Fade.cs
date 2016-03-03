@@ -1,55 +1,57 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fade : MonoBehaviour {
+public class Fade : MonoBehaviour
+{
+    public float fade_time;
 
-    public float speed;
-    public float duration;
     private bool fade;
     private float timer;
-    private float timer_black;
     private bool rising = true;
 
-    SpriteRenderer sprite;
+    private SpriteRenderer sprite;
 
-	void Start () {
+	private void Start ()
+    {
         sprite = GetComponent<SpriteRenderer>();
-        sprite.color = new Color(1f, 1f, 1f, 0f);
-        UseFade();
     }
 
-	void Update () {
+	private void Update ()
+    {
         if (fade)
         {
-            if (rising) {
-                timer += speed * Time.deltaTime;
-                sprite.color = new Color(1f, 1f, 1f, timer);
-                if(timer >= 1)
+            if (rising)
+            {
+                timer += Time.deltaTime;
+                sprite.color = new Color(1f, 1f, 1f, timer * 1/fade_time);
+                if(timer >= fade_time)
                 {
-                    timer_black += Time.deltaTime;
-                    if (timer_black >= duration)
-                    {
-                        timer_black = 0;
-                        timer = 1;
-                        rising = false;
-                    }
+                    timer = fade_time;
+                    fade = false;
                 }
             }
             else if (!rising)
             {
-                timer -= speed * Time.deltaTime;
-                sprite.color = new Color(1f, 1f, 1f, timer);
+                timer -= Time.deltaTime;
+                sprite.color = new Color(1f, 1f, 1f, timer * 1/fade_time);
                 if(timer <= 0)
                 {
                     timer = 0;
-                    rising = true;
                     fade = false;
                 }
             }
         }
 	}
-    public void UseFade()
+    public void BeginFade()
     {
         fade = true;
+        timer = 0;
+        rising = true;
+    }
+    public void EndFade()
+    {
+        fade = true;
+        timer = fade_time;
+        rising = false;
     }
 }

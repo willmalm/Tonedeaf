@@ -113,17 +113,17 @@ public class CameraControl : MonoBehaviour
         }
         else if (!shaking)
         {
-            if (activated == true && playerImmobile)
-            {
-                activated = false;
-            }
             activated = false;
             rUp -= shakeSpeed * Time.deltaTime;
             rRight -= shakeSpeed * Time.deltaTime;
             if (rUp <= 0 && rRight <= 0)
             {
                 objCamera.transform.position = cameraRef.transform.position;
-                player.GetComponent<PlayerVariables>().immobile = false;
+                if (activated == true && playerImmobile)
+                {
+                    activated = false;
+                    player.GetComponent<PlayerVariables>().immobile = false;
+                }
             }
             else
             {

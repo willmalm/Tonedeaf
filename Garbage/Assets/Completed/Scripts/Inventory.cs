@@ -15,15 +15,15 @@ public class Inventory : MonoBehaviour
     public void Start()
     {
         itemList = new List<GameObject>();
-        for (int i = 0; i < GameObject.FindGameObjectsWithTag("Item").Length; i++)
+        for (int i = 0; i < GameObject.FindGameObjectsWithTag("GLOBAL_item").Length; i++)
         {
-            AddItem(GameObject.FindGameObjectsWithTag("Item")[i]);
+            AddItem(GameObject.FindGameObjectsWithTag("GLOBAL_item")[i]);
         }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D) && GameObject.FindGameObjectWithTag("Settings").GetComponent<Settings>().configuringSettings == false)
+        if (Input.GetKeyDown(KeyCode.D) && GameObject.FindGameObjectWithTag("GLOBAL_settings").GetComponent<Settings>().configuringSettings == false)
         {
             UpdatePositions();
         }

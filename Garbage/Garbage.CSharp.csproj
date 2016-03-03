@@ -76,9 +76,9 @@
     <Compile Include="Assets\Completed\Scripts\Item.cs" />
     <Compile Include="Assets\Completed\Scripts\KeyManager.cs" />
     <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
-    <Compile Include="Assets\Completed\Scripts\NPCBehavior.cs" />
     <Compile Include="Assets\Completed\Scripts\NPCVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Beehive.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_Dialog.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
@@ -91,6 +91,7 @@
     <Compile Include="Assets\Jens\JensAnimationController.cs" />
     <Compile Include="Assets\KeyBindings.cs" />
     <Compile Include="Assets\MicrophoneInput.cs" />
+    <Compile Include="Assets\SceneChanger.cs" />
     <Compile Include="Assets\ScreechTransform.cs" />
     <Compile Include="Assets\SpawnByLoudness.cs" />
     <Compile Include="Assets\Users\Hans\Cursor.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Assets\Users\William\Grid\GridPosition.cs" />
     <Compile Include="Assets\Users\William\Grid\GridVariables.cs" />
     <Compile Include="Assets\Users\William\Ljud.cs" />
+    <Compile Include="Assets\Users\William\NPCBehavior.cs" />
     <Compile Include="Assets\Users\William\Obstacle01.cs" />
     <Compile Include="Assets\Users\William\PlayerStatus.cs" />
     <Compile Include="Assets\Users\William\QuestVariables.cs" />

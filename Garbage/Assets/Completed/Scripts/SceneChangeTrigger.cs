@@ -4,32 +4,36 @@ using System.Collections;
 
 public class SceneChangeTrigger : MonoBehaviour
 {
-    public string sceneName;
+    public int sceneIndex;
     public bool canEnter = false;
 
-    void OnTriggerStay2D(Collider2D col)
+    private GameObject obj_sceneChanger;
+    private SceneChanger sceneChanger;
+
+    private void Start()
     {
-        if (col.tag == "plInteract")
+        obj_sceneChanger = GameObject.FindGameObjectWithTag("GLOBAL_sceneChanger");
+        sceneChanger = obj_sceneChanger.GetComponent<SceneChanger>();
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.tag == "PLAYER_interact")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
 
-                SceneManager.LoadScene(sceneName);
+                sceneChanger.LoadScene(sceneIndex, true);
             }
-
-
-
         }
     }
-        void OnTriggerEnter2D(Collider2D col)
-        
+    private void OnTriggerEnter2D(Collider2D col)       
     {
         
-            if (canEnter == true && col.tag == "plInteract")
+            if (canEnter == true && col.tag == "PLAYER_interact")
             {
-                SceneManager.LoadScene(sceneName);
+                sceneChanger.LoadScene(sceneIndex, true);
             }
-
            
         }
 

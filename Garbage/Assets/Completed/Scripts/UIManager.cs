@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour {
     void Start()
     {
         //Dependancy "Player", "Inventory"
-        sprite_inventory = GameObject.FindGameObjectWithTag("SpriteInventory");
+        sprite_inventory = GameObject.FindGameObjectWithTag("GLOBAL_inventoryUI");
         player = GameObject.FindGameObjectWithTag("Player");
     }
 	void Update () {

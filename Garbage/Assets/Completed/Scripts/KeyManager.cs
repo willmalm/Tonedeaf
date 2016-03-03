@@ -21,14 +21,14 @@ public class KeyManager : MonoBehaviour {
     void Start () {
         //Dependency "Player"
         player = GameObject.FindGameObjectWithTag("Player");
-        playerInteract = GameObject.FindGameObjectWithTag("plInteract");
+        playerInteract = GameObject.FindGameObjectWithTag("PLAYER_interact");
         plController = player.GetComponent<PlayerController>();
         plInteraction = playerInteract.GetComponent<Interaction>();
         //Dependency "Inventory"
-        sprite_inventory = GameObject.FindGameObjectWithTag("SpriteInventory");
+        sprite_inventory = GameObject.FindGameObjectWithTag("GLOBAL_inventoryUI");
         inventoryUI = sprite_inventory.GetComponent<InventoryUI>();
 
-        obj_camera = GameObject.FindGameObjectWithTag("CameraObject");
+        obj_camera = GameObject.FindGameObjectWithTag("GLOBAL_camera");
         camMov = obj_camera.GetComponent<CameraControl>();
 	}
 	
