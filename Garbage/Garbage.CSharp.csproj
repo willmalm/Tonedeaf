@@ -74,11 +74,15 @@
     <Compile Include="Assets\Completed\Scripts\Inventory.cs" />
     <Compile Include="Assets\Completed\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Completed\Scripts\Item.cs" />
+    <Compile Include="Assets\Completed\Scripts\Keeper.cs" />
     <Compile Include="Assets\Completed\Scripts\KeyManager.cs" />
     <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
     <Compile Include="Assets\Completed\Scripts\NPCVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Beehive.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Dialog.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_Extinguisher.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_Note.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_Radio.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
@@ -93,6 +97,8 @@
     <Compile Include="Assets\MicrophoneInput.cs" />
     <Compile Include="Assets\SceneChanger.cs" />
     <Compile Include="Assets\ScreechTransform.cs" />
+    <Compile Include="Assets\Scripts\MeshCombiner.cs" />
+    <Compile Include="Assets\Shaders\TVController.cs" />
     <Compile Include="Assets\SpawnByLoudness.cs" />
     <Compile Include="Assets\Users\Hans\Cursor.cs" />
     <Compile Include="Assets\Users\Hans\KeyID.cs" />
@@ -114,6 +120,7 @@
     <Compile Include="Assets\Users\William\StageVariables.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\TVScreen.shader" />
     <None Include="Assets\Vegetation\Grass\Grass.shader" />
     <None Include="Assets\Vegetation\Trees\Tree.shader" />
     <None Include="Assets\eufaof.txt" />

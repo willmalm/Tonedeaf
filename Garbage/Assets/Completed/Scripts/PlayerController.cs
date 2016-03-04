@@ -147,26 +147,27 @@ public class PlayerController : MonoBehaviour {
     }
     public void Idle()
     {
-            //Increase timer based on framrate
-            idleTimer += Time.deltaTime;
-            timerSpeed = 0;
-            playerAnimation.speed = new Vector2(0, 0);
-            if (idleTimer >= idle1_Delay && idleTimer < idle2_Delay)
-            {
-                playerAnimation.idleAnimation = 1;
-            }
-            else if (idleTimer >= idle2_Delay && idleTimer < reset_Delay)
-            {
-                playerAnimation.idleAnimation = 2;
-            }
-            else if (idleTimer >= reset_Delay)
-            {
-                idleTimer = 0;
-            }
-            else
-            {
-                playerAnimation.idleAnimation = 0;
-            }
+        //Increase timer based on framrate
+        idleTimer += Time.deltaTime;
+        timerSpeed = 0;
+        stepTimer = 0;
+        playerAnimation.speed = new Vector2(0, 0);
+        if (idleTimer >= idle1_Delay && idleTimer < idle2_Delay)
+        {
+            playerAnimation.idleAnimation = 1;
+        }
+        else if (idleTimer >= idle2_Delay && idleTimer < reset_Delay)
+        {
+            playerAnimation.idleAnimation = 2;
+        }
+        else if (idleTimer >= reset_Delay)
+        {
+            idleTimer = 0;
+        }
+        else
+        {
+            playerAnimation.idleAnimation = 0;
+        }
     }
     public void Screech()
     {

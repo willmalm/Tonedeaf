@@ -9,6 +9,7 @@ public class SceneChangeTrigger : MonoBehaviour
 
     private GameObject obj_sceneChanger;
     private SceneChanger sceneChanger;
+    public Vector3 player_position;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class SceneChangeTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
 
-                sceneChanger.LoadScene(sceneIndex, true);
+                sceneChanger.LoadScene(sceneIndex, true, player_position);
             }
         }
     }
@@ -32,7 +33,7 @@ public class SceneChangeTrigger : MonoBehaviour
         
             if (canEnter == true && col.tag == "PLAYER_interact")
             {
-                sceneChanger.LoadScene(sceneIndex, true);
+                sceneChanger.LoadScene(sceneIndex, true, player_position);
             }
            
         }

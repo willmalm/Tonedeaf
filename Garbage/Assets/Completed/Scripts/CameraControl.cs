@@ -113,7 +113,7 @@ public class CameraControl : MonoBehaviour
         }
         else if (!shaking)
         {
-            activated = false;
+            
             rUp -= shakeSpeed * Time.deltaTime;
             rRight -= shakeSpeed * Time.deltaTime;
             if (rUp <= 0 && rRight <= 0)

@@ -109,7 +109,7 @@ public class Interaction : MonoBehaviour {
         {
             list_screech.Remove(col.gameObject);
         }
-        if(col.tag == "INTERACT_event")
+        if(col.tag == "INTERACT_eventOnKey")
         {
             list_event.Remove(col.gameObject);
         }
@@ -251,7 +251,14 @@ public class Interaction : MonoBehaviour {
             ObjectVariables vars = nearPlayer.GetComponent<ObjectVariables>();
             if (inventory.ItemExists(vars.itemID) || vars.requiresItem == false)
             {
-                vars.used = true;
+                if (!vars.toggle)
+                {
+                    vars.used = true;
+                }
+                else
+                {
+                    vars.used = !vars.used;
+                }
                 /*else
                 {
                     vars.used = false;

@@ -23,6 +23,7 @@ public class ObjectVariables : MonoBehaviour {
     [Header("Event")]
     public bool requiresItem;
     public int itemID;
+    public bool toggle;
     [Space(5)]
     public bool addsItem;
     public GameObject addItem;

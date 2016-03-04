@@ -98,6 +98,7 @@
     <Compile Include="Assets\Editor\FBXImport.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\TVScreen.shader" />
     <None Include="Assets\Vegetation\Grass\Grass.shader" />
     <None Include="Assets\Vegetation\Trees\Tree.shader" />
     <None Include="Assets\eufaof.txt" />
