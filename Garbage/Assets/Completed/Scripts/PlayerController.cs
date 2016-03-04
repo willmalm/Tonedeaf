@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
     private AudioManager audioManager;
 
     private int timerSpeed;
+	private int knockdownCounter = 0;
 
     //Components
     private AudioSource aud;
@@ -182,26 +183,22 @@ public class PlayerController : MonoBehaviour {
     }
     private void Knockdown()
     {
-        if (playerVar.knockdown)
-        {
-            playerCollider.enabled = false;
-            playerAnimation.screamStrength = 1;
-            playerVar.immobile = true;
-            if (transform.position.x > playerVar.newPosition.x)
-            {
-                transform.position += new Vector3(-0.2f, 0, 0);
-            }
-            else
-            {
-                playerVar.knockdown = false;
-            }
-        }
-        else
-        {
-            playerCollider.enabled = true;
-            playerVar.newPosition = transform.position + new Vector3(-5, 0, 0);
-            //playerVar.immobile = false;
-           // playerAnimation.screamStrength = 0;
-        }
+		knockdownCounter++;
+		if ((playerVar.knockdown) && (!playerVar.immune))
+		{
+			if (knockdownCounter < 50)
+			{
+				playerAnimation.screamStrength = 1;
+				playerVar.immobile = true;
+				transform.position += new Vector3 (-0.3f, 0, 0);
+			}
+			else
+			{
+				playerAnimation.screamStrength = 0;
+				knockdownCounter = 0;
+				playerVar.knockdown = false;
+				playerVar.immobile = false;
+			}
+		}
     }
 }

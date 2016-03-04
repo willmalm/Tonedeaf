@@ -10,5 +10,4 @@ public class PlayerVariables : MonoBehaviour
     public bool immune;
     public bool knockdown;
     public bool immobile;
-    public Vector3 newPosition;
 }
