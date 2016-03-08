@@ -19,14 +19,14 @@ public class OF_Extinguisher : MonoBehaviour {
 	void Update () {
         if (var.used)
         {
-            if (!aud.isPlaying && var_player.immobile == false)
+            if (!aud.isPlaying && var_player.im_event == false)
             {
                 aud.Play();
-                var_player.immobile = true;
+                var_player.im_event = true;
             }
             if (!aud.isPlaying)
             {
-                var_player.immobile = false;
+                var_player.im_event = false;
                 var.used = false;
             }
         }

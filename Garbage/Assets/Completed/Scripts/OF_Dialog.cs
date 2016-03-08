@@ -47,7 +47,7 @@ public class OF_Dialog : MonoBehaviour {
     public void StartDialog()
     {
         talking = true;
-        var_Player.immobile = true;
+        var_Player.im_event = true;
         sprite_dialog.sprite = dialog_sprite[0];
         aud.clip = dialog_audio[0];
         aud.Play();
@@ -68,7 +68,8 @@ public class OF_Dialog : MonoBehaviour {
     }
     public void EndDialog()
     {
-        var_Player.immobile = false;
+        var_Player.im_event = false;
         sprite_dialog.sprite = null;
+        var.used = false;
     }
 }

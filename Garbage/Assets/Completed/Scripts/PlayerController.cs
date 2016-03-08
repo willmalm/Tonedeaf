@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
     private int timerSpeed;
 
     //Components
-    private AudioSource aud;
+    public AudioSource aud;
     private Collider2D playerCollider;
 
     void Start ()
@@ -169,10 +169,10 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
         }
     }
-    public void Screech()
+    public void Screech(AudioClip clip)
     {
         playerAnimation.screamStrength = 1;
-        aud.clip = Resources.Load("Scream_5_01") as AudioClip;
+        aud.clip = clip;
         aud.Play();
     }
     public void ScreechEnd()
@@ -186,7 +186,7 @@ public class PlayerController : MonoBehaviour {
         {
             playerCollider.enabled = false;
             playerAnimation.screamStrength = 1;
-            playerVar.immobile = true;
+            playerVar.im_knockdown = true;
             if (transform.position.x > playerVar.newPosition.x)
             {
                 transform.position += new Vector3(-0.2f, 0, 0);

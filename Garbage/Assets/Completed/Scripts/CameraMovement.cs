@@ -62,7 +62,7 @@ public class CameraMovement : MonoBehaviour {
         {
             if (activated == false && playerImmobile)
             {
-                player.GetComponent<PlayerVariables>().immobile = true;
+                player.GetComponent<PlayerVariables>().im_screech = true;
             }
             activated = true;
             speed += shakeSpeed * Time.deltaTime;
@@ -100,7 +100,7 @@ public class CameraMovement : MonoBehaviour {
                 {
                     activated = false;
                     objCamera.transform.position = new Vector3(cameraRef.transform.position.x, objCamera.transform.position.y, objCamera.transform.position.z);
-                    player.GetComponent<PlayerVariables>().immobile = false;
+                    player.GetComponent<PlayerVariables>().im_screech = false;
                 }
 
             }

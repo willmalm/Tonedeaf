@@ -63,7 +63,7 @@ public class DialogFunction : MonoBehaviour {
         dialogText.GetComponent<Text>().enabled = true;
         portrait.GetComponent<Image>().sprite = port;
         portrait.GetComponent<Image>().enabled = true;
-        player.GetComponent<PlayerVariables>().immobile = true;
+        player.GetComponent<PlayerVariables>().im_event = true;
         currentStage = 0;
         maxStages = s.Length;
         stage = s;
@@ -83,7 +83,7 @@ public class DialogFunction : MonoBehaviour {
         GetComponent<UnityEngine.UI.Image>().enabled = false;
         dialogText.GetComponent<UnityEngine.UI.Text>().enabled = false;
         portrait.GetComponent<UnityEngine.UI.Image>().enabled = false;
-        player.GetComponent<PlayerVariables>().immobile = false;
+        player.GetComponent<PlayerVariables>().im_event = false;
     }
 
 }

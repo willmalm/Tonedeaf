@@ -22,15 +22,19 @@ public class OF_Radio : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (currentIndex == 1)
-        {
-            var_player.immobile = true;
-
-        }
         if (var.used)
         {
 
             currentIndex = Random.Range(0, clips.Length);
+            if (currentIndex == 1)
+            {
+                var_player.im_event = true;
+
+            }
+            else
+            {
+                var_player.im_event = false;
+            }
             if (aud.clip != clips[currentIndex])
             {
                 aud.clip = clips[currentIndex];
