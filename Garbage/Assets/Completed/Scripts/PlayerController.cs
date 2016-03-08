@@ -28,10 +28,9 @@ public class PlayerController : MonoBehaviour {
     private AudioManager audioManager;
 
     private int timerSpeed;
-	private int knockdownCounter = 0;
 
     //Components
-    private AudioSource aud;
+    public AudioSource aud;
     private Collider2D playerCollider;
 
     void Start ()
@@ -170,10 +169,10 @@ public class PlayerController : MonoBehaviour {
             playerAnimation.idleAnimation = 0;
         }
     }
-    public void Screech()
+    public void Screech(AudioClip clip)
     {
         playerAnimation.screamStrength = 1;
-        aud.clip = Resources.Load("Scream_5_01") as AudioClip;
+        aud.clip = clip;
         aud.Play();
     }
     public void ScreechEnd()
@@ -183,22 +182,26 @@ public class PlayerController : MonoBehaviour {
     }
     private void Knockdown()
     {
-		knockdownCounter++;
-		if ((playerVar.knockdown) && (!playerVar.immune))
-		{
-			if (knockdownCounter < 50)
-			{
-				playerAnimation.screamStrength = 1;
-				playerVar.immobile = true;
-				transform.position += new Vector3 (-0.3f, 0, 0);
-			}
-			else
-			{
-				playerAnimation.screamStrength = 0;
-				knockdownCounter = 0;
-				playerVar.knockdown = false;
-				playerVar.immobile = false;
-			}
-		}
+        if (playerVar.knockdown)
+        {
+            playerCollider.enabled = false;
+            playerAnimation.screamStrength = 1;
+            playerVar.im_knockdown = true;
+            if (transform.position.x > playerVar.newPosition.x)
+            {
+                transform.position += new Vector3(-0.2f, 0, 0);
+            }
+            else
+            {
+                playerVar.knockdown = false;
+            }
+        }
+        else
+        {
+            playerCollider.enabled = true;
+            playerVar.newPosition = transform.position + new Vector3(-5, 0, 0);
+            //playerVar.immobile = false;
+           // playerAnimation.screamStrength = 0;
+        }
     }
 }

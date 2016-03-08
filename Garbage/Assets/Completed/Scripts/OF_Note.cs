@@ -18,16 +18,15 @@ public class OF_Note : MonoBehaviour
     {
 	    if (var.used)
         {
-            Debug.Log(1);
             note.SetActive(true);
-            var_player.immobile = true;
+            var_player.im_event = true;
             
         }
         else
         {
             if (note.active == true)
             {
-                var_player.immobile = false;
+                var_player.im_event = false;
                 note.SetActive(false);
 
             }

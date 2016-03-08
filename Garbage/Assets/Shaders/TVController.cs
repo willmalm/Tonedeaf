@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class TVController : MonoBehaviour {
+    public GameObject screen;
     [Range(0,1)]
     public float value;
     public MeshRenderer mesh;
     Material mat;
 	// Use this for initialization
 	void Start () {
-        mesh = GetComponent<MeshRenderer>();
+        mesh = screen.GetComponent<MeshRenderer>();
         if (mesh != null)
         {
             mat = mesh.material;
@@ -19,14 +20,6 @@ public class TVController : MonoBehaviour {
 	void Update () {
 	    if (mat != null) {
             mat.SetFloat("_Noise", value);
-        }
-        if (Input.GetKey(KeyCode.F))
-        {
-            value = 1;
-        }
-        else
-        {
-            value = 0;
         }
 	}
 }

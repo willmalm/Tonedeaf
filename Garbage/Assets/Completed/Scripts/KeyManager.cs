@@ -70,13 +70,21 @@ public class KeyManager : MonoBehaviour {
         {
             plInteraction.Screech(true);
         }
-        else if (Input.GetKey(keys[7]))
+        else if(Input.GetKeyUp(keys[6]))
+        {
+            plInteraction.ScreechStop(true);
+        }
+        if (Input.GetKey(keys[7]))
         {
             plInteraction.Screech(false);
         }
-        else
+        else if (Input.GetKeyUp(keys[7]))
         {
-            plInteraction.ScreechStop();
+            plInteraction.ScreechTimerStop();
+        }
+        else if(!Input.GetKey(keys[6]) && !Input.GetKeyUp(keys[7]))
+        {
+            plInteraction.ScreechStop(false);
         }
     }
 }

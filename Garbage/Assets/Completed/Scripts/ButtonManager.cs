@@ -28,12 +28,12 @@ public class ButtonManager : MonoBehaviour {
         {
             SelectNew(1);
         }
-        if (Input.GetKeyDown("x"))
+        if (Input.GetKeyDown("e"))
         {
             selected.GetComponent<SpriteRenderer>().sprite = buttonDown[currentIndex];
             OnButton();
         }
-        else if (Input.GetKeyUp("x"))
+        else if (Input.GetKeyUp("e"))
         {
             selected.GetComponent<SpriteRenderer>().sprite = buttonUp[currentIndex];
         }

@@ -24,8 +24,6 @@ public class CameraControl : MonoBehaviour
     private bool shaking;
     public bool playerImmobile;
 
-
-
     public float rangeUp;
     public float rangeRight;
 
@@ -77,7 +75,7 @@ public class CameraControl : MonoBehaviour
             {
                 rUp = 0;
                 rRight = 0;
-                player.GetComponent<PlayerVariables>().immobile = true;
+                player.GetComponent<PlayerVariables>().im_screech = true;
                 activated = true;
             }
             rUp += shakeSpeed * Time.deltaTime;
@@ -122,7 +120,7 @@ public class CameraControl : MonoBehaviour
                 if (activated == true && playerImmobile)
                 {
                     activated = false;
-                    player.GetComponent<PlayerVariables>().immobile = false;
+                    player.GetComponent<PlayerVariables>().im_screech = false;
                 }
             }
             else

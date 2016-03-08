@@ -16,8 +16,12 @@ public class Interaction : MonoBehaviour {
     private GameObject object_Inventory;
     private GameObject player;
     private GameObject cameraObject;
+    public float timer;
+    public float timer2;
+    public GameObject bar;
 
     //Lists
+    public AudioClip[] scrtype;
     public List<GameObject> list_pickup;  //List of type 0
     public List<GameObject> list_screech; //List of type 1
     public List<GameObject> list_event;   //List of type 2
@@ -31,10 +35,9 @@ public class Interaction : MonoBehaviour {
     private SpawnByLoudness micInput;
     private CameraControl camMov;
     private PlayerController plController;
-	private PlayerVariables playerVar;
 
     //Variables
-    private bool screeching = false;
+    public bool screeching = false;
 
     void Start()
     {
@@ -57,7 +60,6 @@ public class Interaction : MonoBehaviour {
         camMov = cameraObject.GetComponent<CameraControl>();
 
         plController = transform.parent.gameObject.GetComponent<PlayerController>();
-		playerVar = player.GetComponent<PlayerVariables>();
     }
 
     void Update()
@@ -83,22 +85,22 @@ public class Interaction : MonoBehaviour {
         {
             list_screech.Add(col.gameObject);
         }
-        if(col.tag == "INTERACT_eventOnKey")
+        if (col.tag == "INTERACT_eventOnKey")
         {
             list_event.Add(col.gameObject);
         }
-        if(col.tag == "INTERACT_event")
+        if (col.tag == "INTERACT_event")
         {
             col.gameObject.GetComponent<ObjectVariables>().used = true;
         }
-        if(col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_eventOnKey")
+        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_event")
         {
             ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
             if (var.canHighlight)
             {
                 var.highlight.SetActive(true);
             }
-		}
+        }
     }
     void OnTriggerExit2D(Collider2D col)
     {
@@ -107,15 +109,15 @@ public class Interaction : MonoBehaviour {
             list_pickup.Remove(col.gameObject);
             list_temp.Remove(col.gameObject);
         }
-        if(col.tag == "INTERACT_screech")
+        if (col.tag == "INTERACT_screech")
         {
             list_screech.Remove(col.gameObject);
         }
-        if(col.tag == "INTERACT_eventOnKey")
+        if (col.tag == "INTERACT_eventOnKey")
         {
             list_event.Remove(col.gameObject);
         }
-        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_eventOnKey")
+        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_event")
         {
             ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
             if (var.canHighlight)
@@ -126,6 +128,35 @@ public class Interaction : MonoBehaviour {
     }
     public void PickUp()
     {
+        //Check which item is closest to the player
+        /*while (1 < list_pickup.Count) {
+            Debug.Log("searching...");
+            for (int i = 0; i < list_pickup.Count; i++)
+            {
+                for (int j = 0; j < list_pickup.Count;)
+                {
+                    if (j != i)
+                    {
+                        if (Vector2.Distance(player.transform.position, list_pickup[j].transform.position) > Vector2.Distance(player.transform.position, list_pickup[i].transform.position))
+                        {
+                            list_pickup.Remove(list_pickup[j]);
+                            Debug.Log("Removed object j" + j);
+                            j++;
+                        }
+                        else
+                        {
+                            list_pickup.Remove(list_pickup[i]);
+                            Debug.Log("Removed object i" + i);
+                            j = 1000000;
+                        }
+                    }
+                    else
+                    {
+                        j++;
+                    }
+                }
+            }
+        }*/
         list_pickup = checkList(list_pickup);
         if (list_pickup.Count > 0)
         {
@@ -144,13 +175,14 @@ public class Interaction : MonoBehaviour {
         {
             if (micInput.ReadThreshold1())
             {
+               
                 if (!screeching)
                 {
                     for (int i = 0; i < list_screech.Count; i++)
                     {
                         list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
                     }
-                    plController.Screech();
+                    plController.Screech(scrtype[1]);
                     camMov.ScreenShake(true);
                 }
                 screeching = true;
@@ -163,7 +195,7 @@ public class Interaction : MonoBehaviour {
                     {
                         list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
                     }
-                    plController.Screech();
+                    plController.Screech(scrtype[2]);
                     camMov.ScreenShake(true);
                 }
                 screeching = true;
@@ -176,7 +208,7 @@ public class Interaction : MonoBehaviour {
                     {
                         list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
                     }
-                    plController.Screech();
+                    plController.Screech(scrtype[2]);
                     camMov.ScreenShake(true);
                 }
                 screeching = true;
@@ -194,27 +226,137 @@ public class Interaction : MonoBehaviour {
         }
         else if (!mic)
         {
-            if (!screeching)
+            bar.SetActive(true);
+            bar.transform.localScale = new Vector3(1, timer, 1);
+            timer += Time.deltaTime;
+            if (timer >= 3.75)
             {
-                for (int i = 0; i < list_screech.Count; i++)
-                {
-                    list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
-                }
-                plController.Screech();
-                camMov.ScreenShake(true);
+                timer = 3.75f;
             }
-            screeching = true;
+
         }
     }
-    public void ScreechStop()
+    public void ScreechTimerStop()
     {
-        if (screeching)
+
+        timer2 = (int)(timer * (1/0.75f))*0.75f;
+        if(timer2 >= 3.75)
         {
-            list_var1.Clear();
-            plController.ScreechEnd();
-            camMov.StopShake(true);
+            timer2 = 3.75f;
         }
-        screeching = false;
+        if(timer2 == 0)
+        {
+            timer = -1;
+        }
+    }
+    public void ScreechStop(bool mic)
+    {
+        if (!mic && timer2 > 0)
+        {
+            timer2 -= Time.deltaTime;
+            bar.SetActive(true);
+            bar.transform.localScale = new Vector3(1, timer2, 1);
+            
+            if (timer >= 0.75 && timer < 1.5)
+            {
+                if (!screeching)
+                {
+                    for (int i = 0; i < list_screech.Count; i++)
+                    {
+                        list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
+                    }
+                    Debug.Log(54);
+                    plController.Screech(scrtype[1]);
+                    camMov.ScreenShake(true);
+                    timer = 0;
+                }
+                screeching = true;
+            }
+            else if (timer >= 1.5 && timer < 2.25)
+            {
+                if (!screeching)
+                {
+                    for (int i = 0; i < list_screech.Count; i++)
+                    {
+                        list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
+                    }
+                    plController.Screech(scrtype[2]);
+                    camMov.ScreenShake(true);
+                    timer = 0;
+                }
+                screeching = true;
+            }
+            else if (timer >= 2.25 && timer < 3)
+            {
+                if (!screeching)
+                {
+                    for (int i = 0; i < list_screech.Count; i++)
+                    {
+                        list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
+                    }
+                    plController.Screech(scrtype[3]);
+                    camMov.ScreenShake(true);
+                    timer = 0;
+                }
+                screeching = true;
+            }
+            else if (timer >= 3 && timer < 3.75)
+            {
+                if (!screeching)
+                {
+                    for (int i = 0; i < list_screech.Count; i++)
+                    {
+                        list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
+                    }
+                    plController.Screech(scrtype[4]);
+                    camMov.ScreenShake(true);
+                    timer = 0;
+                }
+                screeching = true;
+            }
+            else if (timer >= 3.75)
+            {
+                if (!screeching)
+                {
+                    for (int i = 0; i < list_screech.Count; i++)
+                    {
+                        list_var1.Add(list_screech[i].GetComponent<ObjectVariables>());
+                    }
+                    plController.Screech(scrtype[5]);
+                    camMov.ScreenShake(true);
+                    timer = 0;
+                }
+                screeching = true;
+            }
+        }
+        else if(!mic && timer2 <= 0)
+        {
+            if(timer == -1)
+            {
+                plController.aud.clip = scrtype[0];
+                plController.aud.Play();
+                timer = 0;
+            }
+            if (screeching)
+            {
+                list_var1.Clear();
+                plController.ScreechEnd();
+                camMov.StopShake(true);
+                bar.SetActive(false);
+                timer = 0;
+            }
+            screeching = false;
+        }
+        else if(mic)
+        {
+            if (screeching)
+            {
+                list_var1.Clear();
+                plController.ScreechEnd();
+                camMov.StopShake(true);
+            }
+            screeching = false;
+        }
     }
     public void Talk()
     {

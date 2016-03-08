@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour {
 
+    public AudioClip[] clips;
     AudioSource audioSource;
     AudioClip clip;
 
@@ -20,4 +22,22 @@ public class AudioManager : MonoBehaviour {
         clip = Resources.Load(file) as AudioClip;
         audioSource.PlayOneShot(clip);
     }
+    private void OnLevelWasLoaded(int level)
+    {
+        Debug.Log("Level " + level + " loaded");
+        try
+        {
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource.clip != clips[level])
+            {
+                audioSource.clip = clips[level];
+                audioSource.Play();
+            }
+        }
+        catch
+        {
+            Debug.Log("Failed to play audio (Most likely irrelevant)");
+        }
+    }
+
 }
