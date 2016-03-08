@@ -31,7 +31,6 @@ public class Interaction : MonoBehaviour {
     private SpawnByLoudness micInput;
     private CameraControl camMov;
     private PlayerController plController;
-	private PlayerVariables playerVar;
 
     //Variables
     private bool screeching = false;
@@ -57,7 +56,6 @@ public class Interaction : MonoBehaviour {
         camMov = cameraObject.GetComponent<CameraControl>();
 
         plController = transform.parent.gameObject.GetComponent<PlayerController>();
-		playerVar = player.GetComponent<PlayerVariables>();
     }
 
     void Update()
@@ -91,14 +89,14 @@ public class Interaction : MonoBehaviour {
         {
             col.gameObject.GetComponent<ObjectVariables>().used = true;
         }
-        if(col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_eventOnKey")
+        if(col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_event")
         {
             ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
             if (var.canHighlight)
             {
                 var.highlight.SetActive(true);
             }
-		}
+        }
     }
     void OnTriggerExit2D(Collider2D col)
     {
@@ -115,7 +113,7 @@ public class Interaction : MonoBehaviour {
         {
             list_event.Remove(col.gameObject);
         }
-        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_eventOnKey")
+        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_event")
         {
             ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
             if (var.canHighlight)
@@ -126,6 +124,35 @@ public class Interaction : MonoBehaviour {
     }
     public void PickUp()
     {
+        //Check which item is closest to the player
+        /*while (1 < list_pickup.Count) {
+            Debug.Log("searching...");
+            for (int i = 0; i < list_pickup.Count; i++)
+            {
+                for (int j = 0; j < list_pickup.Count;)
+                {
+                    if (j != i)
+                    {
+                        if (Vector2.Distance(player.transform.position, list_pickup[j].transform.position) > Vector2.Distance(player.transform.position, list_pickup[i].transform.position))
+                        {
+                            list_pickup.Remove(list_pickup[j]);
+                            Debug.Log("Removed object j" + j);
+                            j++;
+                        }
+                        else
+                        {
+                            list_pickup.Remove(list_pickup[i]);
+                            Debug.Log("Removed object i" + i);
+                            j = 1000000;
+                        }
+                    }
+                    else
+                    {
+                        j++;
+                    }
+                }
+            }
+        }*/
         list_pickup = checkList(list_pickup);
         if (list_pickup.Count > 0)
         {
