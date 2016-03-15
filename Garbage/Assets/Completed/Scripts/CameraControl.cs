@@ -1,31 +1,51 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CameraControl : MonoBehaviour
 {
+    [System.Serializable]
+    public class UIElement
+    {
+        public GameObject obj;
+        public Vector3 position;
+        public Vector3 scale;
+    }
 
-    GameObject player;
-    public int smoothSpeed;
-    public float shakeRange;
-    public float shakeSpeed;
+    //Public
+    [Header("Camera settings")]
+    public GameObject target;
+    public float cameraOffset;
+    public int cameraSpeed;
+    [Range(0.1f, 1f)]
+    public float zoom;
+    public bool updateZoom;
+    
+    [Header("Limits")]
     public float limitLeft;
     public float limitRight;
     public float limitUp;
     public float limitDown;
 
+    [Header("Screenshake")]
+    public float shakeSpeed;
+    public float rangeUp;
+    public float rangeRight;
+
+    [Header("User Interface")]
+    public UIElement[] elements;
+
+    [Header("References")]
+    public GameObject cameraParent;
     public GameObject objCamera;
     public GameObject cameraRef;
-    private bool direction;
 
+    //Private
     private float speed;
-    public  bool activated = false;
+    private bool activated = false;
     private float xPos;
     private float yPos;
     private bool shaking;
-    public bool playerImmobile;
-
-    public float rangeUp;
-    public float rangeRight;
 
     private float rUp;
     private float rRight;
@@ -35,38 +55,53 @@ public class CameraControl : MonoBehaviour
     private float posRight;
     private float posLeft;
 
+    private bool playerImmobile;
+
+    private GameObject player;
+    private Camera mainCamera;
+
     // Use this for initialization
     void Start()
     {
+        cameraRef.transform.position += new Vector3(0, cameraOffset, 0);
+        mainCamera = objCamera.GetComponent<Camera>();
+        mainCamera.orthographicSize = 20*(1 - zoom);
         rUp = 0;
         rRight = 0;
         player = GameObject.FindGameObjectWithTag("Player");
+        UpdateUI();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        if (updateZoom)
+        {
+            mainCamera.orthographicSize = 20 * (1 - zoom);
+            UpdateUI();
+        }
         if (!activated)
         {
-            xPos = Mathf.Lerp(transform.position.x, player.transform.position.x, smoothSpeed * Time.deltaTime);
-            yPos = Mathf.Lerp(transform.position.y, player.transform.position.y, smoothSpeed * Time.deltaTime);
-            transform.position = new Vector3(xPos, yPos, -100);
+            xPos = Mathf.Lerp(cameraParent.transform.position.x, target.transform.position.x, cameraSpeed * Time.deltaTime);
+            yPos = Mathf.Lerp(cameraParent.transform.position.y, target.transform.position.y + cameraOffset, cameraSpeed * Time.deltaTime);
+            cameraParent.transform.position = new Vector3(xPos, yPos, -100);
 
-            if (transform.position.x <= limitLeft)
+            if (cameraParent.transform.position.x <= limitLeft)
             {
-                transform.position = new Vector3(limitLeft, transform.position.y, transform.position.z);
+                cameraParent.transform.position = new Vector3(limitLeft, cameraParent.transform.position.y, cameraParent.transform.position.z);
             }
-            else if (transform.position.x >= limitRight)
+            else if (cameraParent.transform.position.x >= limitRight)
             {
-                transform.position = new Vector3(limitRight, transform.position.y, transform.position.z);
+                cameraParent.transform.position = new Vector3(limitRight, cameraParent.transform.position.y, cameraParent.transform.position.z);
             }
-            if (transform.position.y <= limitDown)
+            if (cameraParent.transform.position.y <= limitDown)
             {
-                transform.position = new Vector3(transform.position.x, limitDown, transform.position.z);
+                cameraParent.transform.position = new Vector3(cameraParent.transform.position.x, limitDown, cameraParent.transform.position.z);
             }
-            else if (transform.position.y >= limitUp)
+            else if (cameraParent.transform.position.y >= limitUp)
             {
-                transform.position = new Vector3(transform.position.x, limitUp, transform.position.z);
+                cameraParent.transform.position = new Vector3(cameraParent.transform.position.x, limitUp, cameraParent.transform.position.z);
             }
         }
         if (shaking)
@@ -99,13 +134,13 @@ public class CameraControl : MonoBehaviour
             {
                 posRight = limitRight;
             }
-            if(posUp > limitUp)
+            if(posUp > limitUp+cameraOffset)
             {
-                posUp = limitUp;
+                posUp = limitUp+cameraOffset;
             }
-            if(posDown < limitDown)
+            if(posDown < limitDown + cameraOffset)
             {
-                posDown = limitDown;
+                posDown = limitDown+cameraOffset;
             }
             objCamera.transform.position = new Vector3(Random.Range(posLeft, posRight), Random.Range(posDown, posUp), objCamera.transform.position.z);
         }
@@ -159,5 +194,13 @@ public class CameraControl : MonoBehaviour
     {
         shaking = false;
         playerImmobile = im;
+    }
+    private void UpdateUI()
+    {
+        for(int i = 0; i < elements.Length; i++)
+        {
+            elements[i].obj.transform.position = new Vector3(objCamera.transform.position.x + elements[i].position.x * (1 - zoom), objCamera.transform.position.y + elements[i].position.y * (1 - zoom), objCamera.transform.position.z + elements[i].position.z);
+            elements[i].obj.transform.localScale = new Vector3((elements[i].scale.x) * (1 - zoom), elements[i].scale.y * (1 - zoom), elements[i].scale.z);
+        }
     }
 }
