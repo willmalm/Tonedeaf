@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour {
     private JensAnimationController playerAnimation;
     private AudioManager audioManager;
 
-	private int timerSpeed = 0;
-	private int knockdownCounter = 0;
+    private int timerSpeed;
 
     //Components
     public AudioSource aud;
@@ -45,6 +44,7 @@ public class PlayerController : MonoBehaviour {
         playerSize = playerSprite.GetComponent<SpriteSize>();
 
         audioManager = GetComponent<AudioManager>();
+        timerSpeed = 0;
 
         aud = GetComponent<AudioSource>();
         playerCollider = GetComponent<Collider2D>();
@@ -182,22 +182,26 @@ public class PlayerController : MonoBehaviour {
     }
     private void Knockdown()
     {
-		knockdownCounter++;
-		if ((playerVar.knockdown) && (!playerVar.immune))
-		{
-			if (knockdownCounter < 75)
-			{
-				playerAnimation.screamStrength = 1;
-				playerVar.im_knockdown = true;
-				transform.position += new Vector3 (-0.2f, 0, 0);
-			}
-			else
-			{
-				playerAnimation.screamStrength = 0;
-				knockdownCounter = 0;
-				playerVar.knockdown = false;
-				playerVar.im_knockdown = false;
-			}
-		}
+        if (playerVar.knockdown)
+        {
+            playerCollider.enabled = false;
+            playerAnimation.screamStrength = 1;
+            playerVar.im_knockdown = true;
+            if (transform.position.x > playerVar.newPosition.x)
+            {
+                transform.position += new Vector3(-0.2f, 0, 0);
+            }
+            else
+            {
+                playerVar.knockdown = false;
+            }
+        }
+        else
+        {
+            playerCollider.enabled = true;
+            playerVar.newPosition = transform.position + new Vector3(-5, 0, 0);
+            //playerVar.immobile = false;
+           // playerAnimation.screamStrength = 0;
+        }
     }
 }

@@ -15,7 +15,7 @@ public class Interaction : MonoBehaviour {
     //Objects
     private GameObject object_Inventory;
     private GameObject player;
-    private GameObject cameraObject;
+    private GameObject global;
     public float timer;
     public float timer2;
     public GameObject bar;
@@ -56,8 +56,8 @@ public class Interaction : MonoBehaviour {
 
         micInput = player.GetComponent<SpawnByLoudness>();
 
-        cameraObject = GameObject.FindGameObjectWithTag("GLOBAL_camera");
-        camMov = cameraObject.GetComponent<CameraControl>();
+        global = GameObject.FindGameObjectWithTag("GLOBAL_parent");
+        camMov = global.GetComponent<CameraControl>();
 
         plController = transform.parent.gameObject.GetComponent<PlayerController>();
     }
@@ -93,7 +93,7 @@ public class Interaction : MonoBehaviour {
         {
             col.gameObject.GetComponent<ObjectVariables>().used = true;
         }
-        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_event")
+        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_event" || col.tag == "INTERACT_eventOnKey")
         {
             ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
             if (var.canHighlight)
@@ -117,7 +117,7 @@ public class Interaction : MonoBehaviour {
         {
             list_event.Remove(col.gameObject);
         }
-        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_event")
+        if (col.tag == "INTERACT_pickup" || col.tag == "INTERACT_screech" || col.tag == "INTERACT_event" || col.tag == "INTERACT_eventOnKey")
         {
             ObjectVariables var = col.gameObject.GetComponent<ObjectVariables>();
             if (var.canHighlight)

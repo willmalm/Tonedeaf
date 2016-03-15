@@ -5,6 +5,8 @@ public class OF_Ball : MonoBehaviour {
 
     public float speed;
     public float height;
+    [Range(-1,1)]
+    public int direction;
     GameObject player;
     ObjectVariables var;
     Rigidbody2D rgd;
@@ -24,14 +26,14 @@ public class OF_Ball : MonoBehaviour {
     void Update() {
         if (var.used)
         {
-            if(transform.position.y > org.y + height)
+            if (transform.position.y > org.y + height)
             {
-                transform.Translate(Vector3.right * speed *Time.deltaTime);
+                transform.Translate(Vector3.right * direction * speed * Time.deltaTime);
             }
             else
             {
-                transform.Translate(Vector3.up * speed *Time.deltaTime);
-            }
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+            }           
         }
     }
 }

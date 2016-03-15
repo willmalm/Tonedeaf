@@ -9,7 +9,9 @@ public class OF_Radio : MonoBehaviour {
     ObjectVariables var;
     GameObject player;
     PlayerVariables var_player;
-    int currentIndex;
+    int currentIndex = 1;
+    int randomValue;
+    int orgIndex;
 	// Use this for initialization
 	void Start () {
         var = GetComponent<ObjectVariables>();
@@ -24,28 +26,33 @@ public class OF_Radio : MonoBehaviour {
     {
         if (var.used)
         {
-
-            currentIndex = Random.Range(0, clips.Length);
-            if (currentIndex == 1)
+            randomValue = Random.Range(0, 10);
+            if (randomValue == 9)
             {
+                orgIndex = currentIndex;
+                currentIndex = 0;
                 var_player.im_event = true;
-
             }
             else
             {
+                Forward();
+                orgIndex = currentIndex;
                 var_player.im_event = false;
             }
-            if (aud.clip != clips[currentIndex])
-            {
-                aud.clip = clips[currentIndex];
-                aud.Play();
-                var.force = 0;
-                var.used = false;               
-            }
-            else
-            {
-                currentIndex = Random.Range(0, clips.Length);
-            }
+            aud.clip = clips[currentIndex];
+            currentIndex = orgIndex;
+            aud.Play();
+            var.force = 0;
+            var.used = false;               
+            
         }
 	}
+    void Forward()
+    {
+        currentIndex++;
+        if(currentIndex > clips.Length-1)
+        {
+            currentIndex = 1;
+        }
+    }
 }

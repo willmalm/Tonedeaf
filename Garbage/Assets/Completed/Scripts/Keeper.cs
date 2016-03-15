@@ -30,6 +30,7 @@ public class Keeper : MonoBehaviour {
         for (int i = 0; i < tags.Length; i++)
         {
             DontDestroyOnLoad(GameObject.FindGameObjectWithTag(tags[i]));
+            Debug.Log("Kept object " + tags[i]);
         }
         for (int i = 0; i < tags_disable.Count; i++)
         {

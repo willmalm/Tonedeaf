@@ -47,7 +47,6 @@
   <ItemGroup>
      <Compile Include="Assets\Beehive\BeehiveController.cs" />
      <Compile Include="Assets\Completed\Scripts\AIGrowlingGoat.cs" />
-     <Compile Include="Assets\Completed\Scripts\AudioController.cs" />
      <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
      <Compile Include="Assets\Completed\Scripts\ButtonManager.cs" />
@@ -62,17 +61,11 @@
      <Compile Include="Assets\Completed\Scripts\KeyManager.cs" />
      <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
      <Compile Include="Assets\Completed\Scripts\NPCVariables.cs" />
-     <Compile Include="Assets\Completed\Scripts\OF_BSOD.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_Beehive.cs" />
-     <Compile Include="Assets\Completed\Scripts\OF_Bench.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_Dialog.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_Extinguisher.cs" />
-     <Compile Include="Assets\Completed\Scripts\OF_Fountain.cs" />
-     <Compile Include="Assets\Completed\Scripts\OF_GrowlingGoatStart.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_Note.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_Radio.cs" />
-     <Compile Include="Assets\Completed\Scripts\OF_Scene.cs" />
-     <Compile Include="Assets\Completed\Scripts\OF_TV.cs" />
      <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
      <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
      <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
@@ -82,7 +75,6 @@
      <Compile Include="Assets\Completed\Scripts\Speech.cs" />
      <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
      <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
-     <Compile Include="Assets\Goat\GoatAnimator.cs" />
      <Compile Include="Assets\Jens\JensAnimationController.cs" />
      <Compile Include="Assets\KeyBindings.cs" />
      <Compile Include="Assets\MicrophoneInput.cs" />
@@ -109,8 +101,6 @@
      <Compile Include="Assets\Users\William\PlayerStatus.cs" />
      <Compile Include="Assets\Users\William\QuestVariables.cs" />
      <Compile Include="Assets\Users\William\StageVariables.cs" />
-     <None Include="Assets\Particles\Shaders\CandleLight.shader" />
-     <None Include="Assets\Particles\Shaders\Piss.shader" />
      <None Include="Assets\Shaders\TVScreen.shader" />
      <None Include="Assets\Vegetation\Trees\Tree.shader" />
      <None Include="Assets\Vegetation\Grass\Grass.shader" />
