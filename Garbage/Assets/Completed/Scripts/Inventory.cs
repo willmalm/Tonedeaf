@@ -56,7 +56,6 @@ public class Inventory : MonoBehaviour
         }
         counter1 = 0;
         counter2 = 0;
-        text.text = itemList.Count.ToString();
     }
     public void SwapItems(int index1, int index2)
     {

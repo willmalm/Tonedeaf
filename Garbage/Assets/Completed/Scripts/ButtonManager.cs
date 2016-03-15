@@ -70,7 +70,7 @@ public class ButtonManager : MonoBehaviour {
         {
             if(buttons[i] == selected)
             {
-                buttons[i].GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+                buttons[i].GetComponent<SpriteRenderer>().color = new Color(0.5f, 0, 0, 1);
             }
             else
             {

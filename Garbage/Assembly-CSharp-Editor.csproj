@@ -46,8 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\FBXImport.cs" />
-     <None Include="Assets\Particles\Shaders\CandleLight.shader" />
-     <None Include="Assets\Particles\Shaders\Piss.shader" />
      <None Include="Assets\Shaders\TVScreen.shader" />
      <None Include="Assets\Vegetation\Trees\Tree.shader" />
      <None Include="Assets\Vegetation\Grass\Grass.shader" />
