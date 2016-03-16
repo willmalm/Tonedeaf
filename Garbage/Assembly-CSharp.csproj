@@ -61,6 +61,7 @@
      <Compile Include="Assets\Completed\Scripts\Keeper.cs" />
      <Compile Include="Assets\Completed\Scripts\KeyManager.cs" />
      <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
+     <Compile Include="Assets\Completed\Scripts\LayerCheck.cs" />
      <Compile Include="Assets\Completed\Scripts\NPCVariables.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_BSOD.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_Ball.cs" />
