@@ -87,11 +87,12 @@ public class AIGrowlingGoat : MonoBehaviour
 		else if (lives == 1) 
 		{
 			Shuffle ();
+			//Not currently used
 		}
 	}
 	public void Shuffle()
 	{
-		//Shuffle bench positions
+		//Add transformation of LayerCheck if Shuffle() is to be used
 		benchArray[0].transform.position = new Vector3(-9f, 0f, 0);
 		benchArray[1].transform.position = new Vector3(-20f, -8f, 0);
 		benchArray[2].transform.position = new Vector3(-13f, -2f, 0);

@@ -4,7 +4,7 @@ using System.Collections;
 public class LayerCheck : MonoBehaviour
 {
 	private GameObject player;
-	private float width;
+	public float width;
 	public float gradient;
 	public float x1; //set to highermost x-value
 	public float y1; //set to highermost y-value
@@ -35,13 +35,19 @@ public class LayerCheck : MonoBehaviour
 			if (BelowLine()) 
 			{
 				transform.position = new Vector3(transform.position.x, transform.position.y, (player.transform.position.z + 1));
-				Debug.Log ("0" +player.transform.position.z);
-				Debug.Log ("1" +(player.transform.position.z + 1));
 			}
 			else 
 			{
 				transform.position = new Vector3(transform.position.x, transform.position.y, (player.transform.position.z - 1));
 			}
+		}
+		if (x1 > x2) 
+		{
+			width = (x1 - x2) / 2;
+		} 
+		else
+		{
+			width = (x2 - x1) / 2;
 		}
 	}
 	private bool BelowLine()
