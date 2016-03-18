@@ -13,6 +13,8 @@ public class AIGrowlingGoat : MonoBehaviour
 	private float timeUntilNextAttack = 0;
 	private float timeUntilCanAttack;
 	private int lives = 1;
+	public GameObject video;
+	private VideoSequence videoSequence;
 	void Start ()
     {
         playerVar = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerVariables>();
@@ -20,6 +22,7 @@ public class AIGrowlingGoat : MonoBehaviour
 		goatObject = transform.GetChild(1).gameObject.GetComponent<ObjectVariables>();
 		benchArray = GameObject.FindGameObjectsWithTag("OBJECT_bench");
 		timeUntilCanAttack = Random.Range(2, 5);
+		videoSequence = video.GetComponent<VideoSequence>();
 	}
 	void Update ()
     {
@@ -82,7 +85,7 @@ public class AIGrowlingGoat : MonoBehaviour
 		if (lives == 0) 
 		{
 			bossActive = false;
-			//Event
+			videoSequence.Play();
 		}
 		else if (lives == 1) 
 		{

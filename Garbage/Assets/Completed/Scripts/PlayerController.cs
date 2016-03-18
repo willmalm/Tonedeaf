@@ -185,11 +185,11 @@ public class PlayerController : MonoBehaviour {
 		knockdownCounter++;
 		if ((playerVar.knockdown) && (!playerVar.immune))
 		{
-			if (knockdownCounter < 75)
+			if (knockdownCounter < 70)
 			{
 				playerAnimation.screamStrength = 1;
 				playerVar.im_knockdown = true;
-				transform.position += new Vector3 (-0.2f, 0, 0);
+				transform.position += new Vector3 (-0.3f, 0, 0);
 			}
 			else
 			{
