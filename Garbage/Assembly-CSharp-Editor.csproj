@@ -46,12 +46,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\FBXImport.cs" />
+     <Compile Include="Assets\Editor\UnlitMultitextureInspector.cs" />
      <None Include="Assets\Particles\Shaders\CandleLight.shader" />
      <None Include="Assets\Particles\Shaders\Piss.shader" />
+     <None Include="Assets\UnlitAnimated.shader" />
+     <None Include="Assets\UnlitLerpTexture.shader" />
      <None Include="Assets\Shaders\TVScreen.shader" />
      <None Include="Assets\Vegetation\Trees\Tree.shader" />
      <None Include="Assets\Vegetation\Grass\Grass.shader" />
      <None Include="Assets\eufaof.txt" />
+     <None Include="Assets\UnlitMultitexture.shader" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>

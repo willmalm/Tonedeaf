@@ -86,6 +86,7 @@
      <Compile Include="Assets\Completed\Scripts\SceneChangeTrigger.cs" />
      <Compile Include="Assets\Completed\Scripts\Speech.cs" />
      <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
+     <Compile Include="Assets\Completed\Scripts\SpriteTransision.cs" />
      <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
      <Compile Include="Assets\Goat\GoatAnimator.cs" />
      <Compile Include="Assets\Jens\JensAnimationController.cs" />
@@ -114,12 +115,16 @@
      <Compile Include="Assets\Users\William\PlayerStatus.cs" />
      <Compile Include="Assets\Users\William\QuestVariables.cs" />
      <Compile Include="Assets\Users\William\StageVariables.cs" />
+     <Compile Include="Assets\gott.cs" />
      <None Include="Assets\Particles\Shaders\CandleLight.shader" />
      <None Include="Assets\Particles\Shaders\Piss.shader" />
+     <None Include="Assets\UnlitAnimated.shader" />
+     <None Include="Assets\UnlitLerpTexture.shader" />
      <None Include="Assets\Shaders\TVScreen.shader" />
      <None Include="Assets\Vegetation\Trees\Tree.shader" />
      <None Include="Assets\Vegetation\Grass\Grass.shader" />
      <None Include="Assets\eufaof.txt" />
+     <None Include="Assets\UnlitMultitexture.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

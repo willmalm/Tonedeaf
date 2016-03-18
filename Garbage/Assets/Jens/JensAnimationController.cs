@@ -18,7 +18,7 @@ public class JensAnimationController : MonoBehaviour {
 	void Start () {
 		animator = gameObject.GetComponent<Animator>();
 	}
-	
+
 	// Update is called once per frame
 	void LateUpdate () {
 		if(animator != null){
@@ -32,7 +32,7 @@ public class JensAnimationController : MonoBehaviour {
 			else animator.SetBool("screaming", false);
 			animator.SetFloat("screamStrength", _screamStrength);
 
-			animator.SetFloat("walkSpeedX", walkSpeedX);					//Set the walking speed for X
+			animator.SetFloat("walkSpeedX", speed.magnitude);					//Set the walking speed for X
 		}
 	}
 
