@@ -13,8 +13,7 @@ public class AIGrowlingGoat : MonoBehaviour
 	private float timeUntilNextAttack = 0;
 	private float timeUntilCanAttack;
 	private int lives = 1;
-	public GameObject video;
-	private VideoSequence videoSequence;
+	private SceneChanger sceneChanger;
 	void Start ()
     {
         playerVar = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerVariables>();
@@ -22,7 +21,6 @@ public class AIGrowlingGoat : MonoBehaviour
 		goatObject = transform.GetChild(1).gameObject.GetComponent<ObjectVariables>();
 		benchArray = GameObject.FindGameObjectsWithTag("OBJECT_bench");
 		timeUntilCanAttack = Random.Range(2, 5);
-		videoSequence = video.GetComponent<VideoSequence>();
 	}
 	void Update ()
     {
@@ -85,24 +83,7 @@ public class AIGrowlingGoat : MonoBehaviour
 		if (lives == 0) 
 		{
 			bossActive = false;
-			videoSequence.Play();
+			sceneChanger.LoadScene(5, true, new Vector3(0f, 0f, 0f));
 		}
-		else if (lives == 1) 
-		{
-			Shuffle ();
-			//Not currently used
-		}
-	}
-	public void Shuffle()
-	{
-		//Add transformation of LayerCheck if Shuffle() is to be used
-		benchArray[0].transform.position = new Vector3(-9f, 0f, 0);
-		benchArray[1].transform.position = new Vector3(-20f, -8f, 0);
-		benchArray[2].transform.position = new Vector3(-13f, -2f, 0);
-		benchArray[3].transform.position = new Vector3(6f, -6f, 0);
-		benchArray[4].transform.position = new Vector3(-10f, -7f, 0);
-		benchArray[5].transform.position = new Vector3(1f, -3f, 0);
-		benchArray[6].transform.position = new Vector3(10f, 0f, 0);
-		benchArray[7].transform.position = new Vector3(12f, -4f, 0);
 	}
 }

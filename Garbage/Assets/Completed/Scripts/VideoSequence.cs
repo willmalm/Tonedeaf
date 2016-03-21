@@ -3,41 +3,44 @@ using System.Collections;
 
 public class VideoSequence : MonoBehaviour
 {
-	public Sprite[] video;
-	public AudioClip videoSound;
 	private AudioSource audioSource;
-	private SpriteRenderer sprite;
-	private int index = 0;
-	private int delay = 0;
-	private bool play = false;
+	public MovieTexture movie;
+	public bool playOnAwake;
+	public int sceneIndex; //-1 if no sceneChange
+	private bool wait = false;
+	private float timer = 0;
+	private SceneChanger sceneChanger;
 	void Start () 
 	{
-		gameObject.SetActive(false);
-		sprite = GetComponent<SpriteRenderer>();
 		audioSource = GetComponent<AudioSource>();
-		audioSource.clip = videoSound;
-	}
-
-	void Update () 
-	{
-		if (play)
+		GetComponent<Renderer>().material.mainTexture = movie;
+		if (playOnAwake) 
 		{
-			sprite.sprite = video[index];
-			delay++;
-			if (delay % 5 == 0) 
+			Play();
+		}
+	}
+	void Update()
+	{
+		if (wait)
+		{
+			timer += Time.deltaTime;
+			if (timer > movie.duration)
 			{
-				index++;
-			}
-			if (index == video.Length) 
-			{
-				index = 0;
+				if (sceneIndex != -1) 
+				{
+					gameObject.SetActive(false);
+				}
+				else 
+				{
+					sceneChanger.LoadScene(sceneIndex, true, new Vector3(0f, 0f, 0f));
+				}
 			}
 		}
 	}
 	public void Play()
 	{
-		gameObject.SetActive(true);
-		play = true;
 		audioSource.Play();
+		movie.Play();
+		wait = true;
 	}
 }
