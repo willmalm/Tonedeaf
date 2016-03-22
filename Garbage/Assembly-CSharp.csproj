@@ -47,7 +47,6 @@
   <ItemGroup>
      <Compile Include="Assets\Beehive\BeehiveController.cs" />
      <Compile Include="Assets\Completed\Scripts\AIGrowlingGoat.cs" />
-     <Compile Include="Assets\Completed\Scripts\AudioController.cs" />
      <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Completed\Scripts\ButtonFunctions.cs" />
      <Compile Include="Assets\Completed\Scripts\ButtonManager.cs" />
@@ -61,6 +60,7 @@
      <Compile Include="Assets\Completed\Scripts\Keeper.cs" />
      <Compile Include="Assets\Completed\Scripts\KeyManager.cs" />
      <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
+     <Compile Include="Assets\Completed\Scripts\LayerCheck.cs" />
      <Compile Include="Assets\Completed\Scripts\NPCVariables.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_BSOD.cs" />
      <Compile Include="Assets\Completed\Scripts\OF_Ball.cs" />
@@ -88,6 +88,7 @@
      <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
      <Compile Include="Assets\Completed\Scripts\SpriteTransision.cs" />
      <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
+     <Compile Include="Assets\Completed\Scripts\VideoSequence.cs" />
      <Compile Include="Assets\Goat\GoatAnimator.cs" />
      <Compile Include="Assets\Jens\JensAnimationController.cs" />
      <Compile Include="Assets\KeyBindings.cs" />
