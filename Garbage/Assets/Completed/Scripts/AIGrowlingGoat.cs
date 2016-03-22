@@ -14,6 +14,10 @@ public class AIGrowlingGoat : MonoBehaviour
 	private float timeUntilCanAttack;
 	private int lives = 1;
 	private SceneChanger sceneChanger;
+	private AudioSource sound;
+	public AudioClip stomp1;
+	public AudioClip stomp2;
+	public AudioClip scream;
 	void Start ()
     {
         playerVar = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerVariables>();
@@ -21,6 +25,7 @@ public class AIGrowlingGoat : MonoBehaviour
 		goatObject = transform.GetChild(1).gameObject.GetComponent<ObjectVariables>();
 		benchArray = GameObject.FindGameObjectsWithTag("OBJECT_bench");
 		timeUntilCanAttack = Random.Range(2, 5);
+		sound = GetComponent<AudioSource>();
 	}
 	void Update ()
     {
@@ -71,6 +76,17 @@ public class AIGrowlingGoat : MonoBehaviour
     {
 		goat.attack = true;
 		actionTaken = true;
+		//wait
+		//
+		//stomp1
+		//
+		//wait
+		//
+		//stomp2
+		//
+		//wait
+		//
+		//scream
     }
 	public void Damaged()
 	{
