@@ -8,6 +8,7 @@ public class OF_Extinguisher : MonoBehaviour {
     ObjectVariables var;
     AudioSource aud;
     PlayerVariables var_player;
+    bool first = true;
 	// Use this for initialization
 	void Start () {
         var = GetComponent<ObjectVariables>();
@@ -20,15 +21,16 @@ public class OF_Extinguisher : MonoBehaviour {
 	void Update () {
         if (var.used)
         {
-            if (!aud.isPlaying && var_player.im_event == false)
+            if (!aud.isPlaying && first)
             {
                 particle.GetComponent<ParticleSystem>().Play();
                 aud.Play();
+                first = false;
                 //var_player.im_event = true;
             }
             if (!aud.isPlaying)
             {
-                var_player.im_event = false;
+                //var_player.im_event = false;
                 //var.used = false;
             }
         }

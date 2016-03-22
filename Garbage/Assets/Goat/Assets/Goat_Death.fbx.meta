@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: a7c4c4a5c69223449a836091e38b0735
+timeCreated: 1458642076
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arms_l
+    100002: Arms_l_001
+    100004: Arms_r
+    100006: Arms_r_001
+    100008: Beard1
+    100010: Beard2
+    100012: Beard3
+    100014: Beard4
+    100016: Beard5
+    100018: Chest
+    100020: Eyebrow
+    100022: Eyebrow_l
+    100024: Eyebrow_l_001
+    100026: Eyebrow_r
+    100028: Eyebrow_r_001
+    100030: Foot_IK_l
+    100032: Foot_IK_r
+    100034: Foot_l
+    100036: Foot_r
+    100038: GlowStrength
+    100040: //RootNode
+    100042: Goat_Rig
+    100044: GroundSmash
+    100046: Hand_IK_l
+    100048: Hand_IK_r
+    100050: Hand_l
+    100052: Hand_r
+    100054: Head
+    100056: Hips
+    100058: Jaw
+    100060: Leg_l
+    100062: Leg_l_001
+    100064: Leg_l_002
+    100066: Leg_r
+    100068: Leg_r_001
+    100070: Leg_r_002
+    100072: Lip_Down
+    100074: Lip_Down_001
+    100076: Lip_Down_002
+    100078: Lip_Down_003
+    100080: Lip_Up
+    100082: Lip_Up_001
+    100084: Lip_Up_002
+    100086: Root
+    100088: Scream
+    100090: Shoulders_l
+    100092: Shoulders_r
+    100094: Spine
+    100096: Tie1
+    100098: Tie2
+    100100: Tie3
+    100102: Tie4
+    100104: Top1
+    100106: Top1_001
+    100108: Top2
+    100110: Top2_001
+    400000: Arms_l
+    400002: Arms_l_001
+    400004: Arms_r
+    400006: Arms_r_001
+    400008: Beard1
+    400010: Beard2
+    400012: Beard3
+    400014: Beard4
+    400016: Beard5
+    400018: Chest
+    400020: Eyebrow
+    400022: Eyebrow_l
+    400024: Eyebrow_l_001
+    400026: Eyebrow_r
+    400028: Eyebrow_r_001
+    400030: Foot_IK_l
+    400032: Foot_IK_r
+    400034: Foot_l
+    400036: Foot_r
+    400038: GlowStrength
+    400040: //RootNode
+    400042: Goat_Rig
+    400044: GroundSmash
+    400046: Hand_IK_l
+    400048: Hand_IK_r
+    400050: Hand_l
+    400052: Hand_r
+    400054: Head
+    400056: Hips
+    400058: Jaw
+    400060: Leg_l
+    400062: Leg_l_001
+    400064: Leg_l_002
+    400066: Leg_r
+    400068: Leg_r_001
+    400070: Leg_r_002
+    400072: Lip_Down
+    400074: Lip_Down_001
+    400076: Lip_Down_002
+    400078: Lip_Down_003
+    400080: Lip_Up
+    400082: Lip_Up_001
+    400084: Lip_Up_002
+    400086: Root
+    400088: Scream
+    400090: Shoulders_l
+    400092: Shoulders_r
+    400094: Spine
+    400096: Tie1
+    400098: Tie2
+    400100: Tie3
+    400102: Tie4
+    400104: Top1
+    400106: Top1_001
+    400108: Top2
+    400110: Top2_001
+    7400000: Death
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

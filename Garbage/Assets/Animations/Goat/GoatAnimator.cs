@@ -6,6 +6,7 @@ public class GoatAnimator : MonoBehaviour {
 	public bool attack = false;
 	public bool takeDamage = false;
 	[Range(0,1)]public float damageTaken = 1;
+	public bool dead = false;
 
 	public Material glowMaterial;
 	[HideInInspector]public float scream = 0;
@@ -21,10 +22,11 @@ public class GoatAnimator : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 		anim.SetBool("attack",attack);
 		anim.SetFloat("damageTaken",damageTaken);
 		anim.SetBool("knockBack",takeDamage);
+		anim.SetBool("dead", dead);
 
 		scream 	= Mathf.Clamp(boneScream.transform.localPosition.z,0f,1f);
 		glow 	= Mathf.Clamp(boneGlow.transform.localPosition.z,0f,1f);

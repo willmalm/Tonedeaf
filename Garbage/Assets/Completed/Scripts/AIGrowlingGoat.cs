@@ -13,6 +13,12 @@ public class AIGrowlingGoat : MonoBehaviour
 	private float timeUntilNextAttack = 0;
 	private float timeUntilCanAttack;
 	private int lives = 1;
+	private SceneChanger sceneChanger;
+	private AudioSource sound;
+	public AudioClip stomp1;
+	public AudioClip stomp2;
+	public AudioClip scream;
+    private float timer = 0;
 	void Start ()
     {
         playerVar = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerVariables>();
@@ -20,6 +26,7 @@ public class AIGrowlingGoat : MonoBehaviour
 		goatObject = transform.GetChild(1).gameObject.GetComponent<ObjectVariables>();
 		benchArray = GameObject.FindGameObjectsWithTag("OBJECT_bench");
 		timeUntilCanAttack = Random.Range(2, 5);
+		sound = GetComponent<AudioSource>();
 	}
 	void Update ()
     {
@@ -63,13 +70,34 @@ public class AIGrowlingGoat : MonoBehaviour
 			{
 				Damaged();
 				goatObject.force = 0;
-			}
-		}
+            }
+            if (lives == 0)
+            {
+                goat.dead = true;
+                timer += Time.deltaTime;
+                if (timer > 0.75f)
+                {
+                    sceneChanger.LoadScene(5, true, new Vector3(0f, 0f, 0f));
+                    bossActive = false;
+                }
+            }
+        }
 	}
     public void Knockdown()
     {
 		goat.attack = true;
 		actionTaken = true;
+		//wait
+		//
+		//stomp1
+		//
+		//wait
+		//
+		//stomp2
+		//
+		//wait
+		//
+		//scream
     }
 	public void Damaged()
 	{
@@ -79,26 +107,5 @@ public class AIGrowlingGoat : MonoBehaviour
 		lives--;
 		goatObject.toughness = 10000;
 		playerVar.im_knockdown = true;
-		if (lives == 0) 
-		{
-			bossActive = false;
-			//Event
-		}
-		else if (lives == 1) 
-		{
-			Shuffle ();
-		}
-	}
-	public void Shuffle()
-	{
-		//Shuffle bench positions
-		benchArray[0].transform.position = new Vector3(-9f, 0f, 0);
-		benchArray[1].transform.position = new Vector3(-20f, -8f, 0);
-		benchArray[2].transform.position = new Vector3(-13f, -2f, 0);
-		benchArray[3].transform.position = new Vector3(6f, -6f, 0);
-		benchArray[4].transform.position = new Vector3(-10f, -7f, 0);
-		benchArray[5].transform.position = new Vector3(1f, -3f, 0);
-		benchArray[6].transform.position = new Vector3(10f, 0f, 0);
-		benchArray[7].transform.position = new Vector3(12f, -4f, 0);
 	}
 }
