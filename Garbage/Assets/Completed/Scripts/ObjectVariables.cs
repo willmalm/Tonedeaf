@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ObjectVariables : MonoBehaviour {
 
-
     public string objName;
 
     [Header("Global")]
@@ -27,6 +26,9 @@ public class ObjectVariables : MonoBehaviour {
     [Space(5)]
     public bool addsItem;
     public GameObject addItem;
+    [Space(5)]
+    public AudioClip failSound;
+    public AudioClip successSound;
 
     void Update()
     {
@@ -40,6 +42,12 @@ public class ObjectVariables : MonoBehaviour {
             else
             {
                 used = false;
+            }
+        }
+        if (used)
+        {
+            if (canHighlight) {
+                highlight.SetActive(false);
             }
         }
     }

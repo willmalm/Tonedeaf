@@ -1,0 +1,822 @@
+fileFormatVersion: 2
+guid: 2454b7ed218067b499b7888aece8e654
+timeCreated: 1458555057
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone_005
+    100002: Bone_009
+    100004: Bone_010
+    100006: Bone_012
+    100008: Bone_013
+    100010: Bone_015
+    100012: Bone_016
+    100014: Bone_017
+    100016: Bone_018
+    100018: Bone_019
+    100020: Bone_020
+    100022: Bone_021
+    100024: Bone_022
+    100026: Bone_023
+    100028: Bone_024
+    100030: Bone_025
+    100032: Bone_026
+    100034: Bone_027
+    100036: Bone_028
+    100038: Bone_029
+    100040: Bone_030
+    100042: Bone_031
+    100044: Bone_032
+    100046: Chest
+    100048: Foot_IK_l
+    100050: Foot_IK_r
+    100052: Hand_IK_l
+    100054: Hand_IK_r
+    100056: Hand_l
+    100058: Hand_r
+    100060: Head
+    100062: Hips
+    100064: Jaw
+    100066: //RootNode
+    100068: Nazi_Skeleton
+    100070: Neck
+    100072: Plane
+    100074: Root
+    100076: Shoulder_l
+    100078: Shoulder_r
+    100080: Spine
+    400000: Bone_005
+    400002: Bone_009
+    400004: Bone_010
+    400006: Bone_012
+    400008: Bone_013
+    400010: Bone_015
+    400012: Bone_016
+    400014: Bone_017
+    400016: Bone_018
+    400018: Bone_019
+    400020: Bone_020
+    400022: Bone_021
+    400024: Bone_022
+    400026: Bone_023
+    400028: Bone_024
+    400030: Bone_025
+    400032: Bone_026
+    400034: Bone_027
+    400036: Bone_028
+    400038: Bone_029
+    400040: Bone_030
+    400042: Bone_031
+    400044: Bone_032
+    400046: Chest
+    400048: Foot_IK_l
+    400050: Foot_IK_r
+    400052: Hand_IK_l
+    400054: Hand_IK_r
+    400056: Hand_l
+    400058: Hand_r
+    400060: Head
+    400062: Hips
+    400064: Jaw
+    400066: //RootNode
+    400068: Nazi_Skeleton
+    400070: Neck
+    400072: Plane
+    400074: Root
+    400076: Shoulder_l
+    400078: Shoulder_r
+    400080: Spine
+    4300000: Plane
+    7400000: Default Take
+    7400002: Idle_Bake
+    7400004: Knockback
+    7400006: NIdle
+    7400008: Run_Scared
+    7400010: Run_Scared_Bake
+    9500000: //RootNode
+    13700000: Plane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nazi_Skeleton
+        weight: 1
+      - path: Nazi_Skeleton/Bone_005
+        weight: 1
+      - path: Nazi_Skeleton/Root
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016/Bone_017
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019/Bone_020
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_023
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_024
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_025
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_026
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_027
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_028
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_029
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_030
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_031
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_032
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_021
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_022
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013/Hand_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010/Hand_r
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_Bake
+      takeName: Idle_Bake
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nazi_Skeleton
+        weight: 1
+      - path: Nazi_Skeleton/Bone_005
+        weight: 1
+      - path: Nazi_Skeleton/Root
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016/Bone_017
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019/Bone_020
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_023
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_024
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_025
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_026
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_027
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_028
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_029
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_030
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_031
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_032
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_021
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_022
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013/Hand_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010/Hand_r
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Knockback
+      takeName: Knockback
+      firstFrame: -1
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nazi_Skeleton
+        weight: 1
+      - path: Nazi_Skeleton/Bone_005
+        weight: 1
+      - path: Nazi_Skeleton/Root
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016/Bone_017
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019/Bone_020
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_023
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_024
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_025
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_026
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_027
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_028
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_029
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_030
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_031
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_032
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_021
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_022
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013/Hand_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010/Hand_r
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: NIdle
+      takeName: NIdle
+      firstFrame: -128
+      lastFrame: 258
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nazi_Skeleton
+        weight: 1
+      - path: Nazi_Skeleton/Bone_005
+        weight: 1
+      - path: Nazi_Skeleton/Root
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016/Bone_017
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019/Bone_020
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_023
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_024
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_025
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_026
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_027
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_028
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_029
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_030
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_031
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_032
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_021
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_022
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013/Hand_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010/Hand_r
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run_Scared
+      takeName: Run_Scared
+      firstFrame: -60
+      lastFrame: 125
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nazi_Skeleton
+        weight: 1
+      - path: Nazi_Skeleton/Bone_005
+        weight: 1
+      - path: Nazi_Skeleton/Root
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016/Bone_017
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019/Bone_020
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_023
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_024
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_025
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_026
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_027
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_028
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_029
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_030
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_031
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_032
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_021
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_022
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013/Hand_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010/Hand_r
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run_Scared_Bake
+      takeName: Run_Scared_Bake
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Nazi_Skeleton
+        weight: 1
+      - path: Nazi_Skeleton/Bone_005
+        weight: 1
+      - path: Nazi_Skeleton/Root
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Foot_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hand_IK_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_015/Bone_016/Bone_017
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Bone_018/Bone_019/Bone_020
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_023
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_024
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_025
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_026
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_027
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_028
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_029
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_030
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_031
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Bone_032
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_021
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Neck/Head/Jaw/Bone_022
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_l/Bone_012/Bone_013/Hand_l
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010
+        weight: 1
+      - path: Nazi_Skeleton/Root/Hips/Spine/Chest/Shoulder_r/Bone_009/Bone_010/Hand_r
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

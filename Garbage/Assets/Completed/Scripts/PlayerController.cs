@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 
     //Public variables
     public GameObject playerSprite;
+    public float walkSpeed;
     [Header("Idle states")]
     public float idle1_Delay;
     public float idle2_Delay;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour {
     private AudioManager audioManager;
 
     private int timerSpeed;
+    private int knockdownCounter = 0;
 
     //Components
     public AudioSource aud;
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour {
             transform.position += new Vector3(playerVar.horizontal_speed * Time.deltaTime, 0, 0);
             playerSize.direction = -1;
             playerAnimation.speed = new Vector2(1, 0);
+            playerAnimation.walkSpeedScale = walkSpeed;
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
@@ -88,6 +91,7 @@ public class PlayerController : MonoBehaviour {
             transform.position += new Vector3(-playerVar.horizontal_speed * Time.deltaTime, 0, 0);
             playerSize.direction = 1;
             playerAnimation.speed = new Vector2(1, 0);
+            playerAnimation.walkSpeedScale = walkSpeed;
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
@@ -109,6 +113,7 @@ public class PlayerController : MonoBehaviour {
             idleTimer = 0;
             transform.position += new Vector3(0, playerVar.vertical_speed * Time.deltaTime, 0);
             playerAnimation.speed = new Vector2(1, 0);
+            playerAnimation.walkSpeedScale = walkSpeed;
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
@@ -132,6 +137,7 @@ public class PlayerController : MonoBehaviour {
             idleTimer = 0;
             transform.position += new Vector3(0, -playerVar.vertical_speed * Time.deltaTime, 0);
             playerAnimation.speed = new Vector2(1, 0);
+            playerAnimation.walkSpeedScale = walkSpeed;
             playerAnimation.idleAnimation = 0;
             if (stepTimer >= stepDelay)
             {
@@ -152,6 +158,7 @@ public class PlayerController : MonoBehaviour {
         timerSpeed = 0;
         stepTimer = 0;
         playerAnimation.speed = new Vector2(0, 0);
+        playerAnimation.walkSpeedScale = 0;
         if (idleTimer >= idle1_Delay && idleTimer < idle2_Delay)
         {
             playerAnimation.idleAnimation = 1;
@@ -182,26 +189,22 @@ public class PlayerController : MonoBehaviour {
     }
     private void Knockdown()
     {
-        if (playerVar.knockdown)
+        knockdownCounter++;
+        if ((playerVar.knockdown) && (!playerVar.immune))
         {
-            playerCollider.enabled = false;
-            playerAnimation.screamStrength = 1;
-            playerVar.im_knockdown = true;
-            if (transform.position.x > playerVar.newPosition.x)
+            if (knockdownCounter < 70)
             {
-                transform.position += new Vector3(-0.2f, 0, 0);
+                playerAnimation.screamStrength = 1;
+                playerVar.im_knockdown = true;
+                transform.position += new Vector3(-0.3f, 0, 0);
             }
             else
             {
+                playerAnimation.screamStrength = 0;
+                knockdownCounter = 0;
                 playerVar.knockdown = false;
+                playerVar.im_knockdown = false;
             }
-        }
-        else
-        {
-            playerCollider.enabled = true;
-            playerVar.newPosition = transform.position + new Vector3(-5, 0, 0);
-            //playerVar.immobile = false;
-           // playerAnimation.screamStrength = 0;
         }
     }
 }

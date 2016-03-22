@@ -5,6 +5,8 @@ public class JensAnimationController : MonoBehaviour {
 	[HideInInspector]	public Animator animator;
 	public Vector2 speed;				//Target speed
 	[Range(0f,1f)]
+	public float walkSpeedScale = 1;		//Walk speed modifier
+	[Range(0f,1f)]
 	public float screamStrength;		//Target scream strength
 
 	private float _screamStrength = 0;	//The actual scream strength
@@ -32,7 +34,7 @@ public class JensAnimationController : MonoBehaviour {
 			else animator.SetBool("screaming", false);
 			animator.SetFloat("screamStrength", _screamStrength);
 
-			animator.SetFloat("walkSpeedX", walkSpeedX);					//Set the walking speed for X
+			animator.SetFloat("walkSpeedX", speed.x*walkSpeedScale);					//Set the walking speed for X
 		}
 	}
 

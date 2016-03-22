@@ -3,6 +3,7 @@ using System.Collections;
 
 public class OF_Extinguisher : MonoBehaviour {
 
+    public GameObject particle;
     GameObject player;
     ObjectVariables var;
     AudioSource aud;
@@ -21,13 +22,14 @@ public class OF_Extinguisher : MonoBehaviour {
         {
             if (!aud.isPlaying && var_player.im_event == false)
             {
+                particle.GetComponent<ParticleSystem>().Play();
                 aud.Play();
-                var_player.im_event = true;
+                //var_player.im_event = true;
             }
             if (!aud.isPlaying)
             {
                 var_player.im_event = false;
-                var.used = false;
+                //var.used = false;
             }
         }
 	}

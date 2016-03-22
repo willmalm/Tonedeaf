@@ -43,7 +43,8 @@ public class OF_Radio : MonoBehaviour {
             currentIndex = orgIndex;
             aud.Play();
             var.force = 0;
-            var.used = false;               
+            var.used = false;
+            var.highlight.SetActive(true);             
             
         }
 	}

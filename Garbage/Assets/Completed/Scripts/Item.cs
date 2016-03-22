@@ -10,6 +10,6 @@ public class Item : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("GLOBAL_inventory");
         transform.SetParent(inventory.transform);
-        transform.position = inventory.transform.position + new Vector3(xPosition * distance, yPosition * distance, 0);
+        transform.position = inventory.transform.position + new Vector3(xPosition * distance, yPosition * distance, -0.1f);
     }
 }

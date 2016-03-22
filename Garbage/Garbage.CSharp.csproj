@@ -62,7 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Beehive\BeehiveController.cs" />
+    <Compile Include="Assets\Animations\Beehive\BeehiveController.cs" />
+    <Compile Include="Assets\Animations\Goat\GoatAnimator.cs" />
     <Compile Include="Assets\Completed\Scripts\AIGrowlingGoat.cs" />
     <Compile Include="Assets\Completed\Scripts\AudioController.cs" />
     <Compile Include="Assets\Completed\Scripts\AudioManager.cs" />
@@ -78,13 +79,19 @@
     <Compile Include="Assets\Completed\Scripts\Keeper.cs" />
     <Compile Include="Assets\Completed\Scripts\KeyManager.cs" />
     <Compile Include="Assets\Completed\Scripts\Keybindings.cs" />
+    <Compile Include="Assets\Completed\Scripts\LayerCheck.cs" />
     <Compile Include="Assets\Completed\Scripts\NPCVariables.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_BSOD.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Ball.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Beehive.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_Bench.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Dialog.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Extinguisher.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Fountain.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_GrowlingGoatStart.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_Key.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_MenuMusic.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_Nazi.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Niise.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Note.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Poster.cs" />
@@ -93,6 +100,7 @@
     <Compile Include="Assets\Completed\Scripts\OF_Sign.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_TV.cs" />
     <Compile Include="Assets\Completed\Scripts\OF_Testing.cs" />
+    <Compile Include="Assets\Completed\Scripts\OF_Toilet.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectLayer.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectProp.cs" />
     <Compile Include="Assets\Completed\Scripts\ObjectVariables.cs" />
@@ -102,9 +110,12 @@
     <Compile Include="Assets\Completed\Scripts\Speech.cs" />
     <Compile Include="Assets\Completed\Scripts\SpriteSize.cs" />
     <Compile Include="Assets\Completed\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Completed\Scripts\Video.cs" />
+    <Compile Include="Assets\Completed\Scripts\VideoSequence.cs" />
     <Compile Include="Assets\Jens\JensAnimationController.cs" />
     <Compile Include="Assets\KeyBindings.cs" />
     <Compile Include="Assets\MicrophoneInput.cs" />
+    <Compile Include="Assets\Nazi\Assets\Nazi_Controller.cs" />
     <Compile Include="Assets\SceneChanger.cs" />
     <Compile Include="Assets\ScreechTransform.cs" />
     <Compile Include="Assets\Scripts\MeshCombiner.cs" />
@@ -130,11 +141,11 @@
     <Compile Include="Assets\Users\William\StageVariables.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Animations\Vegetation\Grass\Grass.shader" />
+    <None Include="Assets\Animations\Vegetation\Trees\Tree.shader" />
     <None Include="Assets\Particles\Shaders\CandleLight.shader" />
     <None Include="Assets\Particles\Shaders\Piss.shader" />
     <None Include="Assets\Shaders\TVScreen.shader" />
-    <None Include="Assets\Vegetation\Grass\Grass.shader" />
-    <None Include="Assets\Vegetation\Trees\Tree.shader" />
     <None Include="Assets\eufaof.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

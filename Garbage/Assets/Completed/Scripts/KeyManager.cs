@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KeyManager : MonoBehaviour {
-
+public class KeyManager : MonoBehaviour
+{
     //Public variables
     public string[] keys;
 
@@ -42,10 +42,6 @@ public class KeyManager : MonoBehaviour {
         {
             plController.MoveLeft();
         }
-        else
-        {
-            plController.Idle();
-        }
         if (Input.GetKey(keys[2]))
         {
             plController.MoveUp();
@@ -53,6 +49,10 @@ public class KeyManager : MonoBehaviour {
         else if (Input.GetKey(keys[3]))
         {
             plController.MoveDown();
+        }
+        if(!Input.GetKey(keys[0]) && !Input.GetKey(keys[1]) && !Input.GetKey(keys[2]) && !Input.GetKey(keys[3]))
+        {
+            plController.Idle();
         }
         //Pick up item or interact with object
         if (Input.GetKeyDown(keys[4]))

@@ -161,6 +161,11 @@ public class Interaction : MonoBehaviour {
         if (list_pickup.Count > 0)
         {
             //Add item to inventory and destroy object
+            ObjectVariables var = list_pickup[0].GetComponent<ObjectVariables>();
+            if (var.successSound != null)
+            {
+                player.GetComponent<AudioSource>().PlayOneShot(var.successSound);
+            }
             var obj = (GameObject)Instantiate(list_pickup[0].GetComponent<ObjectVariables>().inventoryItem, transform.position, Quaternion.identity);
             inventory.AddItem(obj);
             GameObject singleObject = list_pickup[0];
@@ -366,6 +371,10 @@ public class Interaction : MonoBehaviour {
             ObjectVariables vars = nearPlayer.GetComponent<ObjectVariables>();
             if (inventory.ItemExists(vars.itemID) || vars.requiresItem == false)
             {
+                if(vars.successSound != null)
+                {
+                    player.GetComponent<AudioSource>().PlayOneShot(vars.successSound);
+                }
                 if (!vars.toggle)
                 {
                     vars.used = true;
@@ -378,6 +387,13 @@ public class Interaction : MonoBehaviour {
                 {
                     vars.used = false;
                 }*/
+            }
+            else
+            {
+                if(vars.failSound != null)
+                {
+                    player.GetComponent<AudioSource>().PlayOneShot(vars.failSound);
+                }
             }
         }
     }
