@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AIGrowlingGoat : MonoBehaviour
 {
@@ -13,12 +14,15 @@ public class AIGrowlingGoat : MonoBehaviour
 	private float timeUntilNextAttack = 0;
 	private float timeUntilCanAttack;
 	private int lives = 1;
-	private SceneChanger sceneChanger;
 	private AudioSource sound;
 	public AudioClip stomp1;
 	public AudioClip stomp2;
 	public AudioClip scream;
-    private float timer = 0;
+    public float timer = 0;
+    private bool firstSound = false;
+    private bool secondSound = false;
+    private bool thirdSound = false;
+    private bool attack = false;
 	void Start ()
     {
         playerVar = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerVariables>();
@@ -30,7 +34,25 @@ public class AIGrowlingGoat : MonoBehaviour
 	}
 	void Update ()
     {
-		if (bossActive)
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (sound.isPlaying)
+            {
+                sound.Stop();
+            }
+            sound.clip = stomp1;
+            sound.Play();
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (sound.isPlaying)
+            {
+                sound.Stop();
+            }
+            sound.clip = stomp2;
+            sound.Play();
+        }
+        if (bossActive)
 		{
 			if (actionTaken)
 			{
@@ -74,11 +96,33 @@ public class AIGrowlingGoat : MonoBehaviour
             if (lives == 0)
             {
                 goat.dead = true;
-                timer += Time.deltaTime;
-                if (timer > 0.75f)
+                playerVar.im_event = true;
+                if (timer > 1.5f)
                 {
-                    sceneChanger.LoadScene(5, true, new Vector3(0f, 0f, 0f));
+                    SceneManager.LoadScene(8);
                     bossActive = false;
+                }
+            }
+            timer += Time.deltaTime;
+            if (attack == true)
+            {
+                if (firstSound && timer > 1f)
+                {
+                    sound.clip = stomp1;
+                    sound.Play();
+                    firstSound = false;
+                }
+                if (secondSound && timer > 2.2f)
+                {
+                    sound.clip = stomp2;
+                    sound.Play();
+                    secondSound = false;
+                }
+                if (thirdSound && timer > 3.4f)
+                {
+                    sound.clip = scream;
+                    sound.Play();
+                    thirdSound = false;
                 }
             }
         }
@@ -87,25 +131,20 @@ public class AIGrowlingGoat : MonoBehaviour
     {
 		goat.attack = true;
 		actionTaken = true;
-		//wait
-		//
-		//stomp1
-		//
-		//wait
-		//
-		//stomp2
-		//
-		//wait
-		//
-		//scream
+        timer = 0;
+        attack = true;
+        firstSound = true;
+        secondSound = true;
+        thirdSound = true;
     }
 	public void Damaged()
 	{
 		goat.damageTaken = 1;
 		goat.takeDamage = true;
 		actionTaken = true;
-		lives--;
+        timer = 0;
+        lives--;
 		goatObject.toughness = 10000;
 		playerVar.im_knockdown = true;
-	}
+    }
 }

@@ -26,7 +26,7 @@ public class OF_Nazi : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //hasItem = inv.ItemExists(3);
+        hasItem = inv.ItemExists(3);
         if (var.used)
         {
             if (hasItem)
@@ -34,6 +34,7 @@ public class OF_Nazi : MonoBehaviour {
                 if (!knockback)
                 {
                     controller.knockBack = true;
+                    controller2.knockBack = true;
                     knockback = true;
                 }
                 timer += Time.deltaTime;
@@ -53,6 +54,7 @@ public class OF_Nazi : MonoBehaviour {
                 if (timer == 0)
                 {
                     controller.knockBack = true;
+                    controller2.knockBack = true;
                 }
                 timer += Time.deltaTime;
                 if (timer >= delay2)

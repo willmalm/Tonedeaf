@@ -11,10 +11,13 @@ public class OF_Sign : MonoBehaviour {
     bool swinging;
     ObjectVariables var;
     GameObject player;
+    AudioSource aud;
+    bool playSound;
 	// Use this for initialization
 	void Start () {
         var = GetComponent<ObjectVariables>();
         player = GameObject.FindGameObjectWithTag("Player");
+        aud = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -29,9 +32,15 @@ public class OF_Sign : MonoBehaviour {
             }
             var.force = 0;
             var.used = false;
+            playSound = true;
         }
         else
         {
+            if (playSound && !aud.isPlaying)
+            {
+                aud.Play();
+                playSound = false;
+            }
             swinging = true;
             speed -= accel * Time.deltaTime;
             if (speed <= 0)

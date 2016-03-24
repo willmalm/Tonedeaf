@@ -36,7 +36,10 @@ public class Inventory : MonoBehaviour
     }
     public void RemoveItem(int index)
     {
+        GameObject temp = itemList[index];
         itemList.RemoveAt(index);
+        Destroy(temp);
+
     }
     public List<GameObject> GetList()
     {

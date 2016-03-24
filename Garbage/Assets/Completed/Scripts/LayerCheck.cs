@@ -29,7 +29,7 @@ public class LayerCheck : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{	
-		//Debug.DrawLine(new Vector3(x1, y1, transform.position.z), new Vector3(x2, y2, transform.position.z), new Color(1, 0, 0, 1));	
+		Debug.DrawLine(new Vector3(x1, y1, transform.position.z), new Vector3(x2, y2, transform.position.z), new Color(1, 0, 0, 1));	
 		if ((player.transform.position.x < transform.position.x + width) && (player.transform.position.x > transform.position.x - width))
 		{
 			if (BelowLine()) 

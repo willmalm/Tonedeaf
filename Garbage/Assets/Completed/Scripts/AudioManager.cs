@@ -28,10 +28,14 @@ public class AudioManager : MonoBehaviour {
         try
         {
             audioSource = GetComponent<AudioSource>();
-            if (audioSource.clip != clips[level])
+            if (audioSource.clip != clips[level] && clips[level] != null)
             {
                 audioSource.clip = clips[level];
                 audioSource.Play();
+            }
+            else if(level == 8)
+            {
+                audioSource.Stop();
             }
         }
         catch
